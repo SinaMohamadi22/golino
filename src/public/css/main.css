@@ -1,0 +1,231 @@
+@import "tailwindcss";
+@theme {
+  --color-primary : #FC91A4;
+  --color-low-red : #EF3A4F;
+  --color-red : #F21339;
+  --color-FF6781 : #FF6781;
+  --color-565D47 : #565D47;
+  --color-4B4B4B : #4B4B4B;
+  --color-4E4E4E : #4E4E4E;
+  --color-C4C4C4 : #C4C4C4;
+  --color-222223 : #222223;
+  --color-646464 : #646464;
+  --color-737373 : #737373;
+  --color-E1E1E1 : #E1E1E1;
+  --color-FEE3E8 : #FEE3E8;
+  --color-yellow : #FFE217;
+  --color-black-text : #151515;
+  --shadow-box : 0px 10px 30px 0px rgba(0,0,0,0.05);
+  --shadow-box-dark : 0px 10px 30px 0px rgba(255,255,255,0.05);
+}
+@layer components {
+  .container {
+    margin : 0 auto;
+    padding-inline: 1rem ;
+
+  }
+  .swiper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.hidden-section {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0) scale(0.98);
+    filter: blur(2px);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.8s ease,
+                filter 0.8s ease;
+    will-change: transform, opacity;
+}
+
+.hidden-section.show-section {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 32px;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ef4444;
+}
+
+.rating input:checked ~ label {
+    color: #ef4444;
+}
+.cart-open {
+    transform: translateX(0);
+}
+.tabs-wrapper {
+  display: flex;
+  width: 600px;
+  position: absolute;
+  top: 72px;
+  right: 20px;
+  z-index: 50;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.tabs-menu {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #eee;
+}
+
+.tab-btn {
+  padding: 12px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: right;
+  transition: 0.3s;
+}
+.tab-btn-svg {
+    background-color: #FF6781;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.tabs-content {
+  width: 60%;
+  padding: 15px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  background: url("../image/bg-login.png") center/cover no-repeat;
+}
+
+/* رنگی */
+.color {
+  z-index: 1;
+}
+
+/* BW فقط داخل دایره */
+.bw {
+  z-index: 2;
+  filter: grayscale(100%);
+
+  /* 👇 مهم‌ترین بخش ریسپانسیو */
+  --size: 14vw;
+
+  clip-path: circle(var(--size) at var(--x, 50%) var(--y, 50%));
+}
+
+/* 📱 موبایل */
+@media (max-width: 768px) {
+  .bw {
+    --size: 12vw;
+  }
+}
+
+/* 💻 تبلت */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bw {
+    --size: 10vw;
+  }
+}
+
+/* 🖥 دسکتاپ بزرگ */
+@media (min-width: 1200px) {
+  .bw {
+    --size: 8vw;
+  }
+}
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --breakpoint-xs: 33.75rem;
+    --breakpoint-sx: 26.625rem;
+    --shadow-normal: #0000000 5%;
+    --font-iranyekan: "IranYekan", sans-serif;
+    --text-tiny : 0.375rem;
+    --radius-100 : 6.25rem;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-thin.ttf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-extrabold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "IranYekan";
+    src: url("/src/fonts/Qs_Iranyekan-black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+/* npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch */
