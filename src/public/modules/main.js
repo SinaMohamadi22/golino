@@ -45,6 +45,7 @@ const tabsWrapper = document.querySelector(".tabs-wrapper")
 const MultiTabBtn = document.querySelector(".multi-tab-btn")
 const MultiTabText = document.querySelector(".multi-tab-text")
 const detailElems = document.querySelectorAll("details")
+const backToTop = document.querySelector("#backToTop")
 
 const user = getCookie("user");
 if(user) {
@@ -330,7 +331,6 @@ const addProductToBasket = () => {
     countInput.value = 1
 }
 toast.classList.replace("hidden","flex")
-// toast.classList.toggle("flex")
     updateBasketUI()
     showProccessToastBar()
 }
@@ -465,6 +465,22 @@ document.addEventListener("click", (event) => {
     removeProductFromBasket(+removeBtn.dataset.id)
 })
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.remove("opacity-0", "invisible", "translate-y-3")
+    backToTop.classList.add("opacity-100", "visible", "translate-y-0")
+  } else {
+    backToTop.classList.add("opacity-0", "invisible", "translate-y-3")
+    backToTop.classList.remove("opacity-100", "visible", "translate-y-0")
+  }
+})
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+})
 let swiperInstance = null;
 
 const initSwiper = () => {
