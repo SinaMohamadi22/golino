@@ -137,37 +137,29 @@
   background: url("../image/bg-login.png") center/cover no-repeat;
 }
 
-/* رنگی */
 .color {
   z-index: 1;
 }
 
-/* BW فقط داخل دایره */
 .bw {
   z-index: 2;
   filter: grayscale(100%);
-
-  /* 👇 مهم‌ترین بخش ریسپانسیو */
   --size: 14vw;
-
   clip-path: circle(var(--size) at var(--x, 50%) var(--y, 50%));
 }
 
-/* 📱 موبایل */
 @media (max-width: 768px) {
   .bw {
     --size: 12vw;
   }
 }
 
-/* 💻 تبلت */
 @media (min-width: 769px) and (max-width: 1200px) {
   .bw {
     --size: 10vw;
   }
 }
 
-/* 🖥 دسکتاپ بزرگ */
 @media (min-width: 1200px) {
   .bw {
     --size: 8vw;
@@ -226,6 +218,25 @@
     font-family: "IranYekan";
     src: url("/src/fonts/Qs_Iranyekan-black.ttf") format("truetype");
     font-weight: 900;
+}
+.toast {
+  @apply font-iranyekan font-bold fixed top-0 overflow-hidden left-0 w-90 bg-white dark:bg-zinc-700 dark:text-white h-26  rounded-md p-3 items-center z-50;
+}
+
+.toast-icon {
+  @apply text-2xl size-8 flex items-center justify-center rounded text-primary;
+}
+
+.toast-content {
+  @apply flex items-center gap-3;
+}
+
+.proccess-bar {
+  @apply bg-zinc-300 h-1.5  absolute bottom-0 transition-all duration-300  right-0 w-full overflow-hidden;
+}
+
+.proccess {
+  @apply h-full absolute right-0 top-0 transition-all duration-300  bg-primary;
 }
 
 /* npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch */

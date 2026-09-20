@@ -4,6 +4,8 @@ export const supabase = createClient(
   "https://nldmtwggyobypqntjawy.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5sZG10d2dneW9ieXBxbnRqYXd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1MjM2NDcsImV4cCI6MjA5NzA5OTY0N30.zZnoXjSf2IitvmSkN8BrLA9pqQMogZBR3tMShikN_vQ"
 );
+const toast = document.querySelector(".toast")
+const proccess = document.querySelector(".proccess")
 const userLoginBtns = document.querySelectorAll(".user-login-btn")
 const userLoginBtnsText = document.querySelectorAll(".user-login-btn-text")
 const firstTimeLoginBtns = document.querySelectorAll(".first-time-login-btn")
@@ -327,7 +329,10 @@ const addProductToBasket = () => {
     if (countInput) {
     countInput.value = 1
 }
+toast.classList.replace("hidden","flex")
+// toast.classList.toggle("flex")
     updateBasketUI()
+    showProccessToastBar()
 }
 const removeProductFromBasket = (id) => {
     basket = basket.filter(item => item.id !== id)
@@ -386,7 +391,7 @@ const calculateTotalPrice = () => {
   if (totalPriceElem) {
     totalPriceElem.innerHTML = totalPrice.toLocaleString("fa-IR");
   }
-};
+}
 const saveBasketToLocalStorage = () => {
     localStorage.setItem("basket",JSON.stringify(basket))
 }
@@ -394,7 +399,24 @@ const updateBasketUI = () => {
   saveBasketToLocalStorage();
   showBasketProducts();
   calculateTotalPrice();
-};
+}
+const showProccessToastBar = () => {
+  let proccessStep = 0;
+
+  proccess.style.width = "0%";
+
+  const proccessInterval = setInterval(() => {
+    proccessStep += 5; 
+
+    if (proccessStep > 100) {
+      toast.classList.add("hidden");
+      clearInterval(proccessInterval);
+      return;
+    }
+
+    proccess.style.width = `${proccessStep}%`;
+  }, 100);
+}
 userLoginBtns.forEach((userLoginBtn) => {
     userLoginBtn.addEventListener("click", (event) => {
         if (event.target.closest(".user-login-btn-text")) {
