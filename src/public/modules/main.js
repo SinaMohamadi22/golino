@@ -5,6 +5,7 @@ export const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5sZG10d2dneW9ieXBxbnRqYXd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1MjM2NDcsImV4cCI6MjA5NzA5OTY0N30.zZnoXjSf2IitvmSkN8BrLA9pqQMogZBR3tMShikN_vQ"
 );
 const userLoginBtns = document.querySelectorAll(".user-login-btn")
+const userLoginBtnsText = document.querySelectorAll(".user-login-btn-text")
 const firstTimeLoginBtns = document.querySelectorAll(".first-time-login-btn")
 const menuElemBtn = document.querySelector(".menu")
 const navMenuMobile = document.querySelector(".nav-mobile")
@@ -71,6 +72,11 @@ basket = basket.map(item => ({
   price: Number(item.price) || 0,
   count: Number(item.count) || 1
 }));
+const showLogOutBtn = () => {
+    userLoginBtnsText.forEach((userLoginBtnText) => {
+        userLoginBtnText.classList.toggle("hidden")
+    })
+}
 
 const showMultiTab = () => {
   if (!tabsWrapper) return;
@@ -89,6 +95,7 @@ const showMultiTab = () => {
     });
   });
 }
+
 const hideOrShowMultiTab = () => {
     tabsWrapper.classList.toggle("hidden")
 }
@@ -388,6 +395,18 @@ const updateBasketUI = () => {
   showBasketProducts();
   calculateTotalPrice();
 };
+userLoginBtns.forEach((userLoginBtn) => {
+    userLoginBtn.addEventListener("click", (event) => {
+        if (event.target.closest(".user-login-btn-text")) {
+            event.stopPropagation()
+            logout()
+            location.reload()
+            return
+        }
+
+        showLogOutBtn()
+    })
+})
 MultiTabBtn?.addEventListener("click",hideOrShowMultiTab)
 MultiTabText?.addEventListener("click",hideOrShowMultiTab)
 if (tabsWrapper) {
@@ -531,4 +550,4 @@ const hiddenObservser = () => {
     });
 hiddenElements.forEach((hiddenElement) => observer.observe(hiddenElement))
 }
-hiddenObservser() 
+hiddenObservser()
