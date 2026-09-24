@@ -532,6 +532,19 @@
 </section>
 <div id="overlay" class="fixed inset-0 bg-black/50 z-40 hidden">
 </div>
+<button
+  id="backToTop"
+  class="fixed bottom-10 left-5 z-50 size-11 rounded-full bg-primary text-white
+         flex items-center justify-center shadow-lg
+         opacity-0 invisible translate-y-3
+         transition-all duration-300
+         hover:scale-110 active:scale-95"
+  aria-label="بازگشت به بالای صفحه"
+>
+  <svg class="size-5 rotate-180 text-white">
+    <use href="#chevron-down"></use>
+  </svg>
+</button>
 <footer class="mt-20 relative bg-white dark:bg-zinc-700 pb-10">
     <img class="w-30 md:w-45 lg:w-67.5 absolute left-0" src="../public/image/sakora-flower-left.webp" alt="">    
     <div class="flex flex-col justify-center items-center ">

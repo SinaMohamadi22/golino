@@ -188,7 +188,7 @@ const showProducts = () => {
             products.forEach((product) => {
                 productContainer.insertAdjacentHTML("beforeend",
                 `
-                <article class="swiper-slide product-card bg-white dark:bg-zinc-700 rounded-3xl group" data-id="${product.id}">
+                <article class="swiper-slide product-card relative bg-white dark:bg-zinc-700 rounded-3xl group" data-id="${product.id}">
                     ${product.discount > 0 ? `
                     <span class="absolute top-3 right-3 bg-red text-white px-2 py-1 rounded-lg text-xs">
                     ${product.discount}% تخفیف

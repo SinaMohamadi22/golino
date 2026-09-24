@@ -3,5 +3,8 @@
     "@tailwindcss/cli": "^4.3.0",
     "swiper": "^12.2.0",
     "tailwindcss": "^4.3.0"
+  },
+    "scripts": {
+    "tailwind" : "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch"
   }
 }

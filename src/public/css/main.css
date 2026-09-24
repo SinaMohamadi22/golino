@@ -9,9 +9,11 @@
   --color-4E4E4E : #4E4E4E;
   --color-C4C4C4 : #C4C4C4;
   --color-222223 : #222223;
+  --color-151515 : #151515;
   --color-646464 : #646464;
   --color-737373 : #737373;
   --color-E1E1E1 : #E1E1E1;
+  --color-F8F8F8 : #F8F8F8;
   --color-FEE3E8 : #FEE3E8;
   --color-yellow : #FFE217;
   --color-black-text : #151515;
@@ -21,7 +23,7 @@
 @layer components {
   .container {
     margin : 0 auto;
-    padding-inline: 1rem ;
+    @apply px-4 sx:px-3 xs:px-0 lg:px-4;
 
   }
   .swiper {
@@ -165,6 +167,28 @@
     --size: 8vw;
   }
 }
+.range-input {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  appearance: none;
+  background: #F21339;
+}
+@media (min-width: 1024px) {
+  .range-input {
+    width: 90%;
+  }
+}
+.range-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #F21339;
+  cursor: pointer;
+  pointer-events: auto;
+}
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -238,5 +262,3 @@
 .proccess {
   @apply h-full absolute right-0 top-0 transition-all duration-300  bg-primary;
 }
-
-/* npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch */
