@@ -536,15 +536,24 @@ const init = async () => {
     .select("*");
     
 
-  if (error) {
-    console.log(error);
-    return;
-  }
+    if (error) {
+        console.log(error);
+        return;
+    }
 
-  products = data;
+    products = data;
 
-  showProducts()
-  showFamousProducts();
+    window.products = products;
+
+    showProducts();
+
+    document.dispatchEvent(
+        new CustomEvent("productsLoaded", {
+            detail: products
+        })
+    );
+
+    showFamousProducts();
   requestAnimationFrame(() => {
     initSwiper();
   });
