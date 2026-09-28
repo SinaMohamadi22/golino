@@ -355,24 +355,20 @@ let allProducts = [];
 let selectedFlower = "";
 
 function renderFilter(isDesktop) {
+  const oldFilter = filterShopSection.querySelector(".filter-wrapper");
 
-    const oldFilter =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (oldFilter) {
+    oldFilter.remove();
+  }
 
-    if (oldFilter) {
-        oldFilter.remove();
-    }
+  const wrapper = document.createElement(isDesktop ? "div" : "details");
 
-    const wrapper =
-        document.createElement(isDesktop ? "div" : "details");
+  wrapper.className = isDesktop
+    ? "filter-wrapper w-full lg:w-25/100 shrink-0"
+    : "filter-wrapper w-full";
 
-    wrapper.className = isDesktop
-        ? "filter-wrapper w-full lg:w-25/100 shrink-0"
-        : "filter-wrapper w-full";
-
-    if (!isDesktop) {
-
-        wrapper.innerHTML = `
+  if (!isDesktop) {
+    wrapper.innerHTML = `
             <summary class="flex bg-white dark:bg-zinc-600 border text-151515 dark:text-white gap-x-2 border-E1E1E1 p-2.5 rounded-xl items-center cursor-pointer font-iranyekan font-semibold py-3">
 
                 <aside>
@@ -397,474 +393,330 @@ function renderFilter(isDesktop) {
 
             ${filterTemplate}
         `;
+  } else {
+    wrapper.innerHTML = filterTemplate;
+  }
 
-    } else {
+  filterShopSection.prepend(wrapper);
 
-        wrapper.innerHTML = filterTemplate;
-
-    }
-
-    filterShopSection.prepend(wrapper);
-
-    initializeFilters();
+  initializeFilters();
 }
 
 function initializeFilters() {
+  const filterWrapper = filterShopSection.querySelector(".filter-wrapper");
 
-    const filterWrapper =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (!filterWrapper) return;
 
-    if (!filterWrapper) return;
+  const flowerSelect = filterWrapper.querySelector("#flowerSelect");
 
-    const flowerSelect =
-        filterWrapper.querySelector("#flowerSelect");
+  const flowerSelectIcon = filterWrapper.querySelector("#flowerSelect-icon");
 
-    const flowerSelectIcon =
-        filterWrapper.querySelector("#flowerSelect-icon");
+  const flowerOptions = filterWrapper.querySelector("#flowerOptions");
 
-    const flowerOptions =
-        filterWrapper.querySelector("#flowerOptions");
+  if (flowerSelect && flowerSelectIcon && flowerOptions) {
+    flowerSelect.addEventListener("click", () => {
+      flowerOptions.classList.toggle("hidden");
 
-    if (
-        flowerSelect &&
-        flowerSelectIcon &&
-        flowerOptions
-    ) {
+      flowerSelectIcon.classList.toggle("rotate-180");
+    });
 
-        flowerSelect.addEventListener("click", () => {
+    const flowerItems = flowerOptions.querySelectorAll(".flower-option");
 
-            flowerOptions.classList.toggle("hidden");
+    flowerItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        selectedFlower = item.dataset.value || "";
 
-            flowerSelectIcon.classList.toggle("rotate-180");
+        const selectedText = item.textContent.trim();
 
-        });
+        const selectedElement = flowerSelect.querySelector(".flower-selected");
 
-        const flowerItems =
-            flowerOptions.querySelectorAll(".flower-option");
+        selectedElement.textContent = selectedText;
 
-        flowerItems.forEach((item) => {
+        flowerOptions.classList.add("hidden");
 
-            item.addEventListener("click", () => {
-
-                selectedFlower =
-                    item.dataset.value || "";
-
-                const selectedText =
-                    item.textContent.trim();
-
-                const selectedElement =
-                    flowerSelect.querySelector(".flower-selected");
-
-                selectedElement.textContent =
-                    selectedText;
-
-                flowerOptions.classList.add("hidden");
-
-                flowerSelectIcon.classList.remove(
-                    "rotate-180"
-                );
-
-                applyFilters();
-
-            });
-
-        });
-
-    }
-
-    const searchInput =
-        filterWrapper.querySelector(".product-search");
-
-    searchInput?.addEventListener("input", () => {
+        flowerSelectIcon.classList.remove("rotate-180");
 
         applyFilters();
-
+      });
     });
+  }
 
-    const minPrice =
-        filterWrapper.querySelector("#minPrice");
+  const searchInput = filterWrapper.querySelector(".product-search");
 
-    const maxPrice =
-        filterWrapper.querySelector("#maxPrice");
+  searchInput?.addEventListener("input", () => {
+    applyFilters();
+  });
 
-    minPrice?.addEventListener("input", () => {
+  const minPrice = filterWrapper.querySelector("#minPrice");
 
-        updatePriceValues();
+  const maxPrice = filterWrapper.querySelector("#maxPrice");
 
-        applyFilters();
-
-    });
-
-    maxPrice?.addEventListener("input", () => {
-
-        updatePriceValues();
-
-        applyFilters();
-
-    });
-
-    const categoryFilters =
-        filterWrapper.querySelectorAll(".category-filter");
-
-    categoryFilters.forEach((checkbox) => {
-
-        checkbox.addEventListener("change", () => {
-
-            applyFilters();
-
-        });
-
-    });
-
-    const occasionFilters =
-        filterWrapper.querySelectorAll(".occasion-filter");
-
-    occasionFilters.forEach((checkbox) => {
-
-        checkbox.addEventListener("change", () => {
-
-            applyFilters();
-
-        });
-
-    });
-
+  minPrice?.addEventListener("input", () => {
     updatePriceValues();
+
+    applyFilters();
+  });
+
+  maxPrice?.addEventListener("input", () => {
+    updatePriceValues();
+
+    applyFilters();
+  });
+
+  const categoryFilters = filterWrapper.querySelectorAll(".category-filter");
+
+  categoryFilters.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      applyFilters();
+    });
+  });
+
+  const occasionFilters = filterWrapper.querySelectorAll(".occasion-filter");
+
+  occasionFilters.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      applyFilters();
+    });
+  });
+
+  updatePriceValues();
 }
 
 function getSelectedCategories() {
+  const wrapper = filterShopSection.querySelector(".filter-wrapper");
 
-    const wrapper =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (!wrapper) return [];
 
-    if (!wrapper) return [];
-
-    return [
-        ...wrapper.querySelectorAll(".category-filter:checked")
-    ].map((checkbox) => checkbox.value);
+  return [...wrapper.querySelectorAll(".category-filter:checked")].map(
+    (checkbox) => checkbox.value,
+  );
 }
 
 function getSelectedOccasions() {
+  const wrapper = filterShopSection.querySelector(".filter-wrapper");
 
-    const wrapper =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (!wrapper) return [];
 
-    if (!wrapper) return [];
-
-    return [
-        ...wrapper.querySelectorAll(".occasion-filter:checked")
-    ].map((checkbox) => checkbox.value);
+  return [...wrapper.querySelectorAll(".occasion-filter:checked")].map(
+    (checkbox) => checkbox.value,
+  );
 }
 
 function hasTag(product, tag) {
+  if (!tag) return true;
 
-    if (!tag) return true;
+  if (!Array.isArray(product.tags)) {
+    return false;
+  }
 
-    if (!Array.isArray(product.tags)) {
-        return false;
-    }
-
-    return product.tags.some((item) => {
-
-        return String(item).trim() ===
-            String(tag).trim();
-
-    });
+  return product.tags.some((item) => {
+    return String(item).trim() === String(tag).trim();
+  });
 }
 
 function getFilteredProducts() {
+  const wrapper = filterShopSection.querySelector(".filter-wrapper");
 
-    const wrapper =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (!wrapper) {
+    return allProducts;
+  }
 
-    if (!wrapper) {
-        return allProducts;
+  const searchInput = wrapper.querySelector(".product-search");
+
+  const searchValue = searchInput?.value.trim().toLowerCase() || "";
+
+  const minPrice = Number(wrapper.querySelector("#minPrice")?.value || 0);
+
+  const maxPrice = Number(
+    wrapper.querySelector("#maxPrice")?.value || 18000000,
+  );
+
+  const selectedCategories = getSelectedCategories();
+
+  const selectedOccasions = getSelectedOccasions();
+
+  return allProducts.filter((product) => {
+    const title = String(product.title || "").toLowerCase();
+
+    const matchesSearch = !searchValue || title.includes(searchValue);
+
+    if (!matchesSearch) {
+      return false;
     }
 
-    const searchInput =
-        wrapper.querySelector(".product-search");
+    const price = Number(product.price) || 0;
 
-    const searchValue =
-        searchInput?.value.trim().toLowerCase() || "";
+    const matchesPrice = price >= minPrice && price <= maxPrice;
 
-    const minPrice =
-        Number(
-            wrapper.querySelector("#minPrice")?.value || 0
-        );
+    if (!matchesPrice) {
+      return false;
+    }
 
-    const maxPrice =
-        Number(
-            wrapper.querySelector("#maxPrice")?.value ||
-            18000000
-        );
+    const matchesFlower = !selectedFlower || hasTag(product, selectedFlower);
 
-    const selectedCategories =
-        getSelectedCategories();
+    if (!matchesFlower) {
+      return false;
+    }
 
-    const selectedOccasions =
-        getSelectedOccasions();
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(product.category);
 
-    return allProducts.filter((product) => {
+    if (!matchesCategory) {
+      return false;
+    }
 
-        const title =
-            String(product.title || "").toLowerCase();
+    const matchesOccasion =
+      selectedOccasions.length === 0 ||
+      selectedOccasions.some((occasion) => {
+        return hasTag(product, occasion);
+      });
 
-        const matchesSearch =
-            !searchValue ||
-            title.includes(searchValue);
+    if (!matchesOccasion) {
+      return false;
+    }
 
-        if (!matchesSearch) {
-            return false;
-        }
-
-        const price =
-            Number(product.price) || 0;
-
-        const matchesPrice =
-            price >= minPrice &&
-            price <= maxPrice;
-
-        if (!matchesPrice) {
-            return false;
-        }
-
-        const matchesFlower =
-            !selectedFlower ||
-            hasTag(product, selectedFlower);
-
-        if (!matchesFlower) {
-            return false;
-        }
-
-        const matchesCategory =
-            selectedCategories.length === 0 ||
-            selectedCategories.includes(product.category);
-
-        if (!matchesCategory) {
-            return false;
-        }
-
-        const matchesOccasion =
-            selectedOccasions.length === 0 ||
-            selectedOccasions.some((occasion) => {
-                return hasTag(product, occasion);
-            });
-
-        if (!matchesOccasion) {
-            return false;
-        }
-
-        return true;
-
-    });
+    return true;
+  });
 }
 
 function sortProducts(products) {
+  const sortingSelect = document.querySelector(".sorting-select");
 
-    const sortingSelect =
-        document.querySelector(".sorting-select");
+  const sortValue = sortingSelect?.value || "";
 
-    const sortValue =
-        sortingSelect?.value || "";
+  const sortedProducts = [...products];
 
-    const sortedProducts =
-        [...products];
+  switch (sortValue) {
+    case "popular":
+      sortedProducts.sort((a, b) => {
+        return Number(b.rating || 0) - Number(a.rating || 0);
+      });
 
-    switch (sortValue) {
+      break;
 
-        case "popular":
+    case "expensive":
+      sortedProducts.sort((a, b) => {
+        return Number(b.price || 0) - Number(a.price || 0);
+      });
 
-            sortedProducts.sort((a, b) => {
+      break;
 
-                return Number(b.rating || 0) -
-                    Number(a.rating || 0);
+    case "cheap":
+      sortedProducts.sort((a, b) => {
+        return Number(a.price || 0) - Number(b.price || 0);
+      });
 
-            });
+      break;
+  }
 
-            break;
-
-        case "expensive":
-
-            sortedProducts.sort((a, b) => {
-
-                return Number(b.price || 0) -
-                    Number(a.price || 0);
-
-            });
-
-            break;
-
-        case "cheap":
-
-            sortedProducts.sort((a, b) => {
-
-                return Number(a.price || 0) -
-                    Number(b.price || 0);
-
-            });
-
-            break;
-
-    }
-
-    return sortedProducts;
+  return sortedProducts;
 }
 
 function renderFilteredProducts(productsToShow) {
+  const productContainer = document.querySelector(".product-container");
 
-    const productContainer =
-        document.querySelector(".product-container");
+  if (!productContainer) return;
 
-    if (!productContainer) return;
+  const sortedProducts = sortProducts(productsToShow);
 
-    const sortedProducts =
-        sortProducts(productsToShow);
+  const productCards = [...productContainer.querySelectorAll(".product-card")];
 
-    const productCards =
-        [
-            ...productContainer.querySelectorAll(".product-card")
-        ];
+  const cardsMap = new Map();
 
-    const cardsMap =
-        new Map();
+  productCards.forEach((card) => {
+    cardsMap.set(String(card.dataset.id), card);
+  });
 
-    productCards.forEach((card) => {
+  productCards.forEach((card) => {
+    card.classList.add("hidden");
+  });
 
-        cardsMap.set(
-            String(card.dataset.id),
-            card
-        );
+  sortedProducts.forEach((product) => {
+    const card = cardsMap.get(String(product.id));
 
-    });
+    if (!card) return;
 
-    productCards.forEach((card) => {
+    card.classList.remove("hidden");
 
-        card.classList.add("hidden");
-
-    });
-
-    sortedProducts.forEach((product) => {
-
-        const card =
-            cardsMap.get(String(product.id));
-
-        if (!card) return;
-
-        card.classList.remove("hidden");
-
-        productContainer.appendChild(card);
-
-    });
+    productContainer.appendChild(card);
+  });
 }
 
 function applyFilters() {
+  if (!allProducts.length) return;
 
-    if (!allProducts.length) return;
+  const filteredProducts = getFilteredProducts();
 
-    const filteredProducts =
-        getFilteredProducts();
-
-    renderFilteredProducts(filteredProducts);
+  renderFilteredProducts(filteredProducts);
 }
 
 function updatePriceValues() {
+  const wrapper = filterShopSection.querySelector(".filter-wrapper");
 
-    const wrapper =
-        filterShopSection.querySelector(".filter-wrapper");
+  if (!wrapper) return;
 
-    if (!wrapper) return;
+  const minInput = wrapper.querySelector("#minPrice");
 
-    const minInput =
-        wrapper.querySelector("#minPrice");
+  const maxInput = wrapper.querySelector("#maxPrice");
 
-    const maxInput =
-        wrapper.querySelector("#maxPrice");
+  if (!minInput || !maxInput) return;
 
-    if (!minInput || !maxInput) return;
+  let min = Number(minInput.value);
 
-    let min =
-        Number(minInput.value);
+  let max = Number(maxInput.value);
 
-    let max =
-        Number(maxInput.value);
+  if (min > max) {
+    if (document.activeElement === minInput) {
+      min = max;
 
-    if (min > max) {
+      minInput.value = max;
+    } else {
+      max = min;
 
-        if (document.activeElement === minInput) {
-
-            min = max;
-
-            minInput.value = max;
-
-        } else {
-
-            max = min;
-
-            maxInput.value = min;
-
-        }
-
+      maxInput.value = min;
     }
+  }
 
-    const minText =
-        wrapper.querySelector(".values-min");
+  const minText = wrapper.querySelector(".values-min");
 
-    const maxText =
-        wrapper.querySelector(".values-max");
+  const maxText = wrapper.querySelector(".values-max");
 
-    if (minText) {
+  if (minText) {
+    minText.textContent = min.toLocaleString("fa-IR");
+  }
 
-        minText.textContent =
-            min.toLocaleString("fa-IR");
-
-    }
-
-    if (maxText) {
-
-        maxText.textContent =
-            max.toLocaleString("fa-IR");
-
-    }
+  if (maxText) {
+    maxText.textContent = max.toLocaleString("fa-IR");
+  }
 }
 
 if (window.products?.length) {
-
-    allProducts =
-        window.products;
-
+  allProducts = window.products;
 }
 
 document.addEventListener("productsLoaded", (event) => {
+  allProducts = event.detail || [];
 
-    allProducts =
-        event.detail || [];
-
-    applyFilters();
-
+  applyFilters();
 });
 
-const sortingSelect =
-    document.querySelector(".sorting-select");
+const sortingSelect = document.querySelector(".sorting-select");
 
 sortingSelect?.addEventListener("change", () => {
-
-    applyFilters();
-
+  applyFilters();
 });
 
-const mediaQuery =
-    window.matchMedia("(min-width: 768px)");
+const mediaQuery = window.matchMedia("(min-width: 768px)");
 
 renderFilter(mediaQuery.matches);
 
 mediaQuery.addEventListener("change", (event) => {
+  selectedFlower = "";
 
-    selectedFlower = "";
+  renderFilter(event.matches);
 
-    renderFilter(event.matches);
-
-    if (allProducts.length) {
-        applyFilters();
-    }
-
+  if (allProducts.length) {
+    applyFilters();
+  }
 });
