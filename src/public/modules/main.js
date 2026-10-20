@@ -181,11 +181,12 @@ const showProducts = () => {
   if (productContainers.length > 0) {
     productContainers.forEach((productContainer) => {
       productContainer.innerHTML = "";
+      const isSwiper = productContainer.classList.contains("swiper-wrapper");
       products.forEach((product) => {
         productContainer.insertAdjacentHTML(
           "beforeend",
           `
-                <article class="swiper-slide product-card relative bg-white dark:bg-zinc-700 rounded-3xl group" data-id="${product.id}">
+                <article class="${isSwiper ? "swiper-slide " : ""} product-card relative bg-white dark:bg-zinc-700 rounded-3xl group" data-id="${product.id}">
                     ${
                       product.discount > 0
                         ? `
@@ -489,11 +490,15 @@ backToTop.addEventListener("click", () => {
 let swiperInstance = null;
 
 const initSwiper = () => {
+  const swiperElement = document.querySelector(".mySwiper");
+
+  if (!swiperElement || typeof Swiper === "undefined") return;
+
   if (swiperInstance) {
     swiperInstance.destroy(true, true);
   }
 
-  swiperInstance = new Swiper(".mySwiper", {
+  swiperInstance = new Swiper(swiperElement, {
     loop: true,
     autoplay: {
       delay: 3000,
@@ -502,40 +507,56 @@ const initSwiper = () => {
     grabCursor: true,
 
     breakpoints: {
-      0: { slidesPerView: 1.1, spaceBetween: 20 },
-      640: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 4, spaceBetween: 20 },
+      0: {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
     },
   });
 };
 
-const commentSwiper = new Swiper(".commentSwiper", {
-  loop: true,
+const commentSwiper = () => {
+  const commentSwiperElement = document.querySelector(".commentSwiper");
 
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  if (!commentSwiperElement || typeof Swiper === "undefined") return;
 
-  grabCursor: true,
+  new Swiper(commentSwiperElement, {
+    loop: true,
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1.1,
-      spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
-});
 
-const getBlogs = async () => {
+    grabCursor: true,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+};
+
+if (blogContainer) {
+  const getBlogs = async () => {
     const { data, error } = await supabase
         .from("blogs")
         .select("*")
@@ -581,6 +602,7 @@ const getBlogs = async () => {
 };
 
 getBlogs();
+}
 
 const init = async () => {
   const { data, error } = await supabase.from("products").select("*");
@@ -605,6 +627,7 @@ const init = async () => {
   showFamousProducts();
   requestAnimationFrame(() => {
     initSwiper();
+    commentSwiper();
   });
   if (location.pathname.includes("product.html")) {
     showProductsDetail();

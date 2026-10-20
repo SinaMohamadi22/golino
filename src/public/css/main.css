@@ -3,6 +3,12 @@
   --color-primary: #fc91a4;
   --color-low-red: #ef3a4f;
   --color-red: #f21339;
+  --color-dashbord-light: #FDFDFE;
+  --color-border-light: #E2E8F0;
+  --color-border-soft: #EDF1F5;
+  --color-text-primary: #243B60;
+  --color-text-secondary: #6F7F99;
+  --color-text-muted: #9AA7B8;
   --color-FF6781: #ff6781;
   --color-565D47: #565d47;
   --color-4B4B4B: #4b4b4b;
@@ -17,8 +23,19 @@
   --color-FEE3E8: #fee3e8;
   --color-yellow: #ffe217;
   --color-black-text: #151515;
+  --color-success: #20B486;
+  --color-success-light: #D9F7ED;
+  --color-danger: #F21339;
+  --color-danger-light: #FDE2E7;
+  --color-chart: #4C9BE8;
+  --color-chart-light: #E1F0FF;
+  --color-green: #5FD6A8;
+  --color-green-light: #E0FAF0;
+  --color-dark: #222223;
+  --color-dark-secondary: #2B3038;
   --shadow-box: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
   --shadow-box-dark: 0px 10px 30px 0px rgba(255, 255, 255, 0.05);
+  --text-sx : 10px;
 }
 @layer components {
   .container {
