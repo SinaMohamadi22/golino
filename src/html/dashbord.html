@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body class="bg-dashbord-light">
-    <div class="flex">
-        <article class="w-1/5 h-screen bg-white border-l border-border-light flex flex-col items-center py-6">
+    <div class="container mx-auto w-full px-3 sm:px-4 lg:px-0 lg:!max-w-none lg:flex">
+        <article class="w-1/5 h-screen bg-white border-l border-border-light hidden lg:flex flex-col items-center py-6">
             <div class="w-full h-32 shrink-0 flex items-center justify-center -mt-10">
                 <img class="w-48 h-auto object-contain" src="../public/image/logo.png" alt="Golino">
             </div>
@@ -99,28 +99,9 @@
                     </svg>
                 </a>
             </li>
-            <li>
-                <a
-                    href=""
-                    class="w-full h-11 px-4 rounded-xl text-text-primary hover:bg-primary-light hover:text-primary transition-colors flex items-center gap-3"
-                >
-                    <svg class="size-6 shrink-0">
-                        <use href="#setting"></use>
-                    </svg>
-
-                    <span class="flex-1 text-right">
-                        تنظیمات
-                    </span>
-
-                    <svg class="size-4 shrink-0">
-                        <use href="#chevron-right"></use>
-                    </svg>
-                </a>
-            </li>
-
         </ul>
         </article>
-        <main class="w-4/5 min-h-screen flex flex-col">
+        <main class="w-full min-w-0 min-h-screen flex flex-col pb-24 lg:pb-0 lg:w-4/5">
             <article dir="ltr" class="w-full h-16 shrink-0 flex items-center justify-between px-8">
                 <div class="flex items-center gap-3">
 
@@ -450,12 +431,334 @@
             </article>
             <article class="container grid grid-cols-3 gap-3 mt-4 font-iranyekan">
             </article>
-            <article class="grid-cols-3 gap-3">
-                <div></div>
-                <div></div>
-                <div></div>
+            <article class="container font-iranyekan grid grid-cols-3 justify-between gap-x-5">
+                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
+                    <div class="flex justify-between mb-5">
+                        <aside class="flex gap-x-2">
+                            <span>
+                                <svg class="size-6 text-primary">
+                                    <use href="#users-fill"></use>
+                                </svg>
+                            </span>
+                            <span class="text-lg font-medium text-text-primary">کاربران</span>
+                        </aside>
+                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+                            <span>مشاهده همه</span>
+                            <span>
+                                <svg class="size-2 rotate-180">
+                                    <use href="#chevron-right"></use>
+                                </svg>
+                            </span>
+                        </aside>
+                    </div>
+                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
+                        <li>نام و نام خانوادگی</li>
+                        <li>ایمیل</li>
+                        <li>تاریخ عضویت</li>
+                        <li>وضعیت</li>
+                        <li>عملیات</li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li>علی اکبری</li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li>علی اکبری</li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li>علی اکبری</li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li>علی اکبری</li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li>علی اکبری</li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </section>
+                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
+                    <div class="flex justify-between mb-5">
+                        <aside class="flex gap-x-2">
+                            <span>
+                                <svg class="size-6 text-primary">
+                                    <use href="#blogs-fill"></use>
+                                </svg>
+                            </span>
+                            <span class="text-lg font-medium text-text-primary">بلاگ ها</span>
+                        </aside>
+                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+                            <span>مشاهده همه</span>
+                            <span>
+                                <svg class="size-2 rotate-180">
+                                    <use href="#chevron-right"></use>
+                                </svg>
+                            </span>
+                        </aside>
+                    </div>
+                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
+                        <li>تصویر</li>
+                        <li>عنوان</li>
+                        <li>تاریخ</li>
+                        <li>وضعیت</li>
+                        <li>عملیات</li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </section>
+                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
+                    <div class="flex justify-between mb-5">
+                        <aside class="flex gap-x-2">
+                            <span>
+                                <svg class="size-6 text-primary">
+                                    <use href="#products-fill"></use>
+                                </svg>
+                            </span>
+                            <span class="text-lg font-medium text-text-primary">کاربران</span>
+                        </aside>
+                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+                            <span>مشاهده همه</span>
+                            <span>
+                                <svg class="size-2 rotate-180">
+                                    <use href="#chevron-right"></use>
+                                </svg>
+                            </span>
+                        </aside>
+                    </div>
+                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
+                        <li>تصویر</li>
+                        <li>نام محصول</li>
+                        <li>قیمت</li>
+                        <li>وضعیت</li>
+                        <li>عملیات</li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
+                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
+                        <li>aliakbari@gamil.com</li>
+                        <li>1401/03/23</li>
+                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
+                        <li class="flex">
+                            <svg class="size-4 text-FF6781">
+                                <use href="#trash"></use>
+                            </svg>
+                            <svg class="size-4 text-FF6781">
+                                <use href="#rewrite"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </section>
             </article>
         </main>
+                <nav aria-label="منوی اصلی" class="lg:hidden fixed bottom-0 inset-x-0 z-50 border-t border-border-light bg-white/95 backdrop-blur-sm">
+            <ul class="mx-auto flex w-full max-w-3xl items-center justify-around gap-1 px-2 py-2 font-iranyekan">
+                <li class="flex-1">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl bg-primary-light px-1 py-1 text-primary">
+                        <svg class="size-5"><use href="#home"></use></svg>
+                        <span class="text-[10px] sm:text-xs font-semibold">داشبورد</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                        <svg class="size-5"><use href="#products"></use></svg>
+                        <span class="text-[10px] sm:text-xs font-medium">محصولات</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                        <svg class="size-5"><use href="#blogs"></use></svg>
+                        <span class="text-[10px] sm:text-xs font-medium">بلاگ‌ها</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                        <svg class="size-5"><use href="#users"></use></svg>
+                        <span class="text-[10px] sm:text-xs font-medium">کاربران</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                        <svg class="size-5"><use href="#chart"></use></svg>
+                        <span class="text-[10px] sm:text-xs font-medium">آمار</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../public/js/dashbord.js"></script>
@@ -472,12 +775,18 @@
         <symbol id="users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
         </symbol>
+        <symbol id="products-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="blogs-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z" clip-rule="evenodd" />
+            <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+        </symbol>
+        <symbol id="users-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+        </symbol>
         <symbol id="chart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-        </symbol>
-        <symbol id="setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
         </symbol>
         <symbol id="chevron-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
