@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @theme {
-  --color-primary: #fc91a4;
+  --color-primary: #F080AD;
   --color-low-red: #ef3a4f;
   --color-red: #f21339;
   --color-dashbord-light: #FDFDFE;
@@ -202,6 +202,19 @@
     cursor: pointer;
     pointer-events: auto;
   }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FEE3E8;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #FC91A4;
+  border-radius: 10px;
+}
 }
 @media (min-width: 1024px) {
   .range-input {

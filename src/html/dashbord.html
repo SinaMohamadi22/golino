@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/output.css">
     <title>Document</title>
 </head>
-<body class="bg-dashbord-light">
+<body class="bg-dashbord-light dark:bg-222223">
     <div class="container mx-auto w-full px-3 sm:px-4 lg:px-0 lg:!max-w-none lg:flex">
-        <article class="w-1/5 h-screen bg-white border-l border-border-light hidden lg:flex flex-col items-center py-6">
+        <article class="w-1/5 h-100% bg-white dark:bg-dark-secondary border-l border-border-light dark:border-[#3B424D] hidden lg:flex flex-col items-center py-6">
             <div class="w-full h-32 shrink-0 flex items-center justify-center -mt-10">
                 <img class="w-48 h-auto object-contain" src="../public/image/logo.png" alt="Golino">
             </div>
@@ -30,7 +30,7 @@
             <li>
                 <a
                     href=""
-                    class="w-full h-11 px-4 rounded-xl text-text-primary hover:bg-primary-light hover:text-primary transition-colors flex items-center gap-3"
+                    class="w-full h-11 px-4 rounded-xl text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors flex items-center gap-3"
                 >
                     <svg class="size-6 shrink-0">
                         <use href="#products"></use>
@@ -48,7 +48,7 @@
             <li>
                 <a
                     href=""
-                    class="w-full h-11 px-4 rounded-xl text-text-primary hover:bg-primary-light hover:text-primary transition-colors flex items-center gap-3"
+                    class="w-full h-11 px-4 rounded-xl text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors flex items-center gap-3"
                 >
                     <svg class="size-6 shrink-0">
                         <use href="#blogs"></use>
@@ -66,7 +66,7 @@
             <li>
                 <a
                     href=""
-                    class="w-full h-11 px-4 rounded-xl text-text-primary hover:bg-primary-light hover:text-primary transition-colors flex items-center gap-3"
+                    class="w-full h-11 px-4 rounded-xl text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors flex items-center gap-3"
                 >
                     <svg class="size-6 shrink-0">
                         <use href="#users"></use>
@@ -84,7 +84,7 @@
             <li>
                 <a
                     href=""
-                    class="w-full h-11 px-4 rounded-xl text-text-primary hover:bg-primary-light hover:text-primary transition-colors flex items-center gap-3"
+                    class="w-full h-11 px-4 rounded-xl text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors flex items-center gap-3"
                 >
                     <svg class="size-6 shrink-0">
                         <use href="#chart"></use>
@@ -105,12 +105,12 @@
             <article dir="ltr" class="w-full h-16 shrink-0 flex items-center justify-between px-8">
                 <div class="flex items-center gap-3">
 
-                    <div class="size-10 rounded-full bg-[#eef1f5] border border-[#cfd5df] flex items-center justify-center">
-                            <svg class="size-6 text-[#17233c]">
+                    <div class="size-10 rounded-full bg-[#eef1f5] dark:bg-[#343A43] border border-[#cfd5df] dark:border-[#4B5563] flex items-center justify-center">
+                            <svg class="size-6 text-[#17233c] dark:text-[#F1F3F5]">
                                 <use href="#user"></use>
                             </svg>
                     </div>
-                    <div class="flex items-center gap-2 font-iranyekan text-[#17233c]">
+                    <div class="flex items-center gap-2 font-iranyekan text-[#17233c] dark:text-[#F1F3F5]">
                             <span class="text-sm font-semibold">
                                 مدیر سایت
                             </span>
@@ -119,11 +119,18 @@
                                 <use href="#chevron-down"></use>
                             </svg>
                     </div>
-                    <button type="button" class="size-10 rounded-xl border border-[#dce2eb] bg-[#f8fafc] flex items-center justify-center text-[#17233c] hover:bg-[#f1f4f8] transition-colors">
-                        <svg class="size-5">
-                            <use href="#moon"></use>
-                        </svg>
-                    </button>
+                    <div>
+                        <button type="button" class="toggle-theme dark-theme size-10 rounded-xl border border-[#dce2eb] dark:border-[#3B424D] bg-[#f8fafc] dark:bg-dark-secondary flex items-center justify-center text-[#17233c] dark:text-[#F1F3F5] hover:bg-[#f1f4f8] dark:hover:bg-[#343A43] transition-colors">
+                            <svg class="size-5">
+                                <use href="#moon"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="toggle-theme light-theme hidden size-10 rounded-xl border border-[#dce2eb] dark:border-[#3B424D] bg-[#f8fafc] dark:bg-dark-secondary flex items-center justify-center text-[#17233c] dark:text-[#F1F3F5] hover:bg-[#f1f4f8] dark:hover:bg-[#343A43] transition-colors">
+                            <svg class="size-5">
+                                <use href="#sun"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </article>
             <article class="w-full h-20 shrink-0 flex items-center px-8">
@@ -131,7 +138,7 @@
 
                     <div class="flex items-center gap-3 w-full">
 
-                        <h1 class="shrink-0 font-bold text-text-primary leading-7">
+                        <h1 class="shrink-0 font-bold text-text-primary dark:text-[#F1F3F5] leading-7">
                             سلام، به پنل مدیریت گلینو خوش آمدید
                         </h1>
 
@@ -141,7 +148,7 @@
 
                     <div class="flex items-center">
 
-                        <p class="text-xs text-text-secondary font-medium">
+                        <p class="text-xs text-text-secondary dark:text-[#AEB8C6] font-medium">
                             امروز یک روز عالی برای رشد کسب‌وکار شماست
                         </p>
 
@@ -153,209 +160,194 @@
 
                 </div>
             </article>
-            <article class="container grid grid-cols-4 gap-x-5 items-center font-iranyekan">
-                <div class="flex flex-row justify-between items-center bg-white px-5 py-4 border border-border-light rounded-2xl">
-                    <aside class="flex flex-col gap-y-1">
-
-                        <span class="text-sm font-semibold text-text-primary">
+            <article class="container mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-5 font-iranyekan">
+                <!-- کارت بازدیدهای سایت -->
+                <div class="min-w-0 flex items-center justify-between gap-2 bg-white dark:bg-dark-secondary px-3 sm:px-4 py-4 border border-border-light dark:border-[#3B424D] rounded-2xl">
+                    <aside class="min-w-0 flex flex-col gap-y-1">
+                        <span class="text-xs lg:text-sm text-text-primary dark:text-[#F1F3F5] font-semibold">
                             بازدیدهای سایت
                         </span>
 
-                        <span class="text-2xl font-bold text-text-primary leading-8">
+                        <span class="text-xl sm:text-2xl font-bold text-text-primary dark:text-[#F1F3F5] leading-8">
                             12,456
                         </span>
 
-                        <h6 class="text-xs font-medium text-text-secondary flex items-center gap-x-1 mt-0.5">
-                            <span class="flex items-center gap-x-0.5 text-green-700">
+                        <h6 class="text-xs font-medium text-text-secondary dark:text-[#AEB8C6] flex flex-wrap items-center gap-x-1 mt-0.5">
+                            <span class="flex shrink-0 items-center gap-x-0.5 text-green-700 dark:text-green-400">
                                 20%
-                                <svg class="size-3">
+                                <svg class="size-3 shrink-0">
                                     <use href="#arrow-up"></use>
                                 </svg>
                             </span>
-
-                            <span>
-                                نسبت به هفته قبل
-                            </span>
+                            <span>نسبت به هفته قبل</span>
                         </h6>
-
                     </aside>
 
-                    <aside>
-                        <div class="size-14 flex items-center justify-center bg-chart-light rounded-full">
-                            <svg class="size-7 text-chart">
+                    <aside class="shrink-0">
+                        <div class="size-10 sm:size-12 lg:size-14 flex items-center justify-center bg-chart-light dark:bg-[#343A43] rounded-full">
+                            <svg class="size-5 sm:size-6 lg:size-7 text-chart">
                                 <use href="#chart"></use>
                             </svg>
                         </div>
                     </aside>
                 </div>
-                <div class="flex flex-row justify-between items-center bg-white px-5 py-4 border border-border-light rounded-2xl" >
-                    <aside class="flex flex-col gap-y-1">
 
-                        <span class="text-sm font-semibold text-text-primary">
+                <!-- کارت تعداد محصولات -->
+                <div class="min-w-0 flex items-center justify-between gap-2 bg-white dark:bg-dark-secondary px-3 sm:px-4 py-4 border border-border-light dark:border-[#3B424D] rounded-2xl">
+                    <aside class="min-w-0 flex flex-col gap-y-1">
+                        <span class="text-xs lg:text-sm text-text-primary dark:text-[#F1F3F5] font-semibold">
                             تعداد محصولات
                         </span>
 
-                        <span class="text-2xl font-bold text-text-primary leading-8">
+                        <span class="text-xl sm:text-2xl font-bold text-text-primary dark:text-[#F1F3F5] leading-8">
                             48
                         </span>
 
-                        <h6 class="text-xs font-medium text-text-secondary flex items-center gap-x-1 mt-0.5">
-                            <span class="flex items-center gap-x-0.5 text-green-700">
+                        <h6 class="text-xs font-medium text-text-secondary dark:text-[#AEB8C6] flex flex-wrap items-center gap-x-1 mt-0.5">
+                            <span class="flex shrink-0 items-center gap-x-0.5 text-green-700 dark:text-green-400">
                                 20%
-                                <svg class="size-3">
+                                <svg class="size-3 shrink-0">
                                     <use href="#arrow-up"></use>
                                 </svg>
                             </span>
-
-                            <span>
-                                نسبت به هفته قبل
-                            </span>
+                            <span>نسبت به هفته قبل</span>
                         </h6>
-
                     </aside>
 
-                    <aside>
-                        <div class="size-14 flex items-center justify-center bg-danger-light rounded-full">
-                            <svg class="size-7 text-danger">
+                    <aside class="shrink-0">
+                        <div class="size-10 sm:size-12 lg:size-14 flex items-center justify-center bg-danger-light dark:bg-[#49303F] rounded-full">
+                            <svg class="size-5 sm:size-6 lg:size-7 text-danger">
                                 <use href="#products"></use>
                             </svg>
                         </div>
                     </aside>
                 </div>
-                <div class="flex flex-row justify-between items-center bg-white px-5 py-4 border border-border-light rounded-2xl">
-                    <aside class="flex flex-col gap-y-1">
 
-                        <span class="text-sm font-semibold text-text-primary">
+                <!-- کارت تعداد بلاگ‌ها -->
+                <div class="min-w-0 flex items-center justify-between gap-2 bg-white dark:bg-dark-secondary px-3 sm:px-4 py-4 border border-border-light dark:border-[#3B424D] rounded-2xl">
+                    <aside class="min-w-0 flex flex-col gap-y-1">
+                        <span class="text-xs lg:text-sm text-text-primary dark:text-[#F1F3F5] font-semibold">
                             تعداد بلاگ‌ها
                         </span>
 
-                        <span class="text-2xl font-bold text-text-primary leading-8">
+                        <span class="text-xl sm:text-2xl font-bold text-text-primary dark:text-[#F1F3F5] leading-8">
                             24
                         </span>
 
-                        <h6 class="text-xs font-medium text-text-secondary flex items-center gap-x-1 mt-0.5">
-                            <span class="flex items-center gap-x-0.5 text-green-700">
+                        <h6 class="text-xs font-medium text-text-secondary dark:text-[#AEB8C6] flex flex-wrap items-center gap-x-1 mt-0.5">
+                            <span class="flex shrink-0 items-center gap-x-0.5 text-green-700 dark:text-green-400">
                                 20%
-                                <svg class="size-3">
+                                <svg class="size-3 shrink-0">
                                     <use href="#arrow-up"></use>
                                 </svg>
                             </span>
-
-                            <span>
-                                نسبت به هفته قبل
-                            </span>
+                            <span>نسبت به هفته قبل</span>
                         </h6>
-
                     </aside>
 
-                    <aside>
-                        <div class="size-14 flex items-center justify-center bg-green-light rounded-full">
-                            <svg class="size-7 text-green">
+                    <aside class="shrink-0">
+                        <div class="size-10 sm:size-12 lg:size-14 flex items-center justify-center bg-green-light dark:bg-[#23352C] rounded-full">
+                            <svg class="size-5 sm:size-6 lg:size-7 text-green dark:text-green-300">
                                 <use href="#blogs"></use>
                             </svg>
                         </div>
                     </aside>
                 </div>
-                <div class="flex flex-row justify-between items-center bg-white px-5 py-4 border border-border-light rounded-2xl"
-                >
-                    <aside class="flex flex-col gap-y-1">
 
-                        <span class="text-sm font-semibold text-text-primary">
+                <!-- کارت کاربران ثبت‌نام شده -->
+                <div class="min-w-0 flex items-center justify-between gap-2 bg-white dark:bg-dark-secondary px-3 sm:px-4 py-4 border border-border-light dark:border-[#3B424D] rounded-2xl">
+                    <aside class="min-w-0 flex flex-col gap-y-1">
+                        <span class="text-xs lg:text-sm text-text-primary dark:text-[#F1F3F5] font-semibold">
                             کاربران ثبت‌نام شده
                         </span>
 
-                        <span class="text-2xl font-bold text-text-primary leading-8">
+                        <span class="text-xl sm:text-2xl font-bold text-text-primary dark:text-[#F1F3F5] leading-8">
                             1,204
                         </span>
 
-                        <h6 class="text-xs font-medium text-text-secondary flex items-center gap-x-1 mt-0.5">
-                            <span class="flex items-center gap-x-0.5 text-green-700">
+                        <h6 class="text-xs font-medium text-text-secondary dark:text-[#AEB8C6] flex flex-wrap items-center gap-x-1 mt-0.5">
+                            <span class="flex shrink-0 items-center gap-x-0.5 text-green-700 dark:text-green-400">
                                 20%
-                                <svg class="size-3">
+                                <svg class="size-3 shrink-0">
                                     <use href="#arrow-up"></use>
                                 </svg>
                             </span>
-
-                            <span>
-                                نسبت به هفته قبل
-                            </span>
+                            <span>نسبت به هفته قبل</span>
                         </h6>
-
                     </aside>
 
-                    <aside>
-                        <div class="size-14 flex items-center justify-center bg-danger-light rounded-full">
-                            <svg class="size-7 text-danger">
+                    <aside class="shrink-0">
+                        <div class="size-10 sm:size-12 lg:size-14 flex items-center justify-center bg-danger-light dark:bg-[#49303F] rounded-full">
+                            <svg class="size-5 sm:size-6 lg:size-7 text-danger">
                                 <use href="#users"></use>
                             </svg>
                         </div>
                     </aside>
                 </div>
-
             </article>
-            <article class=" container grid grid-cols-3 gap-3 mt-4 font-iranyekan">
-                <section class="font-iranyekan bg-white border border-border-light rounded-2xl p-4">
-                    <div class="flex items-center justify-between pb-3 border-b border-border-light">
-                        <h2 class="text-sm font-bold text-text-primary">
+            <article class=" container flex flex-col md:grid md:grid-cols-3 gap-3 mt-4 font-iranyekan">
+                <section class="font-iranyekan bg-white dark:bg-dark-secondary border border-border-light dark:border-[#3B424D] rounded-2xl p-4">
+                    <div class="flex items-center justify-between pb-3 border-b border-border-light dark:border-[#3B424D]">
+                        <h2 class="text-sm font-bold text-text-primary dark:text-[#F1F3F5]">
                             آخرین فعالیت‌ها
                         </h2>
                     </div>
 
                     <div class="flex flex-col">
-                        <div class="flex items-center gap-3 py-3 border-b border-border-light">
+                        <div class="flex items-center gap-3 py-3 border-b border-border-light dark:border-[#3B424D]">
 
-                            <div class="size-9 shrink-0 rounded-full bg-danger-light text-red flex items-center justify-center">
+                            <div class="size-9 shrink-0 rounded-full bg-danger-light dark:bg-[#49303F] text-red dark:text-[#F080AD] flex items-center justify-center">
                                 <svg class="size-5">
                                     <use href="#user"></use>
                                 </svg>
                             </div>
 
                             <div class="flex-1 min-w-0 text-right">
-                                <p class="text-xs font-medium text-text-primary">
+                                <p class="text-xs font-medium text-text-primary dark:text-[#F1F3F5]">
                                     کاربر جدید ثبت نام کرد
                                 </p>
 
-                                <span class="text-sx text-text-secondary">
+                                <span class="text-sx text-text-secondary dark:text-[#AEB8C6]">
                                     ۶ دقیقه پیش
                                 </span>
                             </div>
 
                         </div>
 
-                        <div class="flex items-center gap-3 py-3 border-b border-border-light">
+                        <div class="flex items-center gap-3 py-3 border-b border-border-light dark:border-[#3B424D]">
 
-                            <div class="size-9 shrink-0 rounded-full bg-danger-light text-red flex items-center justify-center">
+                            <div class="size-9 shrink-0 rounded-full bg-danger-light dark:bg-[#49303F] text-red dark:text-[#F080AD] flex items-center justify-center">
                                 <svg class="size-5">
                                     <use href="#products"></use>
                                 </svg>
                             </div>
 
                             <div class="flex-1 min-w-0 text-right">
-                                <p class="text-xs font-medium text-text-primary">
+                                <p class="text-xs font-medium text-text-primary dark:text-[#F1F3F5]">
                                     محصول جدید اضافه شد
                                 </p>
 
-                                <span class="text-sx text-text-secondary">
+                                <span class="text-sx text-text-secondary dark:text-[#AEB8C6]">
                                     ۱۵ دقیقه پیش
                                 </span>
                             </div>
 
                         </div>
 
-                        <div class="flex items-center gap-3 py-3 border-b border-border-light">
+                        <div class="flex items-center gap-3 py-3 border-b border-border-light dark:border-[#3B424D]">
 
-                            <div class="size-9 shrink-0 rounded-full bg-danger-light text-red flex items-center justify-center">
+                            <div class="size-9 shrink-0 rounded-full bg-danger-light dark:bg-[#49303F] text-red dark:text-[#F080AD] flex items-center justify-center">
                                 <svg class="size-5">
                                     <use href="#blogs"></use>
                                 </svg>
                             </div>
 
                             <div class="flex-1 min-w-0 text-right">
-                                <p class="text-xs font-medium text-text-primary">
+                                <p class="text-xs font-medium text-text-primary dark:text-[#F1F3F5]">
                                     بلاگ جدید منتشر شد
                                 </p>
 
-                                <span class="text-sx text-text-secondary">
+                                <span class="text-sx text-text-secondary dark:text-[#AEB8C6]">
                                     ۳۳ دقیقه پیش
                                 </span>
                             </div>
@@ -364,18 +356,18 @@
 
                         <div class="flex items-center gap-3 py-3">
 
-                            <div class="size-9 shrink-0 rounded-full bg-danger-light text-red flex items-center justify-center">
+                            <div class="size-9 shrink-0 rounded-full bg-danger-light dark:bg-[#49303F] text-red dark:text-[#F080AD] flex items-center justify-center">
                                 <svg class="size-5">
                                     <use href="#user"></use>
                                 </svg>
                             </div>
 
                             <div class="flex-1 min-w-0 text-right">
-                                <p class="text-xs font-medium text-text-primary">
+                                <p class="text-xs font-medium text-text-primary dark:text-[#F1F3F5]">
                                     کاربر جدید ثبت نام کرد
                                 </p>
 
-                                <span class="text-sx text-text-secondary">
+                                <span class="text-sx text-text-secondary dark:text-[#AEB8C6]">
                                     ۱ ساعت پیش
                                 </span>
                             </div>
@@ -386,11 +378,11 @@
 
                 </section>
 
-                <section class="col-span-2 bg-white border border-border-light rounded-2xl p-4">
+                <section class="md:col-span-2 bg-white dark:bg-dark-secondary border border-border-light dark:border-[#3B424D] rounded-2xl p-4">
                     <div class="flex items-center justify-between mb-4">
 
                         <div class="flex items-center gap-2">
-                            <h2 class="text-sm font-bold text-text-primary">
+                            <h2 class="text-sm font-bold text-text-primary dark:text-[#F1F3F5]">
                                 آمار بازدید سایت
                             </h2>
 
@@ -402,14 +394,14 @@
 
                             <button
                                 type="button"
-                                class="px-4 py-2 rounded-full text-[11px] font-medium text-text-secondary hover:bg-primary-light hover:text-primary transition-colors"
+                                class="px-4 py-2 rounded-full text-[11px] font-medium text-text-secondary dark:text-[#AEB8C6] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors"
                             >
                                 ۹۰ روز گذشته
                             </button>
 
                             <button
                                 type="button"
-                                class="px-4 py-2 rounded-full text-[11px] font-medium text-text-secondary hover:bg-primary-light hover:text-primary transition-colors"
+                                class="px-4 py-2 rounded-full text-[11px] font-medium text-text-secondary dark:text-[#AEB8C6] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary transition-colors"
                             >
                                 ۳۰ روز گذشته
                             </button>
@@ -429,339 +421,635 @@
 
                 </section>
             </article>
-            <article class="container grid grid-cols-3 gap-3 mt-4 font-iranyekan">
-            </article>
-            <article class="container font-iranyekan grid grid-cols-3 justify-between gap-x-5">
-                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
-                    <div class="flex justify-between mb-5">
-                        <aside class="flex gap-x-2">
-                            <span>
-                                <svg class="size-6 text-primary">
-                                    <use href="#users-fill"></use>
-                                </svg>
-                            </span>
-                            <span class="text-lg font-medium text-text-primary">کاربران</span>
-                        </aside>
-                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+            <article class="container mx-auto w-full min-w-0 font-iranyekan grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 mt-4 gap-3 sm:gap-4">
+
+                <!-- کاربران -->
+                <section class="flex flex-col min-w-0 p-4 sm:p-5 border border-border-light dark:border-[#3B424D] rounded-2xl bg-white dark:bg-dark-secondary">
+
+                    <div class="flex items-center justify-between gap-2 mb-8">
+                        <div class="flex min-w-0 items-center gap-2">
+                            <svg class="size-5 sm:size-6 shrink-0 text-primary">
+                                <use href="#users-fill"></use>
+                            </svg>
+                            <h2 class="text-sm sm:text-base font-medium text-text-primary dark:text-[#F1F3F5]">
+                                کاربران
+                            </h2>
+                        </div>
+
+                        <a href="#" class="flex shrink-0 items-center gap-1 text-FF6781 text-[10px] sm:text-xs">
                             <span>مشاهده همه</span>
-                            <span>
-                                <svg class="size-2 rotate-180">
-                                    <use href="#chevron-right"></use>
-                                </svg>
-                            </span>
-                        </aside>
+                            <svg class="size-2 rotate-180">
+                                <use href="#chevron-right"></use>
+                            </svg>
+                        </a>
                     </div>
-                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
-                        <li>نام و نام خانوادگی</li>
-                        <li>ایمیل</li>
-                        <li>تاریخ عضویت</li>
-                        <li>وضعیت</li>
-                        <li>عملیات</li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li>علی اکبری</li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
+
+                    <div class="grid grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-bold text-text-primary dark:text-[#F1F3F5] bg-border-soft dark:bg-[#343A43] py-2 px-0.5 border-y-2 border-border-light dark:border-[#3B424D]">
+                        <span class="min-w-0 break-words">نام و نام خانوادگی</span>
+                        <span class="min-w-0 break-words">ایمیل</span>
+                        <span class="min-w-0 break-words">تاریخ عضویت</span>
+                        <span class="min-w-0 break-words">وضعیت</span>
+                        <span class="min-w-0 break-words">عملیات</span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="min-w-0 break-words">علی اکبری</span>
+                        <span class="min-w-0 break-all">aliakbari@gmail.com</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="min-w-0 break-words">علی اکبری</span>
+                        <span class="min-w-0 break-all">aliakbari@gmail.com</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="min-w-0 break-words">علی اکبری</span>
+                        <span class="min-w-0 break-all">aliakbari@gmail.com</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="min-w-0 break-words">علی اکبری</span>
+                        <span class="min-w-0 break-all">aliakbari@gmail.com</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[1.1fr_1.35fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3">
+                        <span class="min-w-0 break-words">علی اکبری</span>
+                        <span class="min-w-0 break-all">aliakbari@gmail.com</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-center gap-1 mt-auto pt-5 text-xs sm:text-sm">
+
+                        <!-- قبلی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه قبلی">
+                            <svg class="size-4">
+                                <use href="#chevron-right"></use>
                             </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
+                        </button>
+
+                        <!-- صفحات 1 تا 5 -->
+                        <button class="size-7 sm:size-8 rounded-lg bg-FF6781 text-white">1</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">2</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">3</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">4</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">5</button>
+
+                        <!-- سه نقطه -->
+                        <span class="flex items-center justify-center size-7 sm:size-8 text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B">...</span>
+
+                        <!-- آخرین صفحه -->
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">10</button>
+
+                        <!-- بعدی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه بعدی">
+                            <svg class="size-4 rotate-180">
+                                <use href="#chevron-right"></use>
                             </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li>علی اکبری</li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li>علی اکبری</li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li>علی اکبری</li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li>علی اکبری</li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
+                        </button>
+
+                    </div>
                 </section>
-                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
-                    <div class="flex justify-between mb-5">
-                        <aside class="flex gap-x-2">
-                            <span>
-                                <svg class="size-6 text-primary">
-                                    <use href="#blogs-fill"></use>
-                                </svg>
-                            </span>
-                            <span class="text-lg font-medium text-text-primary">بلاگ ها</span>
-                        </aside>
-                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+
+
+                <!-- بلاگ‌ها -->
+                <section class="relative flex flex-col min-w-0 p-2 sm:p-3 border border-border-light dark:border-[#3B424D] rounded-2xl bg-white dark:bg-dark-secondary">
+
+                    <div class="flex items-center justify-between gap-2 mb-10">
+                        <div class="flex min-w-0 items-center gap-2">
+                            <svg class="size-5 sm:size-6 shrink-0 text-primary">
+                                <use href="#blogs-fill"></use>
+                            </svg>
+                            <h2 class="text-sm sm:text-base font-medium text-text-primary dark:text-[#F1F3F5]">
+                                بلاگ‌ها
+                            </h2>
+                        </div>
+
+                        <a href="#" class="flex shrink-0 items-center gap-1 text-FF6781 text-[10px] sm:text-xs">
                             <span>مشاهده همه</span>
-                            <span>
-                                <svg class="size-2 rotate-180">
-                                    <use href="#chevron-right"></use>
-                                </svg>
-                            </span>
-                        </aside>
+                            <svg class="size-2 rotate-180"><use href="#chevron-right"></use></svg>
+                        </a>
                     </div>
-                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
-                        <li>تصویر</li>
-                        <li>عنوان</li>
-                        <li>تاریخ</li>
-                        <li>وضعیت</li>
-                        <li>عملیات</li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
+                    <div class="bg-danger-light dark:bg-[#49303F] text-xs sm:text-sm  absolute top-8 left-2 sm:top-10 text-FF6781 px-5 py-1 inline rounded-lg">
+                        <span>+ افزودن بلاگ</span>
+                    </div>
+                    <div class="grid grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-bold text-text-primary dark:text-[#F1F3F5] bg-border-soft dark:bg-[#343A43] py-2 px-0.5 border-y-2 border-border-light dark:border-[#3B424D]">
+                        <span>تصویر</span>
+                        <span class="min-w-0 break-words">عنوان</span>
+                        <span class="min-w-0 break-words">تاریخ</span>
+                        <span class="min-w-0 break-words">وضعیت</span>
+                        <span class="min-w-0 break-words">عملیات</span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر بلاگ">
+                        </span>
+                        <span class="min-w-0 break-words">آموزش طراحی سایت</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر بلاگ">
+                        </span>
+                        <span class="min-w-0 break-words">آموزش طراحی سایت</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر بلاگ">
+                        </span>
+                        <span class="min-w-0 break-words">آموزش طراحی سایت</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر بلاگ">
+                        </span>
+                        <span class="min-w-0 break-words">آموزش طراحی سایت</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر بلاگ">
+                        </span>
+                        <span class="min-w-0 break-words">آموزش طراحی سایت</span>
+                        <span class="min-w-0 break-words">1401/03/23</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-center gap-1 mt-auto pt-5 text-xs sm:text-sm">
+
+                        <!-- قبلی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه قبلی">
+                            <svg class="size-4">
+                                <use href="#chevron-right"></use>
                             </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
+                        </button>
+
+                        <!-- صفحات 1 تا 5 -->
+                        <button class="size-7 sm:size-8 rounded-lg bg-FF6781 text-white">1</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">2</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">3</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">4</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">5</button>
+
+                        <!-- سه نقطه -->
+                        <span class="flex items-center justify-center size-7 sm:size-8 text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B">...</span>
+
+                        <!-- آخرین صفحه -->
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">10</button>
+
+                        <!-- بعدی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه بعدی">
+                            <svg class="size-4 rotate-180">
+                                <use href="#chevron-right"></use>
                             </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
+                        </button>
+
+                    </div>
                 </section>
-                <section class="flex-col p-2.5 items-center border border-border-light rounded-2xl bg-white">
-                    <div class="flex justify-between mb-5">
-                        <aside class="flex gap-x-2">
-                            <span>
-                                <svg class="size-6 text-primary">
-                                    <use href="#products-fill"></use>
-                                </svg>
-                            </span>
-                            <span class="text-lg font-medium text-text-primary">کاربران</span>
-                        </aside>
-                        <aside class="flex text-FF6781 text-sm items-center gap-x-2">
+
+
+                <!-- محصولات -->
+                <section class="relative flex flex-col min-w-0 p-2 sm:p-3 border border-border-light dark:border-[#3B424D] rounded-2xl bg-white dark:bg-dark-secondary">
+
+                    <div class="flex items-center justify-between gap-2 mb-10">
+                        <div class="flex min-w-0 items-center gap-2">
+                            <svg class="size-5 sm:size-6 shrink-0 text-primary">
+                                <use href="#products-fill"></use>
+                            </svg>
+                            <h2 class="text-sm sm:text-base font-medium text-text-primary dark:text-[#F1F3F5]">
+                                محصولات
+                            </h2>
+                        </div>
+
+                        <a href="#" class="flex shrink-0 items-center gap-1 text-FF6781 text-[10px] sm:text-xs">
                             <span>مشاهده همه</span>
-                            <span>
-                                <svg class="size-2 rotate-180">
-                                    <use href="#chevron-right"></use>
-                                </svg>
-                            </span>
-                        </aside>
+                            <svg class="size-2 rotate-180"><use href="#chevron-right"></use></svg>
+                        </a>
                     </div>
-                    <ul class="flex justify-between text-text-primary bg-border-soft font-bold text-xs py-2 px-1 border-t-2 border-b-2 border-b-border-light border-t-border-light">
-                        <li>تصویر</li>
-                        <li>نام محصول</li>
-                        <li>قیمت</li>
-                        <li>وضعیت</li>
-                        <li>عملیات</li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
+                    <div class="bg-danger-light dark:bg-[#49303F] text-xs sm:text-sm  absolute top-8 left-2 sm:top-10 text-FF6781 px-5 py-1 inline rounded-lg">
+                        <span>+ افزودن محصول</span>
+                    </div>
+                    <div class="grid grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-bold text-text-primary dark:text-[#F1F3F5] bg-border-soft dark:bg-[#343A43] py-2 px-0.5 border-y-2 border-border-light dark:border-[#3B424D]">
+                        <span>تصویر</span>
+                        <span class="min-w-0 break-words">نام محصول</span>
+                        <span class="min-w-0 break-words">قیمت</span>
+                        <span class="min-w-0 break-words">وضعیت</span>
+                        <span class="min-w-0 break-words">عملیات</span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر محصول">
+                        </span>
+                        <span class="min-w-0 break-words">محصول نمونه</span>
+                        <span class="min-w-0 break-words">۲۵۰ هزار</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر محصول">
+                        </span>
+                        <span class="min-w-0 break-words">محصول نمونه</span>
+                        <span class="min-w-0 break-words">۲۵۰ هزار</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر محصول">
+                        </span>
+                        <span class="min-w-0 break-words">محصول نمونه</span>
+                        <span class="min-w-0 break-words">۲۵۰ هزار</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3 border-b border-border-light dark:border-[#3B424D]">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر محصول">
+                        </span>
+                        <span class="min-w-0 break-words">محصول نمونه</span>
+                        <span class="min-w-0 break-words">۲۵۰ هزار</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+
+                    <div class="grid h-16.25 grid-cols-[.65fr_1.4fr_1fr_.65fr_.55fr] gap-1 items-center text-center text-[9px] sm:text-xs font-medium text-text-primary dark:text-[#F1F3F5] py-3">
+                        <span class="flex justify-center min-w-0">
+                            <img class="size-7 sm:size-10 rounded-lg object-cover" src="../public/image/blog-1.webp" alt="تصویر محصول">
+                        </span>
+                        <span class="min-w-0 break-words">محصول نمونه</span>
+                        <span class="min-w-0 break-words">۲۵۰ هزار</span>
+                        <span class="min-w-0 rounded-full bg-green-200 dark:bg-green-900/40 text-success dark:text-green-300 px-0.5 py-1 break-words">فعال</span>
+                        <span class="flex min-w-0 items-center justify-center gap-0.5">
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#trash"></use></svg>
+                            <svg class="size-5 shrink-0 text-FF6781"><use href="#rewrite"></use></svg>
+                        </span>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-center gap-1 mt-auto pt-5 text-xs sm:text-sm">
+
+                        <!-- قبلی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه قبلی">
+                            <svg class="size-4">
+                                <use href="#chevron-right"></use>
                             </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
+                        </button>
+
+                        <!-- صفحات 1 تا 5 -->
+                        <button class="size-7 sm:size-8 rounded-lg bg-FF6781 text-white">1</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">2</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">3</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">4</button>
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">5</button>
+
+                        <!-- سه نقطه -->
+                        <span class="flex items-center justify-center size-7 sm:size-8 text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B">...</span>
+
+                        <!-- آخرین صفحه -->
+                        <button class="size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] hover:bg-border-soft dark:hover:text-4B4B4B transition">10</button>
+
+                        <!-- بعدی -->
+                        <button class="flex items-center justify-center size-7 sm:size-8 rounded-lg border border-border-light dark:border-[#3B424D] text-text-primary dark:text-[#F1F3F5] dark:hover:text-4B4B4B hover:bg-border-soft transition" aria-label="صفحه بعدی">
+                            <svg class="size-4 rotate-180">
+                                <use href="#chevron-right"></use>
                             </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="flex h-16.5 justify-between items-center text-text-primary bg-white font-bold text-xs py-2 px-1  border-b-2 border-b-border-light border-t-border-light">
-                        <li><img class="rounded-2xl object-cover size-12" src="../public/image/blog-1.webp" alt=""></li>
-                        <li>aliakbari@gamil.com</li>
-                        <li>1401/03/23</li>
-                        <li class="text-success bg-green-200 p-1 rounded-full">فعال</li>
-                        <li class="flex">
-                            <svg class="size-4 text-FF6781">
-                                <use href="#trash"></use>
-                            </svg>
-                            <svg class="size-4 text-FF6781">
-                                <use href="#rewrite"></use>
-                            </svg>
-                        </li>
-                    </ul>
+                        </button>
+
+                    </div>
                 </section>
+
             </article>
         </main>
-                <nav aria-label="منوی اصلی" class="lg:hidden fixed bottom-0 inset-x-0 z-50 border-t border-border-light bg-white/95 backdrop-blur-sm">
+        
+        <!-- Modal افزودن محصول -->
+        <div id="add-product-modal" class="font-iranyekan hidden fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-black/50 p-3">
+
+            <section dir="rtl" class="w-full max-w-3xl max-h-[calc(100dvh-24px)] overflow-y-auto overflow-x-hidden rounded-2xl bg-white p-4 dark:bg-[#222223] sm:p-6">
+
+                <!-- Header -->
+                <div class="sticky -top-8 z-10 flex items-center justify-between gap-3 border-b border-border-light dark:border-[#3B424D] bg-white dark:bg-dark-secondary px-5 py-4 sm:px-6">
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-text-primary dark:text-[#F1F3F5]">
+                            افزودن محصول جدید
+                        </h2>
+                        <p class="mt-1 text-xs text-text-secondary dark:text-[#AEB8C6]">
+                            اطلاعات محصول جدید را وارد کنید
+                        </p>
+                    </div>
+
+                    <button type="button" class="close-product-modal flex size-9 shrink-0 items-center justify-center rounded-xl text-text-secondary hover:bg-border-soft dark:hover:bg-[#343A43] transition-colors" aria-label="بستن">
+                        <svg class="size-5"><use href="#x-mark"></use></svg>
+                    </button>
+                </div>
+
+                <form id="add-product-form" class="space-y-5 p-5 sm:p-6">
+
+                    <!-- تصویر محصول -->
+                    <div class="flex flex-col gap-2">
+                        <label for="product-image" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">
+                            تصویر محصول
+                        </label>
+
+                        <label for="product-image" class="flex min-h-36 cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border-light dark:border-[#4B5563] bg-[#F8FAFC] dark:bg-[#343A43] px-4 py-5 transition-colors hover:border-primary">
+                            <svg class="size-9 text-text-secondary dark:text-[#AEB8C6]"><use href="#products"></use></svg>
+                            <span class="text-sm font-medium text-text-primary dark:text-[#F1F3F5]">برای انتخاب تصویر کلیک کنید</span>
+                            <span class="text-xs text-text-secondary dark:text-[#AEB8C6]">فرمت‌های PNG، JPG و WEBP</span>
+                            <input id="product-image" name="image" type="file" accept="image/png,image/jpeg,image/webp" class="hidden">
+                        </label>
+                    </div>
+
+                    <!-- نام و دسته‌بندی -->
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="product-title" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">نام محصول</label>
+                            <input id="product-title" name="title" type="text" placeholder="مثلاً دسته گل رز قرمز" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="product-category" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">دسته‌بندی</label>
+                            <select id="product-category" name="category" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none focus:border-primary">
+                                <option value="">انتخاب دسته‌بندی</option>
+                                <option value="bouquet">دسته گل</option>
+                                <option value="plant">گیاه آپارتمانی</option>
+                                <option value="flower-box">باکس گل</option>
+                                <option value="accessory">اکسسوری</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- قیمت و تخفیف -->
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="product-price" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">قیمت (تومان)</label>
+                            <input id="product-price" name="price" type="number" min="0" placeholder="مثلاً 850000" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="product-discount" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">درصد تخفیف</label>
+                            <input id="product-discount" name="discount" type="number" min="0" max="100" value="0" placeholder="0 تا 100" class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+                    </div>
+
+                    <!-- موجودی و رنگ -->
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="product-stock" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">موجودی انبار</label>
+                            <input id="product-stock" name="stock" type="number" min="0" placeholder="تعداد موجودی" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="product-color" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">رنگ محصول</label>
+                            <input id="product-color" name="color" type="text" placeholder="مثلاً صورتی، سفید و قرمز" class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+                    </div>
+
+                    <!-- توضیحات -->
+                    <div class="flex flex-col gap-2">
+                        <label for="product-description" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">توضیحات محصول</label>
+                        <textarea id="product-description" name="description" rows="4" placeholder="توضیحات و ویژگی‌های محصول را بنویسید..." class="w-full resize-y rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary"></textarea>
+                    </div>
+
+                    <!-- وضعیت -->
+                    <div class="flex flex-wrap gap-x-6 gap-y-3 rounded-xl bg-border-soft dark:bg-[#343A43] p-4">
+                        <label class="flex cursor-pointer items-center gap-2 text-sm text-text-primary dark:text-[#F1F3F5]">
+                            <input type="checkbox" name="isFeatured" class="size-4 accent-[#F21339]">
+                            محصول ویژه
+                        </label>
+
+                        <label class="flex cursor-pointer items-center gap-2 text-sm text-text-primary dark:text-[#F1F3F5]">
+                            <input type="checkbox" name="isActive" checked class="size-4 accent-[#F21339]">
+                            فعال و قابل نمایش
+                        </label>
+                    </div>
+
+                    <!-- دکمه‌ها -->
+                    <div class="flex flex-col-reverse gap-3 border-t border-border-light dark:border-[#3B424D] pt-5 sm:flex-row">
+                        <button type="button" class="close-product-modal flex-1 rounded-xl border border-border-light dark:border-[#4B5563] px-4 py-3 text-sm font-semibold text-text-primary dark:text-[#F1F3F5] transition-colors hover:bg-border-soft dark:hover:bg-[#343A43]">
+                            انصراف
+                        </button>
+
+                        <button type="submit" class="flex-1 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#D92D46]">
+                            ثبت محصول
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+        <!-- Modal افزودن بلاگ -->
+        <div id="add-blog-modal" class=font-iranyekan  fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-black/50 p-3">
+
+            <section dir="rtl" class="w-full max-w-3xl max-h-[calc(100dvh-24px)] overflow-y-auto overflow-x-hidden rounded-2xl bg-white p-4 dark:bg-[#222223] sm:p-6">
+
+                <!-- Header -->
+                <div class="sticky -top-8 z-10 flex items-center justify-between gap-3 border-b border-border-light dark:border-[#3B424D] bg-white dark:bg-dark-secondary px-5 py-4 sm:px-6">
+                    <div>
+                        <h2 class="text-base sm:text-lg font-bold text-text-primary dark:text-[#F1F3F5]">
+                            افزودن بلاگ جدید
+                        </h2>
+                        <p class="mt-1 text-xs text-text-secondary dark:text-[#AEB8C6]">
+                            مقاله جدید خود را آماده انتشار کنید
+                        </p>
+                    </div>
+
+                    <button type="button" class="close-blog-modal flex size-9 shrink-0 items-center justify-center rounded-xl text-text-secondary hover:bg-border-soft dark:hover:bg-[#343A43] transition-colors" aria-label="بستن">
+                        <svg class="size-5"><use href="#x-mark"></use></svg>
+                    </button>
+                </div>
+
+                <form id="add-blog-form" class="space-y-5 p-5 sm:p-6">
+
+                    <!-- تصویر کاور -->
+                    <div class="flex flex-col gap-2">
+                        <label for="blog-image" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">تصویر کاور بلاگ</label>
+
+                        <label for="blog-image" class="flex min-h-36 cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border-light dark:border-[#4B5563] bg-[#F8FAFC] dark:bg-[#343A43] px-4 py-5 transition-colors hover:border-primary">
+                            <svg class="size-9 text-text-secondary dark:text-[#AEB8C6]"><use href="#blogs"></use></svg>
+                            <span class="text-sm font-medium text-text-primary dark:text-[#F1F3F5]">انتخاب تصویر کاور</span>
+                            <span class="text-xs text-text-secondary dark:text-[#AEB8C6]">ترجیحاً تصویر افقی با کیفیت مناسب</span>
+                            <input id="blog-image" name="image" type="file" accept="image/png,image/jpeg,image/webp" class="hidden">
+                        </label>
+                    </div>
+
+                    <!-- عنوان -->
+                    <div class="flex flex-col gap-2">
+                        <label for="blog-title" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">عنوان بلاگ</label>
+                        <input id="blog-title" name="title" type="text" placeholder="عنوان جذاب و خوانا برای مقاله" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                    </div>
+
+                    <!-- دسته‌بندی و نویسنده -->
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="blog-category" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">دسته‌بندی</label>
+                            <select id="blog-category" name="category" required class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none focus:border-primary">
+                                <option value="">انتخاب دسته‌بندی</option>
+                                <option value="flower-care">نگهداری گل و گیاه</option>
+                                <option value="flower-guide">راهنمای خرید گل</option>
+                                <option value="decoration">گل‌آرایی و دکوراسیون</option>
+                                <option value="news">اخبار و مطالب عمومی</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="blog-author" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">نویسنده</label>
+                            <input id="blog-author" name="author" type="text" placeholder="نام نویسنده" class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+                    </div>
+
+                    <!-- خلاصه -->
+                    <div class="flex flex-col gap-2">
+                        <label for="blog-excerpt" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">خلاصه مقاله</label>
+                        <textarea id="blog-excerpt" name="excerpt" rows="2" placeholder="خلاصه‌ای کوتاه برای نمایش در کارت بلاگ..." class="w-full resize-y rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary"></textarea>
+                    </div>
+
+                    <!-- محتوای اصلی -->
+                    <div class="flex flex-col gap-2">
+                        <label for="blog-content" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">محتوای مقاله</label>
+                        <textarea id="blog-content" name="content" rows="8" required placeholder="متن کامل مقاله را اینجا بنویسید..." class="w-full resize-y rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm leading-7 text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary"></textarea>
+                    </div>
+
+                    <!-- تنظیمات انتشار -->
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="blog-status" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">وضعیت انتشار</label>
+                            <select id="blog-status" name="status" class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none focus:border-primary">
+                                <option value="draft">پیش‌نویس</option>
+                                <option value="published">منتشر شده</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="blog-tags" class="text-sm font-semibold text-text-primary dark:text-[#F1F3F5]">برچسب‌ها</label>
+                            <input id="blog-tags" name="tags" type="text" placeholder="گل رز، نگهداری گل، راهنمای خرید" class="w-full rounded-xl border border-border-light dark:border-[#4B5563] bg-white dark:bg-[#343A43] px-3 py-3 text-sm text-text-primary dark:text-[#F1F3F5] outline-none placeholder:text-text-secondary focus:border-primary">
+                        </div>
+                    </div>
+
+                    <!-- دکمه‌ها -->
+                    <div class="flex flex-col-reverse gap-3 border-t border-border-light dark:border-[#3B424D] pt-5 sm:flex-row">
+                        <button type="button" class="close-blog-modal flex-1 rounded-xl border border-border-light dark:border-[#4B5563] px-4 py-3 text-sm font-semibold text-text-primary dark:text-[#F1F3F5] transition-colors hover:bg-border-soft dark:hover:bg-[#343A43]">
+                            انصراف
+                        </button>
+
+                        <button type="submit" class="flex-1 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#D92D46]">
+                            ثبت بلاگ
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <nav aria-label="منوی اصلی" class="lg:hidden fixed bottom-0 inset-x-0 z-50 border-t border-border-light dark:border-[#3B424D] bg-white/95 dark:bg-222223/95 backdrop-blur-sm">
             <ul class="mx-auto flex w-full max-w-3xl items-center justify-around gap-1 px-2 py-2 font-iranyekan">
                 <li class="flex-1">
-                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl bg-primary-light px-1 py-1 text-primary">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl bg-primary-light dark:bg-[#49303F] px-1 py-1 text-primary">
                         <svg class="size-5"><use href="#home"></use></svg>
                         <span class="text-[10px] sm:text-xs font-semibold">داشبورد</span>
                     </a>
                 </li>
                 <li class="flex-1">
-                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary">
                         <svg class="size-5"><use href="#products"></use></svg>
                         <span class="text-[10px] sm:text-xs font-medium">محصولات</span>
                     </a>
                 </li>
                 <li class="flex-1">
-                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary">
                         <svg class="size-5"><use href="#blogs"></use></svg>
                         <span class="text-[10px] sm:text-xs font-medium">بلاگ‌ها</span>
                     </a>
                 </li>
                 <li class="flex-1">
-                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary">
                         <svg class="size-5"><use href="#users"></use></svg>
                         <span class="text-[10px] sm:text-xs font-medium">کاربران</span>
                     </a>
                 </li>
                 <li class="flex-1">
-                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary hover:bg-primary-light hover:text-primary">
+                    <a href="" class="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-1 py-1 text-text-primary dark:text-[#F1F3F5] hover:bg-primary-light dark:hover:bg-[#3A292E] hover:text-primary">
                         <svg class="size-5"><use href="#chart"></use></svg>
                         <span class="text-[10px] sm:text-xs font-medium">آمار</span>
                     </a>
                 </li>
             </ul>
         </nav>
-    </div>
+    </div>    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../public/js/dashbord.js"></script>
+    <script type="module" src="../public/js/dashbord.js"></script>
     <svg class="hidden">
         <symbol id="home" xmlns="http://www.w3.org/4000/svg" fill="none" viewBox="0 0 26 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -812,6 +1100,10 @@
         <symbol id="arrow-up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
         </symbol>
+        <symbol id="x-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+        </symbol>
+
 
     </svg>
 </body>

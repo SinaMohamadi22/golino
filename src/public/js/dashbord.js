@@ -1,3 +1,4 @@
+import "./modules/theme.js"
 const ctx = document.getElementById('visitChart');
 
     new Chart(ctx, {

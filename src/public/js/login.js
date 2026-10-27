@@ -1,4 +1,5 @@
-import { getCookie, setCookie } from "../js/cookie.js";
+import { setCookie } from "./modules/cookie.js";
+import "./modules/theme.js";
 const loginInput = document.querySelector(".login-input");
 const loginBtn = document.querySelector(".login-btn");
 const loginBtnText = document.querySelector(".login-btn-text");
@@ -14,11 +15,17 @@ const openEye = document.querySelector(".open-eye");
 const closeEye = document.querySelector(".close-eye");
 const inputContainer = document.querySelector(".input-container");
 
-const loginEmailRegex = /^\w+([\.\_\-+%]?\w)*@\w+([\.\_\-+%]?\w)*(\.\w{2,3})+$/;
+const loginEmailRegex =
+  /^[\w.+%-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+
 const loginPhoneNumberRegex =
   /^09(0[12345]|1[0-9]|2[012]|3[0-9]|4[1]|9[012389])\d{7}$/;
-const loginNameAndLastNameRegex = /^[آ-ی]+(?:[ ‌][آ-ی]+)*$/u;
-const loginPasswordRegex = /^(\w{8,64})+$/;
+
+const loginNameAndLastNameRegex =
+  /^[آ-ی]+(?:\s+[آ-ی]+)+$/u;
+
+const loginPasswordRegex =
+  /^\w{8,64}$/;
 
 const loginIsSuccessfull = () => {
   document.body.insertAdjacentHTML(
@@ -126,7 +133,7 @@ const loginError = (error) => {
 };
 
 const loginHandler = () => {
-  if (!codeInput.classList.contains("hidden")) {
+  if (codeInput && !codeInput.classList.contains("hidden")) {
     verifyCode();
     return;
   }
@@ -252,10 +259,3 @@ codeInputs.forEach((input, index) => {
     }
   });
 });
-if (localStorage.getItem("theme") === "dark") {
-  document.documentElement.classList.remove("dark");
-  localStorage.setItem("theme", "light");
-} else {
-  document.documentElement.classList.add("dark");
-  localStorage.setItem("theme", "dark");
-}
