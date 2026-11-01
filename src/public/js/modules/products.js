@@ -1,13 +1,10 @@
 
-import { supabase } from "../cofig/supabase.js";
+import { supabase } from "../cofig/supabase.js"
 
 // عناصر مربوط به محصولات
-const productContainers = document.querySelectorAll(".product-container");
-const famousProductContainer = document.querySelector(
-  ".famous-prodcut-container"
-);
+const productContainers = document.querySelectorAll(".product-container")
+const famousProductContainer = document.querySelector(".famous-prodcut-container")
 
-// آرایه محصولات؛ سایر ماژول‌ها هم می‌توانند آن را import کنند
 export let products = [];
 
 // نمایش کارت محصولات

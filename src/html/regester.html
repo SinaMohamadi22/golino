@@ -26,7 +26,7 @@
             </svg>
         </aside>
         <aside class="flex relative w-66">
-            <input class="phone-number-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" type="text" placeholder="شماره موبایل" pattern="[0-9]" inputmode="numeric" maxlength="11">
+            <input class="phone-number-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" autocomplete="tel" placeholder="شماره موبایل" pattern="[0-9]" inputmode="numeric" maxlength="11">
             <svg class="size-4 absolute left-4 top-4 dark:text-white text-737373">
                 <use href="#phone"></use>
             </svg>
@@ -38,7 +38,7 @@
             </svg>
         </aside>
         <aside class="flex relative w-66">
-            <input class="password-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" type="password" placeholder="رمز عبور  (حداقل 8 کارکتر و حداکثر 64)">
+            <input class="password-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" autocomplete="new-password" minlength="8" maxlength="64" type="password" placeholder="رمز عبور  (حداقل 8 کارکتر و حداکثر 64)">
             <svg class="open-eye size-4 absolute left-4  dark:text-white top-4 text-737373">
                 <use href="#open-eye"></use>
             </svg>
@@ -55,8 +55,10 @@
       </aside>
     </article>
     <article class="flex  justify-center py-5">
-      <button class="login-btn dark:bg-white bg-222223 w-65  rounded-lg  h-12 leading-12 px-4 py-4 flex justify-center items-center">
-        <p class="login-btn-text dark:text-222223 text-white text-sm font-medium">ادامه و ورود به حساب</p>
+      <button type="button" class="login-btn dark:bg-white bg-222223 w-65 rounded-lg h-12 leading-12 px-4 py-4 flex justify-center items-center">
+        <p class="login-btn-text dark:text-222223 text-white text-sm font-medium">
+          ساخت حساب کاربری
+        </p>
       </button>
     </article>
   </div>
