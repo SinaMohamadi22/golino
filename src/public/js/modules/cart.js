@@ -1,6 +1,6 @@
 
 import { products } from "./products.js";
-
+import { getImageUrl } from "../cofig/supabase.js";
 const toast = document.querySelector(".toast");
 const proccess = document.querySelector(".proccess");
 
@@ -123,7 +123,7 @@ const showBasketProducts = () => {
             <div class="items-center">
               <img
                 class="size-14"
-                src="../public/image/${item.image}"
+                src="${getImageUrl(item.image)}"
                 alt="${item.title}"
               >
             </div>

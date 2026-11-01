@@ -1,22 +1,7 @@
 import "./modules/theme.js"
 import "./modules/chart.js"
-import {supabase} from "./cofig/supabase.js"
-const getImageUrl = (image, folder = "") => {
-    if (!image) return ""
+import {supabase , getImageUrl} from "./cofig/supabase.js"
 
-    if (image.startsWith("http")) {
-        return image
-    }
-
-    const imagePath = folder
-        ? `${folder}/${image}`
-        : image
-
-    return supabase.storage
-        .from("products")
-        .getPublicUrl(imagePath)
-        .data.publicUrl
-}
 const addProductModal = document.querySelector("#add-product-modal")
 const addBlogModal = document.querySelector("#add-blog-modal")
 const addProductForm = document.querySelector("#add-product-form")
