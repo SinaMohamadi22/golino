@@ -1,5 +1,17 @@
 # 🌸 Golino — Flower Shop Website
 
+# Homepage — Desktop
+
+![Homepage light](./src/public/screenshots/home-page-light.png)
+![Homepage dark](./src/public/screenshots/dark-home-page.png)
+
+# Product Details page
+
+![Product details page](./src/public/screenshots/product-detail.png)
+
+# Admin Dashboard
+![Homepage light](./src/public/screenshots/dashbord-dark.png)
+![Homepage dark](./src/public/screenshots/dashbord-responsive.png)
 A responsive flower shop website built with **HTML5, Tailwind CSS v4, JavaScript, and Supabase**.
 
 Golino is a Persian RTL flower shop project designed to provide a clean and engaging shopping experience. It combines a responsive storefront, interactive shopping cart, dynamic product data, authentication, and an admin dashboard for managing store content.
