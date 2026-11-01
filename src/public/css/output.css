@@ -1027,12 +1027,6 @@
   .grid-cols-\[1\.1fr_1\.35fr_1fr_\.65fr_\.55fr\] {
     grid-template-columns: 1.1fr 1.35fr 1fr .65fr .55fr;
   }
-  .grid-cols-\[1\.2fr_1\.2fr_1fr_\.65fr\] {
-    grid-template-columns: 1.2fr 1.2fr 1fr .65fr;
-  }
-  .grid-cols-\[1\.4fr_1\.6fr_1fr_\.65fr\] {
-    grid-template-columns: 1.4fr 1.6fr 1fr .65fr;
-  }
   .grid-rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
@@ -3525,15 +3519,6 @@
       &:hover {
         @media (hover: hover) {
           color: var(--color-4B4B4B);
-        }
-      }
-    }
-  }
-  .hover\:dark\:text-FEE3E8 {
-    &:hover {
-      @media (hover: hover) {
-        &:where(.dark, .dark *) {
-          color: var(--color-FEE3E8);
         }
       }
     }
