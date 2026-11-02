@@ -2,31 +2,30 @@
 $ErrorActionPreference = "Stop"
 
 # Remove previous build
-if (Test-Path "dist") {
-    Remove-Item "dist" -Recurse -Force
+if (Test-Path "docs") {
+    Remove-Item "docs" -Recurse -Force
 }
 
 # Create output folder
-New-Item -ItemType Directory -Path "dist" | Out-Null
+New-Item -ItemType Directory -Path "docs" | Out-Null
 
 # Copy HTML pages
-Copy-Item "src/html/*" "dist" -Recurse
+Copy-Item "src/html/*" "docs" -Recurse
 
 # Copy public assets
-Copy-Item "src/public" "dist/public" -Recurse
+Copy-Item "src/public" "docs/public" -Recurse
 
 # Copy fonts if the folder exists
 if (Test-Path "src/fonts") {
-    Copy-Item "src/fonts" "dist/fonts" -Recurse
+    Copy-Item "src/fonts" "docs/fonts" -Recurse
 }
 
 # Fix asset paths in HTML files
-Get-ChildItem "dist" -Filter "*.html" -File | ForEach-Object {
+Get-ChildItem "docs" -Filter "*.html" -File | ForEach-Object {
     $content = Get-Content $_.FullName -Raw -Encoding UTF8
 
     $content = $content.Replace("../public/", "public/")
     $content = $content.Replace("../fonts/", "fonts/")
-    $content = $content.Replace("./main.html", "./index.html")
 
     Set-Content $_.FullName $content -Encoding UTF8
 }
