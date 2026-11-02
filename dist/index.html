@@ -1,0 +1,718 @@
+﻿<!DOCTYPE html>
+<html data-theme="dark" lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="icon" type="image/png" href="public/image/favicon.png">
+    <title>گلینو</title>
+</head>
+
+<body class="bg-gray-50 dark:bg-zinc-800 transition-colors duration-300">
+    <div class="toast hidden">
+      <div class="toast-content">
+        <div class="toast-icon">
+          <svg>
+                <use href="#checked"></use>
+          </svg>
+        </div>
+        <p class="toast-message">محصول با موفقیت به سبد خرید افزوده شد</p>
+      </div>
+
+      <div class="proccess-bar">
+        <div class="proccess"></div>
+      </div>
+    </div>  
+<nav class="-mt-13 container hidden lg:flex justify-between items-center ">
+    <div class="flex gap-2 lg:gap-4">
+        <div class="flex items-center">
+            <h2 class="text-red dark:text-primary text-xl font-iranyekan font-semibold lg:text-xl place-items-cente">09105789349</h2>
+        </div>
+        <div class="bg-FEE3E8 py-2 px-3 text-center text-low-red rounded-full">
+        <svg class="size-5 lg:size-7">
+            <use href="#phone-header"></use>
+        </svg>            
+        </div>
+        <div class="bg-FEE3E8 py-2 px-3 text-center text-low-red rounded-full">
+            <button class="toggle-theme dark-theme">
+                <svg class="size-5 lg:size-7">
+                    <use href="#moon"></use>
+                </svg>
+            </button>
+            <button class="toggle-theme light-theme hidden">
+                <svg class="size-5 lg:size-7">
+                    <use href="#sun"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="size-50 object-cover" >
+        <img class="w-full object-cover" src="public/image/logo.png" alt="">
+    </div>
+    <div class="flex relative gap-2 lg:gap-4">
+        <div class="flex items-center space-x-3 ">
+         <input class="w-55 lg:w-71 p-3 px-11 relative items-center font-iranyekan font-normal text-sm bg-white dark:bg-zinc-800 text-stone-500 dark:text-white border-stone-300 dark:border-zinc-700 border rounded-3xl focus: outline-none" type="search" placeholder="جستجو محصولات ...">
+            <svg class="size-5 lg:size-7 items-center mr-2.5 z-100 absolute">
+                <use href="#search"></use>
+            </svg>
+        </div>
+        <div class="relative flex items-center gap-1 lg:gap-4">
+            <div class="user-login-btn hidden bg-FEE3E8 py-2 px-3 text-center text-low-red rounded-full">
+                <button>
+                    <svg class="size-5 xs:size-7">
+                        <use href="#user"></use>
+                    </svg>
+                                <div>
+                <div class="user-login-btn-text hidden absolute text-red dark:text-white shadow-box dark:shadow-box-dark dark:bg-zinc-700 font-iranyekan font-semibold items-center justify-center gap-2 flex left-0.5 top-14 bg-white w-60 h-15 z-50 rounded-2xl">
+                    <p class="">خروج از حساب کاربری</p>
+                    <svg class="size-6">
+                        <use href="#log-out"></use>
+                    </svg>
+                </div>
+            </div>   
+                </button>
+            </div>
+        <div class="first-time-login-btn bg-FEE3E8 font-iranyekan font-semibold py-3 px-3 text-center text-low-red rounded-lg">
+            <button>
+                <a class="cursor-grab" href="./login.html">ورود | ثبت نام</a>
+            </button>
+        </div>
+        <div class="bg-FEE3E8 basket-btn py-2 px-3 text-center text-low-red rounded-full">
+            <button>
+                <svg class="size-5 lg:size-7">
+                    <use href="#header-basket"></use>
+                </svg>
+            </button>
+        </div>
+        </div>
+    </div>
+</nav>
+<nav class="container flex lg:hidden justify-between items-center ">
+    <div class="">
+        <div class="text-center text-low-red">
+            <button>
+                <svg class="menu size-7 xs:size-10 text-low-red">
+                    <use href="#menu"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class=" size-38 xs:size-50 sm:size-60 object-cover" >
+        <img class="w-full object-cover" src="public/image/logo.png" alt="">
+    </div>
+    <div class=" relative flex gap-2 xs:gap-4">
+            <div class="user-login-btn hidden bg-FEE3E8 py-2 px-3 text-center text-low-red rounded-full">
+                <button>
+                    <svg class="size-5 xs:size-7">
+                        <use href="#user"></use>
+                    </svg>
+                </button>
+                <div class="user-login-btn-text hidden absolute text-red dark:text-white shadow-box dark:shadow-box-dark dark:bg-zinc-700 font-iranyekan font-semibold items-center justify-center gap-2 flex left-2 top-15 bg-white w-60 h-20 z-50 rounded-2xl">
+                    <p class="">خروج از حساب کاربری</p>
+                    <svg class="size-6">
+                        <use href="#log-out"></use>
+                    </svg>
+                </div>
+            </div>
+        <div class="first-time-login-btn flex bg-FEE3E8 font-iranyekan font-semibold py-2 xs:py-3 px-3 text-center text-low-red xs:rounded-lg rounded-full ">
+            <button>
+                <a class="cursor-grab hidden xs:block" href="./login.html">ورود | ثبت نام</a>
+                <a class="cursor-grab xs:hidden " href="./login.html">
+                    <svg class="size-5 xs:size-7">
+                        <use href="#first-time-login-icon"></use>
+                    </svg>
+                </a>
+            </button>
+        </div>
+        <div class="bg-FEE3E8 basket-mobile-btn py-2 px-3 text-center text-low-red rounded-full">
+            <button>
+                <svg class="size-5 xs:size-7">
+                    <use href="#header-basket"></use>
+                </svg>
+            </button>
+        </div>
+        </div>
+    <!--nav menu mobile -->
+    <div class="nav-mobile hidden fixed top-0 right-0 h-full w-60 bg-white text-4B4B4B dark:text-white dark:bg-zinc-900 z-50">
+        <div class="flex justify-between items-center">
+            <div class="size-38">
+                <img class="w-full object-cover" src="public/image/logo.png" alt="">
+            </div>
+            <div class="pl-2">
+                <svg class="close-menu-btn size-7 text-red dark:text-red">
+                    <use href="#x-btn"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="flex items-center gap-1">
+             <div class="flex items-center space-x-3 ">
+         <input class="w-55 mr-1.5  py-3 px-11 relative items-center font-iranyekan font-normal text-sm bg-white dark:bg-zinc-800 text-stone-500 dark:text-white border-stone-300 dark:border-zinc-700 border rounded-3xl focus: outline-none" type="search" placeholder="جستجو محصولات ...">
+            <svg class="size-6 items-center mr-4 z-100 absolute">
+                <use href="#search"></use>
+            </svg>
+        </div>
+        </div>
+        <div class="flex flex-col px-7">
+            <article class="flex pt-6 gap-2">
+                <svg class="size-5 text-red">
+                    <use href="#home"></use>
+                </svg>
+                <a href="./index.html" class="hover:text-red active:text-red font-bold font-MorabbaBold">صفحه اصلی</a>
+            </article>
+            <article class="flex pt-6 gap-2">
+                <svg class="size-5 text-red">
+                    <use href="#small-basket"></use>
+                </svg>
+                <a href="./shop.html" class="hover:text-red active:text-red font-bold font-MorabbaBold">فروشگاه</a>
+            </article>
+            <article class="flex pt-6 gap-2">
+                <svg class="size-5 text-red">
+                    <use href="#chart"></use>
+                </svg>
+                <a href="./dashbord.html" class="hover:text-red active:text-red font-bold font-MorabbaBold">داشبورد</a>
+            </article>
+            <article class="flex pt-6 gap-2">
+                <svg class="size-5 text-red">
+                    <use href="#about-us"></use>
+                </svg>
+                <a href="./about-us.html" class="hover:text-red active:text-red font-bold font-MorabbaBold">درباره ما</a>
+            </article>
+            <article class="flex pt-6 gap-2">
+                <svg class="size-5 text-red">
+                    <use href="#phone"></use>
+                </svg>
+                <a href="./contact-us.html" class="hover:text-red active:text-red font-bold font-MorabbaBold">تماس با ما</a>
+            </article>
+            <article class="flex pt-6 gap-2">
+            <div class=" text-center">
+                <button class="toggle-theme dark-theme flex gap-2">
+                <svg class="size-5 lg:size-7 text-red">
+                    <use href="#moon"></use>
+                </svg>
+                <span class="hover:text-red active:text-red font-bold font-MorabbaBold">تم دارک</span>
+                </button>
+                <button class="toggle-theme light-theme flex gap-2 hidden">
+                    <svg class="size-5 lg:size-7 text-red">
+                        <use href="#sun"></use>
+                    </svg>
+                    <span class="hover:text-red active:text-red font-bold font-MorabbaBold">تم روشن</span>
+                </button>
+            </div>
+            </article>
+        </div>
+    </div>
+</nav>
+    <div class="basket-modal fixed hidden z-50 w-82.5 font-iranyekan bg-white dark:bg-zinc-800 dark:text-white top-20 left-13 p-3.75 rounded-2xl shadow-box dark:shadow-box-dark flex-col justify-between">
+        <svg class="absolute text-red close-basket size-5 left-2">
+            <use href="#x-btn"></use>
+        </svg>
+        <div class="flex-1 overflow-y-auto basket-container">
+            <!-- data loaded from js -->
+        </div>
+        <div class="footer-basket">
+            <div class="font-black text-center flex justify-center border border-dashed border-737373 rounded-lg  my-3 p-4">
+                <p>جمع کل : <span class="total-price">0</span></p>
+            </div>
+            <div class="gap-y-2 flex flex-col font-normal">
+                <button class="py-4 text-center text-white bg-FF6781 hover:bg-red rounded-lg">
+                    <a href="#">تسویه حساب</a>
+                </button>
+            </div>
+        </div>    
+    </div>
+    <div class="basket-modal-mobile fixed transform -translate-x-full transition-transform duration-300 ease-in-out inset-y-0 left-0 z-90 lg:hidden w-82.5 font-iranyekan bg-white dark:bg-zinc-800 dark:text-white p-3.75 shadow-box dark:shadow-box-dark flex flex-col justify-between">
+        <svg class="absolute text-red close-basket-mobile size-5 left-2">
+            <use href="#x-btn"></use>
+        </svg>
+        <div class="flex-1 overflow-y-auto basket-container">
+            <!-- data loaded from js -->
+             
+        </div>        
+        <div class="footer-basket">
+            <div class="font-black text-center flex justify-center border border-dashed border-737373 rounded-lg  my-3 p-4">
+                <p>جمع کل : <span class="total-price">0</span></p>
+            </div>
+            <div class="gap-y-2 flex flex-col font-normal">
+            <button class="py-4 text-center  text-white bg-FF6781 hover:bg-red rounded-lg">
+                <a href="#">تسویه حساب</a>
+            </button>
+            </div>
+        </div>
+    </div>
+<header class="container relative hidden lg:flex justify-between bg-red w-91/100 py-2.5 px-4 h-16 rounded-4xl">
+        <div class="flex gap-4 xl:gap-8 items-center text-white px-7 font-iranyekan font-medium">
+            <article class="flex gap-2 ">
+                <svg class="size-5 multi-tab-btn">
+                    <use href="#category"></use>
+                </svg>
+                <span class="font-bold multi-tab-text">دسته بندی کالا ها</span>
+            </article>
+            <article class="flex gap-2">
+                <svg class="size-5">
+                    <use href="#home"></use>
+                </svg>
+                <a href="./index.html" class="font-bold">صفحه اصلی</a>
+            </article>
+            <article class="flex gap-2">
+                <svg class="size-5">
+                    <use href="#small-basket"></use>
+                </svg>
+                <a href="./shop.html" class="font-bold">فروشگاه</a>
+            </article>
+            <article class="flex gap-2">
+                <svg class="size-5">
+                    <use href="#chart"></use>
+                </svg>
+                <a href="./dashbord.html" class="font-bold">داشبورد</a>
+            </article>
+            <article class="flex gap-2">
+                <svg class="size-5">
+                    <use href="#about-us"></use>
+                </svg>
+                <a href="./about-us.html" class="font-bold">درباره ما</a>
+            </article>
+            <article class="flex gap-2">
+                <svg class="size-5">
+                    <use href="#phone"></use>
+                </svg>
+                <a href="./contact-us.html" class="font-bold">تماس با ما</a>
+            </article>
+    </div>
+    <div class="flex  items-center justify-center border border-white rounded-4xl text-white w-46 gap-2">
+        <span class="font-bold ">Golino_site</span> 
+        <svg class="size-5 text-white">
+            <use href="#instagram"></use>
+        </svg> 
+    </div>
+    <div class="tabs-wrapper hidden font-iranyekan h-55 bg-white dark:bg-zinc-700 dark:text-white">
+    <div class="tabs-menu font-medium *:bg-white *:dark:bg-zinc-700 *:dark:text-white">
+        <button class="tab-btn hover:bg-neutral-100 active:bg-neutral-100 dark:hover:bg-zinc-400 dark:active:bg-zinc-400 group active flex gap-2 items-center " data-tab="1">
+            <div class="tab-btn-svg  group-hover:bg-red group-active:bg-red">
+                <svg class="size-12 text-white">
+                    <use href="#multi-tab-1"></use>
+                </svg>
+            </div>
+            <h2>دسته گل</h2>
+        </button>
+        <button class="tab-btn hover:bg-neutral-100 active:bg-neutral-100 dark:hover:bg-zinc-400 dark:active:bg-zinc-400 group flex gap-2 items-center " data-tab="2">
+            <div class="tab-btn-svg  group-hover:bg-red group-active:bg-red">
+                <svg class="size-12 text-white">
+                    <use href="#multi-tab-2"></use>
+                </svg>
+            </div>
+            <h2>جام گل</h2>
+        </button>
+        <button class="tab-btn hover:bg-neutral-100 active:bg-neutral-100 dark:hover:bg-zinc-400 dark:active:bg-zinc-400 group flex gap-2 items-center " data-tab="3">
+            <div class="tab-btn-svg  group-hover:bg-red group-active:bg-red">
+                <svg class="size-12 text-white">
+                    <use href="#multi-tab-3"></use>
+                </svg>
+            </div>
+            <h2>گل ساختمانی</h2>
+        </button>
+    </div>
+    <div class="tabs-content font-normal">
+        <div class="tab-content show" data-tab="1">
+        <ul class="list-disc grid grid-rows-4 grid-flow-col gap-x-5 gap-y-3 px-5  transition-colors marker:text-red *:active:text-primary *:hover:text-primary">
+            <li>دسته گل عروس</li>
+            <li>دسته گل ترحیم</li>
+            <li>دسته گل تولد</li>
+            <li>دسته گل عاشقانه</li>
+        </ul>
+        </div>
+        <div class="tab-content" data-tab="2">
+        <ul class="list-disc grid grid-rows-4 grid-flow-col gap-x-5 gap-y-3 px-5  transition-colors marker:text-red *:active:text-primary *:hover:text-primary">
+            <li>جام گل شفاف</li>
+            <li>جام گل سفالی</li>
+            <li>جام گل فلزی</li>
+            <li>جام گل چوبی</li>
+            <li>جام گل تزئینی</li>
+        </ul>
+        </div>
+        <div class="tab-content" data-tab="3">
+        <ul class="list-disc grid grid-rows-4 grid-flow-col gap-x-5 gap-y-3 px-5  transition-colors marker:text-red *:active:text-primary *:hover:text-primary">
+            <li>پوتوس</li>
+            <li>دراسنا</li>
+            <li>سانسوریا</li>
+            <li>خیار زینتی</li>
+            <li>آگلونما</li>
+        </ul>
+        </div>
+
+    </div>
+
+    </div>
+
+</header>
+<section class="relative my-7 h-screen">
+    <img sizes="100vw" alt="Flower Background" class="bg-header overflow-x-hidden opacity-40  absolute inset-0 w-full h-full object-cover"> 
+        <img class="absolute w-17.5 top-5 xs:top-10 right-5 xs:right-22 sm:right-30 md:right-50 lg:right-13" src="public/image/butterfly.webp" alt="">
+        <img class="absolute w-12.5 bottom-0 lg:bottom-27 right-69  sx:right-90  xs:right-105 sm:right-130 md:right-155 lg:right-120 xl:right-160" src="public/image/butterfly2.webp" alt="">
+
+        <div class="absolute z-10 top-1/2 -translate-y-1/2 w-full px-10 xl:px-20 flex gap-y-12.5 flex-col-reverse lg:flex-row items-center justify-between">
+                <div class="relative">
+                <img class="absolute w-12.5 lg:w-17.5 left-1/2 right-1/2 lg:left-0 lg:right-20 xl:right-19 -top-8 lg:-top-3" src="public/image/little-flower-hero.webp" alt="">
+                <h2 class="lg:w-140 xl:w-160 dark:text-white leading-10 lg:leading-20.5 font-black sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-iranyekan text-center">با<span class="text-red"> گـــل ها،</span> احساسات خود را به زیباتریـــن شکل <span class="text-primary"> بیــان</span> کنید</h2>
+                <p class="lg:w-130 xl:w-149 dark:text-white  hidden xs:inline-block leading-7 text-center text-xs md:text-sm font-sm font-normal font-iranyekan pr-0 lg:pr-12">در پرشین گل، با مجموعه‌ای از تازه‌ترین و زیباترین گل‌ها، لحظات خاص زندگی شما را جاودانه می‌کنیم. انتخاب کنید، عشق را هدیه دهید و با رایحه‌ی خوش گل‌های ما، لبخند بر لبان عزیزانتان بنشانید</p>
+                <div class="pt-2.5 sm:pt-5 lg:pt-9">
+                <button class="bg-red cursor-pointer rounded-lg px-3 sm:px-7 py-2.5 text-center flex items-center gap-2 sm:gap-4 justify-between font-iranyekan font-semibold leading-3.5 text-white m-auto">
+                <span>خرید کنید</span>
+                <svg class="size-5 sm:size-6 text-white text-center">
+                    <use href="#arrow"></use>
+                </svg>
+                </button>
+                </div>
+            </div>
+        <div class="w-60 lg:w-87.5 relative">
+            <img src="public/image/hero-image.webp" alt="">
+            <div class=" absolute left-1/2 -translate-x-1/2 -bottom-15 translate-y-1/2 flex justify-center">
+                <img class="animate-flower-right w-32 lg:w-60 xl:w-70 top-1/2 -translate-y-1/2 origin-center" src="public/image/right-moving-flower.webp" alt="">
+                <img class="animate-flower-left w-32 lg:w-60 xl:w-70 top-1/2 -translate-y-1/2 origin-center" src="public/image/left-moving-flower.webp" alt="">
+            </div>
+        </div>
+    </div>    
+</section>
+    <div class="flex items-center justify-center gap-1 px-3 xs:px-0 pt-7">
+        <svg class="size-10">
+            <use href="#first-flower"></use>
+        </svg>
+        <h1 class="text-red dark:text-white font-iranyekan font-black text-3xl">دســته بــنــدی <span class="text-565D47 dark:text-primary">محصولات</span></h1>
+    </div>
+<section class="flex hidden-section flex-wrap px-10 py-20 *:w-28.25 *:h-37.5 items-center gap-y-12 gap-10 sm:gap-12 justify-center lg:justify-between lg:gap-0 **:rounded-100">
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-1.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">جام گل</h2>
+    </article>
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-2.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">گل آرایی</h2>
+    </article>
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-3.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">باکس گل</h2>
+    </article>
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-4.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">سبد گل</h2>
+    </article>
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-5.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">دسته گل</h2>
+    </article>
+    <article>
+        <img class="transition-all hover:-translate-y-4" src="public/image/category-6.webp" loading="lazy" alt="">
+        <h2 class="text-565D47 dark:text-white text-center font-iranyekan font-medium pt-2">گل آپارتمانی</h2>
+    </article>
+</section>
+<div class="flex items-center justify-between">
+    <div class="flex gap-1 px-10 py-20">
+    <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#e7cfb3" d="M24.9 64c-.1 0-.3 0-.4-.1-.5-.2-.8-.8-.5-1.3 4.6-11.3 7-23.3 7-35.6 0-.6.4-1 1-1s1 .4 1 1c0 12.6-2.4 24.8-7.2 36.4-.2.4-.5.6-.9.6z"></path><linearGradient id="a" x1="35" x2="35" y1="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f96762"></stop><stop offset="1" stop-color="#ec4130"></stop></linearGradient><path fill="url(#a)" d="M32 22c5.5 0 10-4.5 10-10V2c0-1.1-.9-2-2-2-6.6 0-12 5.4-12 12v6c0 2.2 1.8 4 4 4z"></path><linearGradient id="b" x1="41" x2="41" y1="22" gradientTransform="matrix(-1 0 0 1 70 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec4130"></stop><stop offset="1" stop-color="#f96762"></stop></linearGradient><path fill="url(#b)" d="M32 22c-5.5 0-10-4.5-10-10V2c0-1.1.9-2 2-2 6.6 0 12 5.4 12 12v6c0 2.2-1.8 4-4 4z"></path><linearGradient id="c" x1="17" x2="17" y1="28" y2="4" gradientTransform="matrix(-1 0 0 1 54 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec4130"></stop><stop offset="1" stop-color="#f96762"></stop></linearGradient><path fill="url(#c)" d="M44 4c-8.8 0-16 7.2-16 16v4c0 2.2 1.8 4 4 4 7.7 0 14-6.3 14-14V6c0-1.1-.9-2-2-2z"></path><linearGradient id="d" x1="27" x2="27" y1="28" y2="4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f96762"></stop><stop offset="1" stop-color="#ec4130"></stop></linearGradient><path fill="url(#d)" d="M20 4c8.8 0 16 7.2 16 16v4c0 2.2-1.8 4-4 4-7.7 0-14-6.3-14-14V6c0-1.1.9-2 2-2z"></path><linearGradient id="e" x1="29.586" x2="44.414" y1="49.414" y2="34.586" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e7cfb3"></stop><stop offset="1" stop-color="#f5ece1"></stop></linearGradient><path fill="url(#e)" d="M31 50c-1.1 0-2-.9-2-2 0-7.7 6.3-14 14-14 1.1 0 2 .9 2 2 0 7.7-6.3 14-14 14z"></path></svg>
+    <h1 class="text-red dark:text-white font-iranyekan font-black text-2xl sm:text-3xl">جدیدترین <span class="text-565D47 dark:text-primary">محصولات</span></h1>
+    </div>
+        <span class=" hidden sm:inline flex-1 bg-zinc-400 dark:bg-white h-px mt-1 mx-6"></span>
+        <div class="flex items-center gap-1 text-zinc-900 dark:text-white hover:text-red cursor-pointer pl-2 sm:pl-10 ">
+            <h2 class="font-iranyekan font-light">مشاهده همه</h2>
+            <svg class="size-4">
+                <use href="#arrow"></use>
+            </svg>
+        </div>
+</div>
+<div class="relative">
+    <img class="w-23.75 absolute left-0 bottom-1" src="public/image/sun-flower.png" alt="">
+</div>
+<section class="container hidden-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper product-container">
+      <!-- JS inject slides here -->
+    </div>
+  </div>
+</section>
+<div class="relative">
+    <img class="w-23.75 absolute right-0" src="public/image/sun-flower.png" alt="">
+</div>
+<section class="container hidden-section flex flex-col sm:flex-row justify-center sm:gap-x-2 md:gap-x-10 items-center my-20">
+    <article>
+        <img class=" sm:w-90 md:w-100 lg:w-125 xl:w-150" src="public/image/banner-1.webp" alt="">
+    </article>
+    <article>
+        <img class=" sm:w-90 md:w-100 lg:w-125 xl:w-150" src="public/image/banner-2.webp" alt="">
+    </article>
+    
+</section>
+<div class="flex items-center justify-between">
+    <div class="flex gap-1 px-10 py-20">
+    <svg class="size-10">
+        <use href="#heart-flower"></use>
+    </svg>
+    <h1 class="text-red dark:text-white font-iranyekan font-black text-2xl sm:text-3xl">پرفروش ترین <span class="text-565D47 dark:text-primary">محصولات</span></h1>
+    </div>
+        <span class=" hidden sm:inline flex-1 bg-zinc-400 dark:bg-white h-px mt-1 mx-6"></span>
+        <div class="flex items-center gap-1 text-zinc-900 dark:text-white hover:text-red cursor-pointer pl-2 sm:pl-10 ">
+            <h2 class="font-iranyekan font-light">مشاهده همه</h2>
+            <svg class="size-4">
+                <use href="#arrow"></use>
+            </svg>
+        </div>
+    </div>
+<section class="container famous-prodcut-container hidden-section bg-FEE3E8 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-x-5 gap-y-25 p-9 rounded-3xl">
+    <!-- data loaded from js -->
+</section>
+<div class="flex items-center justify-between  relative">
+    <div class="flex gap-1 px-10 pt-30 pb-15">
+    <svg class="size-10">
+        <use href="#comment-flower"></use>
+    </svg>
+    <h1 class="text-red dark:text-white font-iranyekan font-black text-2xl sm:text-3xl">نظرات <span class="text-565D47 dark:text-primary">مشتریان</span></h1>
+    </div>
+    <img class="absolute left-0 -bottom-1.5 w-26.5 z-40" src="public/image/comment-section-flower.webp" alt="">
+</div>
+<section class="swiper commentSwiper hidden-section container">
+    <div class="swiper-wrapper pt-8">
+        <article class="swiper-slide relative p-5 bg-white dark:bg-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded-3xl h-105">
+                <img class="w-15 rounded-100 absolute -right-2 -top-3.5 " src="public/image/avatar-1.webp" alt="">
+                <div class="flex" dir="ltr">
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                </div>
+            <h2 class="py-5 font-iranyekan text-zinc-950 dark:text-white font-medium">مریم محمدی</h2>
+            <p class="text-4B4B4B dark:text-white line-clamp-3  font-iranyekan font-normal leading-8">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+        </article>
+        <article class="swiper-slide relative p-5 bg-white dark:bg-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded-3xl h-105">
+                <img class="w-15 rounded-100 absolute -right-2 -top-3.5 " src="public/image/avatar-2.webp" alt="">
+                <div class="flex"  dir="ltr">
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                </div>
+            <h2 class="py-5 font-iranyekan text-zinc-950 dark:text-white font-medium">سهیل اکبری</h2>
+            <p class="text-4B4B4B dark:text-white line-clamp-3  font-iranyekan font-normal leading-8">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+        </article>
+        <article class="swiper-slide relative p-5 bg-white dark:bg-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded-3xl h-105">
+                <img class="w-15 rounded-100 absolute -right-2 -top-3.5 " src="public/image/avatar-3.webp" alt="">
+                <div class="flex " dir="ltr">
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                </div>
+            <h2 class="py-5 font-iranyekan text-zinc-950 dark:text-white font-medium">دریا نوروزی</h2>
+            <p class="text-4B4B4B dark:text-white line-clamp-3  font-iranyekan font-normal leading-8">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+        </article>
+        <article class="swiper-slide relative p-5 bg-white dark:bg-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded-3xl h-105">
+                <img class="w-15 rounded-100 absolute -right-2 -top-3.5 " src="public/image/avatar-4.webp" alt="">
+                <div class="flex" dir="ltr">
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                <svg class="size-4 text-yellow">
+                    <use href="#star"></use>
+                </svg>
+                </div>
+            <h2 class="py-5 font-iranyekan text-zinc-950 dark:text-white font-medium">حمید سعیدی</h2>
+            <p class="text-4B4B4B dark:text-white line-clamp-3  font-iranyekan font-normal leading-8">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+        </article>
+    </div>
+</section>
+<div class="flex relative items-center justify-between">
+    <div class="flex gap-1 px-10 py-20">
+    <svg class="size-10">
+        <use href="#blog-flower"></use>
+    </svg>
+    <h1 class="text-red dark:text-white font-iranyekan font-black text-2xl sm:text-3xl">وبلاگ <span class="text-565D47 dark:text-primary">سایت</span></h1>
+    </div>
+        <span class=" hidden sm:inline flex-1 bg-zinc-400 dark:bg-white h-px mt-1 mx-6"></span>
+        <div class="flex items-center gap-1 text-zinc-900 dark:text-white hover:text-red cursor-pointer pl-2 sm:pl-10 ">
+            <h2 class="font-iranyekan font-light">مشاهده همه</h2>
+            <svg class="size-4">
+                <use href="#arrow"></use>
+            </svg>
+        </div>
+         <img class="w-35 absolute right-0 top-15" src="public/image/flower-branch.webp" alt="">
+</div>
+<section class="blog-container container hidden-section grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7.5 items-center justify-between gap">
+</section>
+<div id="overlay" class="fixed inset-0 bg-black/50 z-40 hidden">
+</div>
+<button
+  id="backToTop"
+  class="fixed bottom-10 left-5 z-50 size-11 rounded-full bg-primary text-white
+         flex items-center justify-center shadow-lg
+         opacity-0 invisible translate-y-3
+         transition-all duration-300
+         hover:scale-110 active:scale-95"
+  aria-label="بازگشت به بالای صفحه"
+>
+  <svg class="size-5 rotate-180 text-white">
+    <use href="#chevron-down"></use>
+  </svg>
+</button>
+<footer class="mt-20 relative bg-white dark:bg-zinc-700 pb-10">
+    <img class="w-30 md:w-45 lg:w-67.5 absolute left-0" src="public/image/sakora-flower-left.webp" alt="">    
+    <div class="flex flex-col justify-center items-center ">
+        <img class="w-40 md:w-50" src="public/image/logo.png" alt="">
+        <p class="w-full md:w-2/3 lg:w-1/3 px-4 text-4B4B4B dark:text-white font-iranyekan font-medium text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+    </div>
+    <img class="w-30 md:w-45 lg:w-67.5 absolute rotate-180 top-7 right-0" src="public/image/sakora-flower-left.webp" alt="">
+    <section class="hidden-section pt-10 px-2.5">
+            <div class="flex flex-col gap-6 lg:flex-row justify-between items-center px-10 py-2.5 xs:border border-zinc-500 rounded-100">
+                    <article class="flex gap-x-1">
+            <svg class="size-6 text-red">
+                <use href="#location"></use>
+            </svg>
+            <p class="font-iranyekan font-normal text-sm text-black-text dark:text-white">لورم , اپیسوم , متن , ساختگی</p>
+        </article>
+        <article class="flex flex-wrap gap-2 xs:gap-4 font-iranyekan font-normal text-xs xs:text-sm dark:text-white text-black-text">
+            <a href="./index.html" class="transition-colors hover:text-red active:text-red relative pl-2 xs:pl-4 after:content-[''] after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 after:w-px after:h-2 after:bg-red px-2.75">صفحه اصلی</a>
+            <a href="./shop.html" class="transition-colors hover:text-red active:text-red relative pl-2 xs:pl-4 after:content-[''] after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 after:w-px after:h-2 after:bg-red px-2.75">فروشگاه</a>
+            <a href="./dashbord.html" class="transition-colors hover:text-red active:text-red relative pl-2 xs:pl-4 after:content-[''] after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 after:w-px after:h-2 after:bg-red px-2.75">داشبورد</a>
+            <a href="./about-us.html" class="transition-colors hover:text-red active:text-red relative pl-2 xs:pl-4 after:content-[''] after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 after:w-px after:h-2 after:bg-red px-2.75">درباره ما</a>
+            <a href="./contact-us.html" class="transition-colors hover:text-red active:text-red px-2.75">تماس با ما</a>
+        </article>
+        <article class="flex gap-x-2">
+                <svg class="size-6 text-low-red">
+                    <use href="#telegram"></use>
+                </svg>
+
+                <svg class="size-6 text-low-red">
+                    <use href="#whatsapp"></use>
+                </svg>
+
+                <svg class="size-6 text-low-red">
+                    <use href="#instagram"></use>
+                </svg>
+
+        </article>
+    </div>
+    </section>
+    <div class="flex justify-center gap-3 p-5">
+        <articl class="rounded-2xl">
+            <img class="size-20" src="public/image/enamad.webp" alt="">
+        </articl>
+        <articl class="size-20 border flex text-xs font-iranyekan font-light items-center justify-center border-C4C4C4 text-C4C4C4 text-center rounded-2xl">محل مجوز</articl>
+        <articl class="size-20 border flex text-xs font-iranyekan font-light items-center justify-center border-C4C4C4 text-C4C4C4 text-center rounded-2xl">محل مجوز</articl>
+    </div>
+</footer>
+    <svg class="hidden">
+    <symbol id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+    </symbol>
+        <symbol id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor">
+        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+        </symbol>
+        <symbol id="checked" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </symbol>
+        <symbol id="category-1" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="23" fill="#F21339"></circle><path d="M28.9999 20.52C28.2308 20.9699 27.3345 21.153 26.4505 21.0406C25.5666 20.9283 24.7446 20.5268 24.1124 19.8988C23.4803 19.2707 23.0736 18.4513 22.9555 17.5681C22.8375 16.6849 23.0147 15.7874 23.4597 15.0154C23.9047 14.2434 24.5924 13.6402 25.4158 13.2996C26.2392 12.959 27.1521 12.9002 28.0124 13.1324C28.8727 13.3645 29.6321 13.8745 30.1724 14.5831C30.7128 15.2916 31.0037 16.1589 30.9999 17.05" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28 20.8C29.1046 20.8 30 19.9046 30 18.8C30 17.6954 29.1046 16.8 28 16.8C26.8954 16.8 26 17.6954 26 18.8C26 19.9046 26.8954 20.8 28 20.8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24.9999 13.5L22.9999 14.8C21.6208 15.5956 20.6142 16.9066 20.2017 18.4444C19.7891 19.9822 20.0043 21.6209 20.7999 23C21.5956 24.3791 22.9065 25.3857 24.4443 25.7983C25.9821 26.2109 27.6208 25.9956 28.9999 25.2L30.9999 24C31.9216 23.4696 32.5947 22.5947 32.8713 21.568C33.148 20.5412 33.0054 19.4466 32.4749 18.525C31.9445 17.6034 31.0697 16.9302 30.0429 16.6536C29.0161 16.377 27.9216 16.5196 26.9999 17.05" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20.77 23C15 26 13 33 13 33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 31C24 31 19 34 14.8 29C14.8 29 20 26 24 31Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="category-2" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><circle opacity="0.46" cx="23" cy="23" r="23" fill="#d"></circle><path d="M23.5331 11.6885C22.732 12.0138 22.0999 12.4989 21.7167 13.0757L21.0224 11.7823C20.5997 14.0953 20.4355 16.2394 22.5224 16.918C22.0192 18.6496 21.7167 20.3821 21.5527 22.1124L20.5888 20.315C20.4553 19.6254 20.1379 18.8761 19.7758 18.1119L18.9613 21.5865C18.6232 20.5333 18.1881 19.4922 17.6268 18.4707C18.7734 16.4449 18.3831 15.1628 16.1693 14.7544C16.1452 14.8969 16.1431 15.1924 16.1431 15.1924L15.2114 14.7823L15.1015 15.7124L14.6635 15.4942C14.4088 17.4748 14.6579 19.0073 16.8491 18.8736C17.0207 19.185 17.182 19.502 17.3325 19.8242L12.3696 18.3271C13.8351 20.4481 15.3777 22.2065 17.6445 20.5347C18.1594 21.7842 18.511 23.0633 18.7578 24.3653L15.7212 22.4815C16.3246 24.1722 17.0432 25.6355 18.8588 24.9395C18.9168 25.2885 18.9669 25.6391 19.0126 25.9913H19.8974C19.7681 24.9624 19.5911 23.9372 19.3393 22.9209C19.724 22.729 20.0119 22.506 20.2182 22.2559C20.3913 22.7807 20.7624 23.1766 21.4575 23.3619C21.406 24.2389 21.3869 25.1156 21.3901 25.9912H22.2661C22.2654 25.8004 22.2659 25.6105 22.2675 25.4199C24.231 25.1005 24.1181 23.4287 23.7866 21.6142L22.2881 24.4091C22.324 23.2982 22.4049 22.1907 22.5503 21.0854C25.0119 21.3218 25.4164 19.2675 25.603 16.9707L22.7057 20.0571C22.8683 19.0932 23.0835 18.131 23.3619 17.1713C25.1218 17.3867 26.9658 15.4948 26.8907 13.8901L26.3076 14.2519C26.2583 13.6913 25.9948 13.0561 25.5049 12.3446C25.1517 12.5956 24.8485 12.9339 24.5748 13.3027L24.3828 12.4546L23.8349 13.1387C23.8199 12.6479 23.7332 12.1651 23.5331 11.6885ZM32.0747 16.3409C31.8406 16.3412 31.56 16.3812 31.2192 16.4771C30.5941 16.6531 29.9292 17.0513 30.1704 18.2408C29.0225 18.8561 28.0419 19.6996 27.2524 20.7324H27.2435C27.2449 20.7345 27.2466 20.7361 27.2479 20.7383C27.2104 20.7875 27.1733 20.8362 27.1366 20.8862L28.2177 17.3076C26.0643 18.7955 24.283 20.3622 26.0878 22.6865C25.6336 23.6847 25.3127 24.793 25.1356 25.9912H26.9184C28.0682 25.6454 28.3059 24.2832 28.4271 22.7919L26.1699 25.1958C26.487 23.7638 27.0335 22.5129 27.7826 21.4706C29.5042 23.4462 31.4005 22.169 33.3154 20.542L28.4126 20.6958C29.0264 20.0262 29.7415 19.4678 30.5482 19.0317C31.082 19.7227 31.8796 19.696 32.4511 19.3979C33.6388 18.7784 33.2687 18.0929 34.2455 17.2461C33.2662 17.4928 33.3384 16.3387 32.0747 16.3408V16.3409ZM18.1688 26.8672L19.3891 34.1138H26.12L27.3579 26.8672H18.1688Z" fill="white"></path></symbol>
+        <symbol id="category-3" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><circle opacity="0.46" cx="23" cy="23" r="23" fill="#d"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M18.047 13.0002C17.9121 12.9972 17.7779 13.0216 17.6526 13.0718C17.5273 13.1221 17.4135 13.1971 17.318 13.2925C17.2225 13.3879 17.1473 13.5017 17.097 13.6269C17.0466 13.7522 17.0221 13.8863 17.025 14.0212C17.041 14.7272 17.212 15.7212 17.692 16.7382C17.959 17.3042 18.302 17.8122 18.732 18.2422C19.0127 18.5222 19.3237 18.7662 19.665 18.9742H17C16.4696 18.9742 15.9609 19.185 15.5858 19.56C15.2107 19.9351 15 20.4438 15 20.9742V22.9742C15 23.328 15.0939 23.6755 15.272 23.9812C15.4501 24.2869 15.7062 24.5398 16.014 24.7142C16.153 28.3792 17.289 30.9322 17.851 31.9842C18.201 32.6402 18.874 32.9742 19.535 32.9742H26.465C27.125 32.9742 27.799 32.6402 28.149 31.9842C28.711 30.9322 29.847 28.3792 29.986 24.7142C30.2938 24.5398 30.5499 24.2869 30.728 23.9812C30.9061 23.6755 31 23.328 31 22.9742V20.9742C31 20.4438 30.7893 19.9351 30.4142 19.56C30.0391 19.185 29.5304 18.9742 29 18.9742H27.102C27.3193 18.7476 27.507 18.4976 27.665 18.2242C27.8757 17.8562 28.0257 17.4599 28.115 17.0352C28.288 16.2372 28.252 15.4172 28.094 14.6342L27.95 14.0642C27.8731 13.8306 27.7128 13.6335 27.4997 13.5107C27.2866 13.3878 27.0357 13.3478 26.795 13.3982C26.1235 13.5504 25.4821 13.8133 24.897 14.1762C24.241 14.5792 23.702 15.0882 23.335 15.7242C23.2857 15.8102 23.2397 15.8976 23.197 15.9862C22.9541 15.5146 22.6405 15.083 22.267 14.7062C21.83 14.2752 21.3214 13.9233 20.764 13.6662C19.9133 13.2611 18.9886 13.0344 18.047 13.0002ZM19.25 15.2242C19.476 15.2942 19.697 15.3742 19.91 15.4742C20.278 15.6482 20.596 15.8632 20.854 16.1212C21.111 16.3782 21.326 16.6962 21.5 17.0642C21.594 17.2812 21.68 17.4972 21.749 17.7242C21.5234 17.6566 21.3028 17.573 21.089 17.4742C20.7395 17.3154 20.4204 17.0968 20.146 16.8282C19.8774 16.5536 19.6587 16.2341 19.5 15.8842C19.4012 15.6704 19.3177 15.4499 19.25 15.2242ZM26.222 15.7242L26.228 15.9542C26.228 16.1836 26.2057 16.4036 26.161 16.6142C26.1172 16.8282 26.0403 17.034 25.933 17.2242C25.748 17.5442 25.448 17.8282 25.056 18.0692L24.777 18.2232L24.772 17.9952C24.772 17.7666 24.7947 17.5462 24.84 17.3342C24.8887 17.1069 24.9643 16.9036 25.067 16.7242C25.252 16.4042 25.552 16.1212 25.944 15.8792L26.222 15.7242ZM18.028 24.9742H27.972C27.798 27.9972 26.879 30.0992 26.421 30.9742H19.579C19.121 30.0992 18.201 27.9972 18.028 24.9742ZM29 22.9742H17V20.9742H29V22.9742Z" fill="white"></path></symbol>
+        <symbol id="user" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </symbol>
+        <symbol id="first-time-login-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+        </symbol>
+        <symbol id="log-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+        </symbol>
+        <symbol id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </symbol>
+		<symbol id="first-flower" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64"><g fill="#a0ece6"><path d="M28.28 37.32c-1.022-.789-2.263.781-1.242 1.568c2.405 1.857 3.734 4.264 4.431 6.916c-2.759-.672-6.519.057-8.47 1.75c-.454.393-.593 1.199-.023 1.584c2.563 1.734 6.292 1.539 9.08.227c.303 4.03-.354 8.309-.766 11.984c-.141 1.277 1.842 1.547 1.985.262c.905-8.135 2.501-18.504-4.996-24.291"></path><path d="M40.37 34.805c1.022-.789 2.262.781 1.242 1.568c-2.406 1.855-3.734 4.264-4.431 6.916c2.759-.674 6.519.057 8.47 1.748c.454.393.592 1.201.023 1.586c-2.564 1.732-6.293 1.537-9.08.225c-.302 4.03.355 8.309.766 11.984c.142 1.279-1.841 1.547-1.984.262c-.904-8.133-2.502-18.504 4.996-24.289"></path></g><path fill="#47d3a7" d="M48.938 34.385c-1.869-2.334-4.904-3.133-7.619-1.615c-4.155 2.32-6.071 6.436-6.949 11.01c-1.33-4.084-3.889-7.205-8.636-7.418c-7.833-.352-6.305 10.51-6.31 15.9c-.002 1.936 1.514 2.113 1.514.178c.003-3.586-.441-14.09 5.336-12.949c8.313 1.643 6.558 15.906 6.04 21.639c-.174 1.924 2.826 1.844 3-.066q.06-.659.12-1.414c.662-.107 1.256-.596 1.256-1.459c-.021-5.412-.194-10.803 1.261-16.07c.788-2.861 2.476-5.779 5.337-6.932c5.407-2.178 4.182 6.99 3.217 9.305c-.736 1.766-.221 3.139.521 1.354c1.532-3.666 4.656-8.03 1.912-11.459"></path><path fill="#dde4e9" d="m16.602 18l-2.699-3.03s-.835-4.811 3.483-2.034l1.252 3.87l-2.036 1.189"></path><path fill="#c8d2d9" d="m18.69 16.884l-1.268-3.852s1.148-4.745 4-.477l-.395 4.047l-2.341.282"></path><path fill="#dde4e9" d="m19.703 16.448l1.744-3.924s4.28-2.902 3.481 2.476l-3.189 2.896zm.284 5.811l-.227 4.049s-2.813 3.99-3.903-1.025l1.851-3.623zm1.721-3.548l3.894 1.226s2.935 4.01-2.362 3.988l-2.911-2.883z"></path><path fill="#c8d2d9" d="m17.72 21.572l-1.826 3.623s-4.169 2.539-3.169-2.496l3.142-2.586z"></path><path fill="#dde4e9" d="m16.507 21.13l-3.782 1.455s-4.795-.922-.671-3.979l4.063.199z"></path><path fill="#c8d2d9" d="m16.11 19.535l-3.941-.949s-3.42-3.48 1.71-3.656l3.231 2.467zm4.292-1.756l3.991-2.441s5.633.047 1.59 4.377l-4.652.623z"></path><circle cx="18.589" cy="19.07" r="3.125" fill="#f8ae1c"></circle><path fill="#ca8a2a" d="M17.902 19.681a3.11 3.11 0 0 1-.437-3.496a3.127 3.127 0 0 0-1.269 5.002a3.124 3.124 0 0 0 5.122-.645a3.125 3.125 0 0 1-3.416-.861"></path><path fill="#c8d2d9" d="m21.07 21.242l2.447 3.238s.438 4.861-3.64 1.744l-.932-3.961z"></path><path fill="#86cdec" d="m41.915 24.795l-2.699-3.02s-.836-4.811 3.483-2.034l1.253 3.871l-2.037 1.188"></path><path fill="#8abdd8" d="m44.01 23.674l-1.271-3.851s1.15-4.746 4-.477l-.393 4.047l-2.34.281"></path><path fill="#86cdec" d="m45.02 23.24l1.744-3.924s4.279-2.902 3.479 2.477l-3.186 2.896zm.28 5.81l-.233 4.05s-2.811 3.988-3.898-1.026l1.849-3.623zm1.72-3.549l3.894 1.227s2.938 4.01-2.361 3.988l-2.913-2.883z"></path><path fill="#8abdd8" d="m43.03 28.363l-1.824 3.623s-4.168 2.54-3.172-2.496l3.143-2.586z"></path><path fill="#dde4e9" d="m41.819 27.915l-3.783 1.456s-4.793-.922-.668-3.979l4.063.198z"></path><path fill="#8abdd8" d="m41.42 26.326l-3.943-.95s-3.42-3.48 1.711-3.655l3.23 2.467zm4.249-1.804l3.992-2.44s5.633.045 1.59 4.377l-4.653.621z"></path><circle cx="43.902" cy="25.864" r="3.126" fill="#ecd4a9"></circle><path fill="#e7cb9f" d="M43.22 26.471a3.12 3.12 0 0 1-.438-3.496a3.127 3.127 0 0 0-1.267 5.002a3.127 3.127 0 0 0 4.412.272c.302-.268.533-.577.709-.916a3.12 3.12 0 0 1-3.416-.862"></path><path fill="#8abdd8" d="m46.34 27.986l2.445 3.236s.436 4.864-3.641 1.745l-.932-3.961z"></path><path fill="#86cdec" d="m26.903 25.04l-2.699-3.02s-.836-4.811 3.482-2.033l1.252 3.869l-2.035 1.189"></path><path fill="#8abdd8" d="m28.995 23.916l-1.271-3.852s1.147-4.744 4-.476l-.393 4.048l-2.339.28"></path><path fill="#86cdec" d="m30 23.48l1.743-3.924s4.282-2.902 3.482 2.476l-3.19 2.896zm.29 5.81l-.229 4.049s-2.814 3.99-3.901-1.025l1.847-3.623zm1.72-3.547l3.896 1.227s2.938 4.02-2.363 3.988l-2.911-2.883z"></path><path fill="#8abdd8" d="m28.02 28.604l-1.826 3.623s-4.169 2.541-3.169-2.496l3.139-2.586z"></path><path fill="#dde4e9" d="m26.809 28.16l-3.782 1.456s-4.796-.922-.672-3.978l4.064.197z"></path><path fill="#8abdd8" d="m26.411 26.568l-3.942-.951s-3.421-3.48 1.708-3.655l3.23 2.467zm4.244-1.805l3.992-2.441s5.635.047 1.592 4.377l-4.654.623z"></path><circle cx="28.89" cy="26.11" r="3.125" fill="#ecd4a9"></circle><path fill="#e7cb9f" d="M28.2 26.712a3.11 3.11 0 0 1-.438-3.496a3.123 3.123 0 1 0 3.855 4.358a3.12 3.12 0 0 1-3.417-.862"></path><path fill="#8abdd8" d="m31.33 28.23l2.446 3.238s.436 4.862-3.641 1.745l-.932-3.961z"></path><path fill="#f46384" d="M31.605 29.778s-2.02-.81-2.451-3.421c-.438-2.612-2.318-2.026-2.318-2.026l-3.788 4.866c.24-2.84.382-6.73-.562-7.584c-1.53-1.373-3.557.971-3.557.971s-1.507 1.563-4.093.988c-2.586-.573-2.75 1.388-2.75 1.388l3.557 6.142c-2.545-1.092-5.756-2.254-6.789-1.68c-1.795.996-.238 3.68-.238 3.68s.99 1.928-.392 4.188c-1.377 2.262.423 3.051.423 3.051l5.79-1.143c-1.542 2.295-3.269 5.221-2.897 6.34c.646 1.947 3.574.912 3.574.912s2.076-.613 4.04 1.164s3.076.15 3.076.15l-.063-8.08c1.287 2.279 4.234 7.217 5.803 7.385c2.042.223 2.315-2.865 2.315-2.865s.312-2.148 2.741-3.197c2.438-1.045 1.416-2.732 1.416-2.732l-5.957-2.668c2.416-.82 4.986-1.9 5.348-2.893c.702-1.931-2.229-2.932-2.229-2.932"></path><path fill="#d34d75" d="M22.17 39.922s5.688 4.994 9.401 2.029c0 0-1.437 1.426-1.282 2.248c0 0-.347 2.502-1.633 2.809c0 0-.938.313-1.783-.574c-.846-.887-3.303-4.26-4.703-6.512m-3.674 5.791s-2.925 1.035-3.573-.91c-.367-1.119 1.355-4.045 2.896-6.338l-5.788 1.141s-1.807-.791-.425-3.049c1.381-2.262.396-4.192.396-4.192s-.923-1.596-.523-2.781c-1.16-.314-2.139-.434-2.625-.162c-1.795.996-.238 3.68-.238 3.68s.99 1.928-.392 4.188c-1.377 2.262.423 3.051.423 3.051l5.79-1.143c-1.542 2.295-3.269 5.221-2.897 6.34c.646 1.947 3.574.912 3.574.912s2.076-.613 4.04 1.164s3.076.15 3.076.15l-.007-1.146c-1.863-1.45-3.728-.905-3.728-.905m.535-15.344l-3.555-6.143s.02-.25.162-.543a5 5 0 0 1-.797-.111c-2.586-.573-2.75 1.388-2.75 1.388l2.168 3.737c1.401.306 3.215 1 4.772 1.672"></path><circle cx="20.438" cy="34.484" r="3.832" fill="#ffc84d"></circle><path fill="#e45a6f" d="M28.62 32c-.402-.135-.806-.27-1.197-.426c-.668-.266-1.565.344-1.82 1.01c-.131.344-.131.719.009 1.025c.159.35.434.502.778.643c.391.158.797.295 1.197.43c.689.229 1.551-.314 1.816-1.01c.3-.763-.091-1.441-.783-1.67m-3.44-4.243c-.343.252-.687.502-1.041.729c-.609.393-.629 1.472-.238 2.064c.204.311.513.526.845.592c.373.07.656-.059.974-.262c.354-.227.7-.477 1.045-.727c.584-.43.646-1.444.233-2.066c-.455-.683-1.233-.759-1.818-.33m-5.357-1.214c-.053.423-.109.843-.186 1.261c-.133.709.637 1.465 1.336 1.588c.365.063.734-.01 1.01-.209c.309-.224.407-.518.478-.885c.084-.416.139-.836.19-1.257c.089-.72-.605-1.46-1.341-1.591c-.806-.14-1.397.374-1.486 1.093m-4.883 2.685c.302.299.606.598.887.91c.481.535 1.557.379 2.075-.102c.275-.254.436-.59.45-.93c.004-.383-.171-.639-.42-.918c-.28-.314-.583-.613-.886-.911c-.521-.509-1.533-.402-2.078.104c-.597.556-.548 1.337-.028 1.847m-2.434 4.465c.408.125.812.256 1.205.404c.676.258 1.558-.367 1.803-1.035c.126-.35.119-.724-.027-1.029c-.168-.345-.438-.493-.785-.627c-.394-.154-.8-.283-1.206-.41c-.69-.218-1.544.341-1.799 1.04c-.286.769.119 1.441.809 1.657m1.011 4.799c.39-.17.781-.334 1.178-.479c.684-.244.941-1.293.692-1.959a1.35 1.35 0 0 0-.688-.764c-.354-.154-.66-.092-1.01.035c-.395.143-.788.309-1.179.477c-.664.285-.952 1.266-.692 1.959c.287.768 1.035 1.018 1.699.731m3.309 3.047c.146-.402.293-.799.467-1.189c.286-.656-.293-1.568-.944-1.848c-.345-.145-.721-.156-1.03-.025c-.355.148-.518.412-.665.756c-.175.387-.325.783-.469 1.182c-.251.682.262 1.563.946 1.854c.753.315 1.442-.048 1.695-.73m4.629.4a20 20 0 0 1-.207-1.256c-.091-.717-1.054-1.203-1.762-1.107a1.36 1.36 0 0 0-.896.506c-.224.309-.228.617-.185.988c.049.422.129.84.205 1.256c.131.713 1.025 1.209 1.76 1.107c.812-.111 1.22-.781 1.085-1.494m4.604-2.125a19 19 0 0 1-.841-.957c-.451-.563-1.526-.467-2.073-.014a1.34 1.34 0 0 0-.5.898c-.028.385.126.648.361.941c.266.33.551.645.836.959c.488.535 1.509.486 2.079.014c.633-.52.625-1.302.138-1.841m2.509-3.052a21 21 0 0 1-1.066-.695c-.591-.416-1.6-.033-2.01.553a1.35 1.35 0 0 0-.231 1c.073.377.302.59.606.807c.345.246.705.475 1.063.697c.618.381 1.584.059 2.01-.557c.461-.673.244-1.423-.373-1.805"></path><path fill="#fff" d="M21.01 39.32a18 18 0 0 1-.048-1.111c-.014-.639-.661-1-1.172-.865a1.22 1.22 0 0 0-.674.521c-.186.293-.213.574-.208.904c.008.371.026.744.054 1.111a.93.93 0 0 0 1.163.861c.588-.155.925-.788.885-1.421m-3.144-.441c.187-.322.373-.639.58-.955c.348-.531.01-1.197-.485-1.363a1.18 1.18 0 0 0-.854.055c-.315.139-.495.357-.673.633q-.306.471-.58.953a.935.935 0 0 0 .485 1.365c.574.193 1.206-.145 1.527-.688m-1.706-2.104c.317-.199.63-.395.955-.582c.555-.313.562-1.057.198-1.438a1.2 1.2 0 0 0-.782-.338c-.346-.023-.605.088-.893.248c-.325.186-.637.381-.953.58a.937.937 0 0 0-.197 1.438c.422.436 1.139.432 1.672.092m-.823-2.685q.552.057 1.104.146c.63.104 1.104-.469 1.063-.992a1.2 1.2 0 0 0-.398-.756c-.253-.237-.523-.313-.85-.366a20 20 0 0 0-1.104-.149a.937.937 0 0 0-1.058.993c.052.604.618 1.05 1.243 1.124m1.373-2.86c.229.291.459.584.675.891c.368.518 1.108.45 1.447.049c.176-.213.271-.506.26-.813c-.012-.349-.15-.594-.34-.862c-.216-.306-.446-.599-.671-.892a.935.935 0 0 0-1.449-.047c-.393.463-.315 1.176.078 1.674m2.868-1.506c0 .371-.004.742-.022 1.115c-.038.637.582 1.045 1.1.943c.271-.057.53-.227.709-.472c.207-.282.251-.56.272-.888c.019-.373.025-.744.027-1.115a.936.936 0 0 0-1.102-.943c-.593.122-.978.727-.984 1.36m2.972.496a22 22 0 0 1-.646.91c-.382.51-.095 1.195.388 1.397c.258.107.566.107.853.006c.33-.118.521-.324.724-.584c.225-.301.435-.605.645-.914a.933.933 0 0 0-.392-1.395c-.562-.232-1.219.059-1.572.58m2.437 2.08q-.53.157-1.076.289c-.62.145-.841.855-.597 1.32c.13.242.368.445.654.549c.326.119.605.086.925.014c.361-.084.723-.184 1.078-.285c.608-.176.852-.836.598-1.324c-.281-.538-.971-.734-1.582-.563m-1.124 5.589c-.229-.291-.46-.586-.673-.891c-.371-.52-1.11-.455-1.452-.051a1.25 1.25 0 0 0-.265.813c.014.344.15.592.341.859c.217.307.442.6.673.891a.937.937 0 0 0 1.45.053c.39-.461.312-1.176-.074-1.674m1.535-2.309a20 20 0 0 1-1-.494c-.563-.301-1.194.092-1.319.604c-.063.268-.015.576.13.842c.168.307.401.465.694.619c.332.176.664.336 1 .494a.936.936 0 0 0 1.318-.605c.141-.589-.247-1.19-.818-1.46"></path><path fill="#f46384" d="M32.396 30.859s2.02-.811 2.451-3.422c.438-2.611 2.318-2.025 2.318-2.025l3.788 4.865c-.24-2.84-.382-6.73.562-7.584c1.53-1.373 3.557.971 3.557.971s1.507 1.563 4.093.988c2.586-.572 2.75 1.389 2.75 1.389l-3.557 6.141c2.545-1.092 5.756-2.254 6.789-1.68c1.795.996.238 3.68.238 3.68s-.99 1.928.392 4.188c1.377 2.262-.423 3.051-.423 3.051l-5.79-1.143c1.542 2.295 3.269 5.221 2.897 6.34c-.646 1.947-3.574.912-3.574.912s-2.076-.613-4.04 1.164s-3.076.15-3.076.15l.063-8.08c-1.287 2.279-4.234 7.217-5.803 7.385c-2.042.223-2.315-2.865-2.315-2.865s-.312-2.148-2.741-3.197c-2.438-1.045-1.416-2.732-1.416-2.732l5.957-2.668c-2.416-.82-4.986-1.9-5.348-2.891c-.702-1.933 2.229-2.933 2.229-2.933"></path><path fill="#d34d75" d="M41.832 41s-5.688 4.994-9.401 2.029c0 0 1.437 1.426 1.282 2.248c0 0 .347 2.502 1.633 2.809c0 0 .938.313 1.783-.574c.846-.887 3.303-4.26 4.703-6.512m3.673 5.793s2.925 1.035 3.573-.91c.367-1.119-1.355-4.045-2.896-6.338l5.788 1.141s1.807-.791.425-3.049c-1.381-2.262-.396-4.191-.396-4.191s.923-1.596.523-2.782c1.16-.314 2.139-.434 2.625-.162c1.795.996.238 3.68.238 3.68s-.99 1.928.392 4.188c1.377 2.262-.423 3.051-.423 3.051l-5.79-1.143c1.542 2.295 3.269 5.221 2.897 6.34c-.646 1.947-3.574.912-3.574.912s-2.076-.613-4.04 1.164s-3.076.15-3.076.15l.007-1.146c1.863-1.45 3.728-.905 3.728-.905m-.531-15.344l3.555-6.143s-.02-.25-.162-.543c.252-.016.518-.049.797-.111c2.586-.572 2.75 1.389 2.75 1.389l-2.168 3.736c-1.401.306-3.215 1-4.772 1.672"></path><circle cx="43.563" cy="35.564" r="3.832" fill="#ffc84d"></circle><path fill="#e45a6f" d="M35.38 33.08c.402-.135.806-.27 1.197-.426c.668-.266 1.565.344 1.82 1.01c.131.344.131.719-.009 1.025c-.159.352-.434.502-.778.643c-.391.16-.797.295-1.197.43c-.689.229-1.551-.314-1.816-1.01c-.3-.762.091-1.441.783-1.67m3.439-4.243c.343.252.687.502 1.041.729c.609.393.629 1.473.238 2.064a1.34 1.34 0 0 1-.845.592c-.373.07-.656-.059-.974-.262c-.354-.227-.7-.477-1.045-.727c-.584-.43-.646-1.443-.233-2.066c.455-.683 1.233-.759 1.818-.33m5.361-1.213c.053.422.109.842.186 1.26c.133.709-.637 1.465-1.336 1.588a1.34 1.34 0 0 1-1.01-.209c-.309-.223-.407-.518-.478-.885a16 16 0 0 1-.19-1.256c-.089-.721.605-1.461 1.341-1.592c.806-.14 1.397.374 1.486 1.094m4.881 2.684c-.302.299-.606.598-.887.91c-.481.535-1.557.379-2.075-.102a1.36 1.36 0 0 1-.45-.93c-.004-.383.171-.639.42-.918c.28-.314.583-.613.886-.91c.521-.51 1.533-.402 2.078.104c.597.555.548 1.336.028 1.846m2.43 4.465c-.408.125-.812.256-1.205.404c-.676.258-1.558-.367-1.803-1.035c-.126-.348-.119-.723.027-1.027c.168-.346.438-.494.785-.627c.394-.154.8-.283 1.206-.41c.69-.219 1.544.34 1.799 1.04c.286.767-.119 1.439-.809 1.655m-1.01 4.801c-.39-.172-.781-.336-1.178-.48c-.684-.244-.941-1.293-.692-1.959c.131-.348.381-.625.688-.764c.354-.154.66-.092 1.01.035c.395.143.788.309 1.179.477c.664.287.952 1.266.692 1.959c-.287.767-1.035 1.017-1.699.732m-3.31 3.045a18 18 0 0 0-.467-1.189c-.286-.656.293-1.568.944-1.848c.345-.145.721-.156 1.03-.025c.355.148.518.412.665.756c.175.387.325.783.469 1.182c.251.682-.262 1.563-.946 1.854c-.753.315-1.442-.048-1.695-.73m-4.625.399c.081-.418.154-.838.207-1.256c.091-.717 1.054-1.203 1.762-1.107c.363.053.689.234.896.506c.224.309.228.617.185.988c-.049.424-.129.84-.205 1.256c-.131.713-1.025 1.209-1.76 1.107c-.812-.111-1.22-.781-1.085-1.494m-4.602-2.124c.291-.313.574-.629.841-.957c.451-.563 1.526-.467 2.073-.014c.286.234.469.561.5.9c.028.383-.126.646-.361.939c-.266.33-.551.645-.836.959c-.488.535-1.509.486-2.079.014c-.633-.52-.625-1.301-.138-1.841m-2.511-3.052c.366-.227.722-.451 1.066-.695c.591-.416 1.6-.031 2.01.553c.209.303.293.668.231 1c-.073.377-.302.592-.606.807c-.345.246-.705.475-1.063.697c-.618.381-1.584.059-2.01-.557c-.461-.672-.244-1.422.373-1.805"></path><path fill="#fff" d="M42.987 40.4c.026-.369.045-.738.048-1.111c.014-.639.661-1 1.172-.865c.262.074.511.264.674.521c.186.293.213.574.208.904a21 21 0 0 1-.054 1.111a.93.93 0 0 1-1.163.861c-.588-.155-.925-.788-.885-1.421m3.143-.441a21 21 0 0 0-.58-.955c-.348-.531-.01-1.197.485-1.363c.263-.09.573-.07.854.055c.315.139.495.357.673.633q.306.471.58.953a.934.934 0 0 1-.485 1.365c-.574.193-1.206-.145-1.527-.688m1.706-2.104c-.317-.199-.63-.395-.955-.582c-.555-.311-.562-1.057-.198-1.438c.19-.195.479-.32.782-.338c.346-.023.605.088.893.248c.325.186.637.381.953.582a.935.935 0 0 1 .197 1.436c-.422.436-1.139.432-1.672.092m.828-2.685q-.552.06-1.104.146c-.63.104-1.104-.469-1.063-.992c.026-.273.169-.549.398-.756c.253-.236.523-.313.85-.365c.369-.063.738-.109 1.104-.15a.937.937 0 0 1 1.058.992c-.053.605-.618 1.051-1.243 1.125m-1.374-2.86c-.229.292-.459.584-.675.891c-.368.518-1.108.449-1.447.049a1.2 1.2 0 0 1-.26-.813c.012-.348.15-.594.34-.861c.216-.307.446-.6.671-.893a.935.935 0 0 1 1.449-.047c.393.463.315 1.176-.078 1.674m-2.87-1.506c0 .371.004.742.022 1.115c.038.637-.582 1.045-1.1.944a1.2 1.2 0 0 1-.709-.471c-.207-.283-.251-.561-.272-.889a25 25 0 0 1-.027-1.115a.937.937 0 0 1 1.102-.943c.593.121.978.726.984 1.359m-2.97.496q.312.464.646.91c.382.51.095 1.196-.388 1.397a1.2 1.2 0 0 1-.853.006c-.33-.117-.521-.322-.724-.584a25 25 0 0 1-.645-.915a.933.933 0 0 1 .392-1.395c.562-.231 1.219.06 1.572.581m-2.44 2.077q.53.157 1.076.287c.62.145.841.855.597 1.32c-.13.242-.368.445-.654.549c-.326.119-.605.088-.925.014a23 23 0 0 1-1.078-.285a.94.94 0 0 1-.598-1.324c.281-.538.971-.733 1.582-.561m1.13 5.592c.229-.291.46-.586.673-.891c.371-.52 1.11-.455 1.452-.051c.173.209.272.506.265.813c-.014.344-.15.592-.341.859c-.217.307-.442.6-.673.891a.937.937 0 0 1-1.45.053c-.39-.461-.312-1.176.074-1.674m-1.537-2.309c.341-.158.674-.32 1.01-.494c.563-.299 1.194.092 1.319.604c.063.27.015.576-.13.842c-.168.307-.401.465-.694.619c-.332.176-.664.336-1 .494a.936.936 0 0 1-1.318-.605c-.141-.589.247-1.19.818-1.46"></path><path fill="#efa8b6" d="M44.966 19.685s-1.172-1.824-.019-4.207c1.154-2.385-.716-2.996-.716-2.996l-5.908 1.777c1.842-2.176 4.209-5.267 3.934-6.51c-.448-2-3.461-1.27-3.461-1.27s-2.132.404-3.911-1.561s-3.046-.461-3.046-.461l-.656 7.06c-1.439-2.359-3.387-5.168-4.563-5.297c-2.037-.228-2.318 2.861-2.318 2.861s-.314 2.145-2.748 3.19s-1.421 2.731-1.421 2.731l5.381 2.418c-2.584.979-5.686 2.366-6.03 3.492c-.599 1.962 2.384 2.813 2.384 2.813s2.05.705 2.628 3.289c.57 2.586 2.421 1.906 2.421 1.906l4.624-6.63c-.271 2.604-.722 8.337.455 9.382c1.537 1.364 3.545-.996 3.545-.996s1.5-1.57 4.092-1.019c2.589.556 2.736-1.409 2.736-1.409l-3.313-5.625c2.444.73 5.166 1.338 6.04.738c1.688-1.162-.125-3.68-.125-3.68"></path><path fill="#e295a8" d="M31.398 22.498s1.748 7.361 6.489 7.096c0 0-1.992.329-2.348 1.09c0 0-1.728 1.842-2.953 1.346c0 0-.946-.291-1.121-1.502c-.177-1.212-.23-5.386-.067-8.03M25.05 25.09s-2.985-.851-2.384-2.814c.348-1.125 3.445-2.512 6.03-3.489l-5.379-2.42s-1.017-1.69 1.421-2.731c2.436-1.043 2.744-3.191 2.744-3.191s.172-1.834 1.186-2.569c-.762-.925-1.492-1.59-2.049-1.651c-2.037-.228-2.318 2.861-2.318 2.861s-.314 2.145-2.748 3.19s-1.421 2.731-1.421 2.731l5.381 2.418c-2.584.979-5.686 2.366-6.03 3.492c-.599 1.962 2.384 2.813 2.384 2.813s2.05.705 2.628 3.289c.57 2.586 2.421 1.906 2.421 1.906l.655-.941c-.682-2.261-2.519-2.894-2.519-2.894m9.318-12.206l.655-7.06s.16-.192.447-.348a5.5 5.5 0 0 1-.589-.553c-1.778-1.965-3.046-.461-3.046-.461l-.397 4.301c.97 1.063 2.046 2.678 2.93 4.125"></path><circle cx="33.13" cy="17.06" r="3.831" fill="#ffc84d"></circle><path fill="#e45a6f" d="M41.25 19.771a19 19 0 0 1-.734-1.041c-.391-.604-1.471-.625-2.063-.23c-.312.203-.522.51-.589.842c-.075.379.06.66.261.973c.23.357.479.701.73 1.043c.43.584 1.446.643 2.068.23c.68-.45.758-1.229.327-1.817m-.352-5.449c-.427.007-.854.01-1.274-.01c-.722-.033-1.362.836-1.386 1.547c-.014.371.111.727.345.97c.265.274.57.335.943.351c.422.021.849.018 1.274.012c.726-.012 1.36-.805 1.386-1.551c.031-.816-.562-1.33-1.288-1.319m-3.668-4.094c-.286.314-.581.625-.882.922c-.518.5-.331 1.564.173 2.07c.258.262.602.416.938.414c.388-.004.636-.188.907-.447c.308-.291.593-.602.88-.914c.488-.535.352-1.543-.173-2.074c-.575-.58-1.353-.506-1.843.029m-5.535-.64c.079.421.152.839.198 1.257c.085.717 1.048 1.211 1.753 1.121a1.36 1.36 0 0 0 .902-.5c.228-.307.235-.619.189-.99c-.048-.42-.123-.838-.198-1.258c-.128-.714-1.014-1.214-1.752-1.117c-.808.107-1.22.773-1.092 1.487m-4.575 2.234c.261.341.514.68.751 1.029c.401.602 1.482.604 2.066.199c.31-.21.519-.52.576-.852c.065-.379-.07-.657-.278-.969c-.232-.354-.492-.693-.746-1.033c-.439-.575-1.457-.615-2.07-.192c-.675.462-.736 1.243-.299 1.818m-1.95 4.5c.42.087.836.181 1.238.291c.699.195 1.522-.51 1.699-1.197a1.32 1.32 0 0 0-.119-1.021c-.193-.33-.479-.453-.838-.555a22 22 0 0 0-1.238-.293c-.707-.152-1.508.48-1.695 1.198c-.211.792.248 1.426.953 1.577m.94 4.4c.35-.242.703-.48 1.068-.699c.613-.371.666-1.447.299-2.055a1.33 1.33 0 0 0-.826-.615c-.373-.086-.66.035-.979.229a18 18 0 0 0-1.065.693c-.598.41-.689 1.426-.302 2.059c.432.694 1.206.797 1.805.388m3.54 3.008c.178-.389.357-.772.558-1.145c.342-.637-.159-1.593-.792-1.923c-.329-.168-.699-.212-1.022-.104c-.363.117-.548.367-.726.696c-.202.373-.38.759-.562 1.142c-.302.66.133 1.58.797 1.92c.726.383 1.444.072 1.747-.586m4.983.93a18 18 0 0 1-.128-1.268c-.049-.721-.979-1.266-1.688-1.213c-.37.026-.711.188-.93.444c-.247.298-.271.603-.247.979c.022.422.075.844.125 1.266c.089.719.95 1.268 1.687 1.212c.819-.059 1.269-.699 1.181-1.42m3.814-1.035a19 19 0 0 1-.467-1.186c-.241-.68-1.29-.953-1.954-.709c-.35.125-.63.375-.77.681c-.158.353-.102.653.026 1.01c.14.402.3.795.464 1.186c.279.666 1.254.963 1.955.709c.773-.28 1.027-1.02.746-1.688"></path><path fill="#fff" d="M30.809 21.333a19 19 0 0 1 .604-.939c.362-.523.04-1.199-.452-1.379a1.2 1.2 0 0 0-.854.037c-.32.131-.505.342-.691.615c-.213.307-.408.621-.606.938a.933.933 0 0 0 .455 1.377c.566.209 1.209-.111 1.544-.649m-2.313-2.183a18 18 0 0 1 1.021-.442c.594-.233.704-.971.397-1.394a1.2 1.2 0 0 0-.729-.448c-.338-.071-.608.003-.911.125c-.352.135-.69.286-1.031.44a.94.94 0 0 0-.394 1.396c.355.487 1.07.582 1.647.323m-.168-2.694c.371.019.743.04 1.113.075c.63.068 1.07-.534.992-1.057a1.2 1.2 0 0 0-.442-.729c-.267-.219-.54-.277-.871-.313c-.369-.039-.74-.061-1.113-.08a.934.934 0 0 0-.99 1.057c.089.6.68 1.01 1.311 1.047m.872-2.675q.424.37.822.761c.447.45 1.169.256 1.438-.194a1.2 1.2 0 0 0 .115-.846c-.072-.342-.248-.561-.48-.79a26 26 0 0 0-.814-.763a.943.943 0 0 0-1.443.197c-.306.523-.104 1.215.362 1.635m2.782-1.536q.029.556.035 1.116c-.004.637.641 1.01 1.15.879c.267-.068.514-.256.683-.51c.189-.291.221-.572.221-.9c0-.375-.014-.744-.035-1.115a.93.93 0 0 0-1.151-.879c-.583.15-.937.777-.903 1.409m3.208.434q-.319.456-.664.896c-.402.497-.13 1.19.352 1.407c.251.109.561.121.853.024c.332-.108.526-.31.735-.563c.231-.295.45-.594.667-.895a.94.94 0 0 0-.354-1.408c-.554-.244-1.219.027-1.589.539m2.13 2.129c-.35.129-.694.254-1.053.367c-.606.193-.768.92-.49 1.365c.145.234.396.414.689.497c.336.094.611.039.929-.058c.354-.113.703-.242 1.053-.373a.933.933 0 0 0 .49-1.362c-.321-.516-1.022-.659-1.618-.436m.8 3.101a20 20 0 0 1-1.045-.39c-.591-.24-1.181.213-1.251.732a1.18 1.18 0 0 0 .212.825c.197.286.442.423.748.548c.345.141.694.268 1.044.391c.6.209 1.184-.188 1.251-.734c.084-.6-.362-1.16-.959-1.372m-4.164 3.909a22 22 0 0 1-.033-1.115c0-.639-.642-1.014-1.153-.885a1.2 1.2 0 0 0-.679.513c-.192.289-.225.569-.225.896c-.003.375.013.748.032 1.117a.936.936 0 0 0 1.15.883c.589-.152.935-.78.908-1.409m2.589-.996a21 21 0 0 1-.528-.981c-.286-.571-1.033-.618-1.426-.272a1.2 1.2 0 0 0-.383.762c-.04.346.058.609.206.904c.169.336.343.658.527.982a.94.94 0 0 0 1.43.27c.452-.4.483-1.114.174-1.665"></path><path fill="#dde4e9" d="m33.382 35.02l-2.699-3.03s-.835-4.811 3.485-2.034l1.252 3.871l-2.038 1.189"></path><path fill="#c8d2d9" d="m35.474 33.895l-1.271-3.852s1.15-4.745 4.01-.477l-.394 4.047l-2.34.282"></path><path fill="#dde4e9" d="m36.483 33.457l1.745-3.922s4.279-2.903 3.481 2.475l-3.188 2.897zm.288 5.813l-.23 4.049s-2.813 3.99-3.899-1.025l1.847-3.623zm1.716-3.549l3.895 1.227s2.938 4.01-2.36 3.988l-2.915-2.883z"></path><path fill="#c8d2d9" d="m34.501 38.582l-1.826 3.623s-4.168 2.539-3.168-2.496l3.14-2.586z"></path><path fill="#dde4e9" d="m33.29 38.13l-3.781 1.455s-4.797-.922-.671-3.979l4.063.199z"></path><path fill="#c8d2d9" d="m32.89 36.545l-3.942-.949s-3.421-3.481 1.708-3.657l3.232 2.467zm4.29-1.756l3.992-2.442s5.634.047 1.591 4.377l-4.654.623z"></path><circle cx="35.37" cy="36.08" r="3.126" fill="#f8ae1c"></circle><path fill="#ca8a2a" d="M34.683 36.691a3.12 3.12 0 0 1-.437-3.496a3.1 3.1 0 0 0-.993.59a3.13 3.13 0 0 0-.274 4.412a3.125 3.125 0 0 0 5.12-.645a3.12 3.12 0 0 1-3.416-.861"></path><path fill="#c8d2d9" d="m37.854 38.25l2.446 3.238s.435 4.861-3.643 1.744l-.931-3.961z"></path></symbol>
+		<symbol id="rose-flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#e7cfb3" d="M24.9 64c-.1 0-.3 0-.4-.1-.5-.2-.8-.8-.5-1.3 4.6-11.3 7-23.3 7-35.6 0-.6.4-1 1-1s1 .4 1 1c0 12.6-2.4 24.8-7.2 36.4-.2.4-.5.6-.9.6z"></path><linearGradient id="a" x1="35" x2="35" y1="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f96762"></stop><stop offset="1" stop-color="#ec4130"></stop></linearGradient><path fill="url(#a)" d="M32 22c5.5 0 10-4.5 10-10V2c0-1.1-.9-2-2-2-6.6 0-12 5.4-12 12v6c0 2.2 1.8 4 4 4z"></path><linearGradient id="b" x1="41" x2="41" y1="22" gradientTransform="matrix(-1 0 0 1 70 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec4130"></stop><stop offset="1" stop-color="#f96762"></stop></linearGradient><path fill="url(#b)" d="M32 22c-5.5 0-10-4.5-10-10V2c0-1.1.9-2 2-2 6.6 0 12 5.4 12 12v6c0 2.2-1.8 4-4 4z"></path><linearGradient id="c" x1="17" x2="17" y1="28" y2="4" gradientTransform="matrix(-1 0 0 1 54 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec4130"></stop><stop offset="1" stop-color="#f96762"></stop></linearGradient><path fill="url(#c)" d="M44 4c-8.8 0-16 7.2-16 16v4c0 2.2 1.8 4 4 4 7.7 0 14-6.3 14-14V6c0-1.1-.9-2-2-2z"></path><linearGradient id="d" x1="27" x2="27" y1="28" y2="4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f96762"></stop><stop offset="1" stop-color="#ec4130"></stop></linearGradient><path fill="url(#d)" d="M20 4c8.8 0 16 7.2 16 16v4c0 2.2-1.8 4-4 4-7.7 0-14-6.3-14-14V6c0-1.1.9-2 2-2z"></path><linearGradient id="e" x1="29.586" x2="44.414" y1="49.414" y2="34.586" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e7cfb3"></stop><stop offset="1" stop-color="#f5ece1"></stop></linearGradient><path fill="url(#e)" d="M31 50c-1.1 0-2-.9-2-2 0-7.7 6.3-14 14-14 1.1 0 2 .9 2 2 0 7.7-6.3 14-14 14z"></path></symbol>
+        <symbol id="heart-flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g transform="matrix(3.77953 0 0 3.77953 -910.961 -1181.51)"><path fill="#d87070" d="m 931.81055,111.60938 a 0.50004998,0.50004998 0 0 0 -0.0527,0.004 0.50004998,0.50004998 0 0 0 -0.10351,0.0312 c -0.31257,0.1183 -0.64871,0.20925 -1.00391,0.28711 -0.44802,0.0983 -0.90315,0.20516 -1.29297,0.32422 -0.38982,0.11905 -0.69163,0.1994 -0.97461,0.47266 -0.61432,0.59349 -0.57315,1.64815 0.14844,2.33398 0.35906,0.34205 0.84926,0.46092 1.32813,0.42773 0.4961,-0.034 0.95864,-0.21791 1.31445,-0.47265 0.34091,-0.24416 0.50621,-0.58401 0.67969,-0.99024 0.17348,-0.40618 0.31656,-0.87778 0.40625,-1.34179 0.0514,-0.2744 0.0426,-0.32059 0.0664,-0.51758 a 0.50004998,0.50004998 0 0 0 -0.27344,-0.50195 0.50004998,0.50004998 0 0 0 -0.24218,-0.0566 z" font-family="sans-serif" font-weight="400" transform="matrix(.26458 0 0 .26458 0 288.533)" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"></path><path fill="#ff819a" d="m 924.04297,112.60938 a 0.50004998,0.50004998 0 0 0 -0.45117,0.5625 c 0.0264,0.19275 0.0112,0.23284 0.0664,0.51562 0.0896,0.46401 0.2327,0.93756 0.40625,1.34375 0.17348,0.40619 0.33882,0.74581 0.67969,0.99023 0.3651,0.26193 0.83452,0.43106 1.32227,0.46485 0.47762,0.0302 0.96477,-0.0918 1.32031,-0.42969 0.71981,-0.68409 0.76628,-1.73329 0.1543,-2.32422 -0.28309,-0.27326 -0.59061,-0.3536 -0.98047,-0.47265 -0.38982,-0.11906 -0.84498,-0.22633 -1.29297,-0.32422 -0.34885,-0.0764 -0.67748,-0.17436 -0.9961,-0.29493 a 0.50004998,0.50004998 0 0 0 -0.17773,-0.0312 0.50004998,0.50004998 0 0 0 -0.0508,0 z" font-family="sans-serif" font-weight="400" transform="matrix(.26458 0 0 .26458 0 288.533)" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"></path><path fill="#eb7282" d="m 246.25058,313.13733 c 0.54791,0 0.99208,0.44315 0.99208,0.98979 -3e-4,0.28326 -0.14603,0.66258 -0.32306,0.94424 -0.41372,0.65825 -1.6611,1.63743 -1.6611,1.63743 0,0 -1.30196,-1.02493 -1.7198,-1.71959 -0.15492,-0.25757 -0.264,-0.61917 -0.26437,-0.86208 0,-0.54664 0.44417,-0.98979 0.99208,-0.98979 0.54792,0 0.99209,0.37928 0.99209,0.92593 0,-0.54665 0.44417,-0.92593 0.99208,-0.92593 z"></path><path fill="none" stroke="#484666" stroke-linecap="round" stroke-linejoin="round" stroke-width=".265" d="M246.25058 313.13733c.54791 0 .99208.44315.99208.98979-.0003.28326-.14603.66258-.32306.94424-.41372.65825-1.6611 1.63743-1.6611 1.63743 0 0-1.30196-1.02493-1.7198-1.71959-.15492-.25757-.264-.61917-.26437-.86208 0-.54664.44417-.98979.99208-.98979.54792 0 .99209.37928.99209.92593 0-.54665.44417-.92593.99208-.92593zM245.2549 316.71084c0 0 .32103 1.407.26022 2.11468-.0513.59695-.52045 1.7182-.52045 1.7182"></path><path fill="none" stroke="#484666" stroke-linecap="round" stroke-linejoin="round" stroke-width=".265" d="M246.37357 318.96575c-.18588.13321-.50964.19158-.6997.0108-.19006-.18068-.19426-.46741-.0393-.617.2399-.23162 1.00052-.175 1.07917-.46011 0 0-.0285.84291-.34013 1.06624zM244.67261 319.23033c.18587.13322.50964.19158.69969.0109.19006-.18069.19426-.46741.0393-.61701-.2399-.23162-1.00052-.175-1.07917-.46011 0 0 .0285.84291.34013 1.06624z"></path><path fill="#ce7082" d="m 924.0918,113.10742 c 0.008,0.0634 0.0145,0.0994 0.0176,0.13867 0.1988,0.061 0.39074,0.13199 0.5996,0.17774 0.88419,0.19389 1.78053,0.42582 2.0293,0.66601 0.35263,0.34054 0.38322,1.10591 -0.14648,1.60938 -0.16678,0.15853 -0.3894,0.22691 -0.63282,0.25781 0.0473,0.007 0.0939,0.0261 0.14063,0.0293 0.38192,0.0257 0.70834,-0.0618 0.94531,-0.28711 0.52974,-0.50347 0.49912,-1.26884 0.14649,-1.60938 -0.24873,-0.24019 -1.14508,-0.47212 -2.0293,-0.66601 -0.3727,-0.0816 -0.72902,-0.18715 -1.07031,-0.31641 z" font-family="sans-serif" font-weight="400" transform="matrix(.26458 0 0 .26458 0 288.533)" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"></path><path fill="#bd5858" d="m 931.85156,112.13086 c -0.1494,0.0566 -0.34076,0.10821 -0.49609,0.15429 -0.008,0.0977 -0.005,0.12178 -0.0391,0.30469 -0.16555,0.85762 -0.53402,1.7707 -0.88672,2.02344 -0.23548,0.16863 -0.57888,0.29619 -0.91797,0.3457 0.10389,0.0132 0.20265,0.0391 0.3164,0.0312 0.38185,-0.0257 0.7871,-0.18533 1.05469,-0.37695 0.45037,-0.36212 0.72118,-1.16582 0.88672,-2.02344 0.0476,-0.25455 0.0556,-0.23864 0.082,-0.45898 z" font-family="sans-serif" font-weight="400" transform="matrix(.26458 0 0 .26458 0 288.533)" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" fill="#c86774" d="m 244.26726,313.27031 c -0.0285,0 -0.0554,0.006 -0.0832,0.008 0.4347,0.0421 0.75654,0.34462 0.75654,0.78496 l 0.18604,0 c 0,-0.47488 -0.37262,-0.79323 -0.85938,-0.79323 z m 1.98231,0 c -0.0354,0 -0.0687,0.005 -0.10284,0.008 0.43663,0.0421 0.77825,0.40261 0.77825,0.84904 -2.6e-4,0.23794 -0.13689,0.60931 -0.30283,0.87334 -0.19068,0.30339 -0.60274,0.71327 -0.96273,1.03714 -0.24185,0.21758 -0.3946,0.34283 -0.49299,0.4222 0.0295,0.0238 0.079,0.0643 0.093,0.0754 0.0627,-0.0498 0.26991,-0.21327 0.58602,-0.49765 0.35999,-0.32387 0.77204,-0.73375 0.96273,-1.03714 0.16593,-0.26403 0.30256,-0.6354 0.30282,-0.87334 0,-0.47487 -0.38498,-0.85731 -0.86144,-0.85731 z" font-family="sans-serif" font-weight="400"></path></g></symbol> 
+        <symbol id="comment-flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68"><path fill="#15bcac" d="M30.1,65.9c-0.5-0.2-0.7-0.8-0.5-1.3c0.6-1.4,0.4-3.1,0-4.3c-0.5-1.6-1.3-3.1-1.8-4.8    c-1.3-4.3-0.5-8.7,0.2-13c0.7-4.5,1.4-8.7,0-12.6c-0.2-0.5,0.1-1.1,0.6-1.3c0.5-0.2,1.1,0.1,1.3,0.6c1.5,4.4,0.8,9.1,0,13.6    c-0.7,4.3-1.4,8.3-0.2,12.1c0.5,1.6,1.3,3.1,1.8,4.8c0.7,2.2,0.6,4.1-0.1,5.7C31.2,66,30.6,66.2,30.1,65.9z"></path><path fill="#fc95ce" d="M49.3,14.5c0.1,2.1-1.1,4.3-3,5.3c-1.7,1-3.8,1.1-5.7,0.4c1.9,0.9,3.3,3,3.2,5.2      c-0.1,2.3-1.9,4.5-4.1,5.1c-0.8,0.2-1.6,0.2-2.4,0c-1-0.2-1.9-0.7-2.6-1.3c0.7,1.3,0.8,2.9,0.2,4.2c-0.1,0.1-0.1,0.2-0.2,0.3      c-1,1.6-3.1,2.4-4.9,1.9c-2.1-0.6-3-2.6-3.2-4.6c-1.2,1.4-2.7,2.4-4.7,2.2c-1.8-0.2-3.5-1.6-4-3.4c-0.3-1.3-0.1-2.7,0.6-3.8      c-1.3,1.1-3,1.6-4.7,1.3c-2.2-0.5-3.9-2.6-3.8-4.8c0.1-1.6,1.3-3.1,2.7-3.7c-1.9-0.1-3.7-1.1-4.6-2.7c-1.2-2.2-0.4-5.3,1.8-6.4      c1.8-1,4.6-0.6,6,1c-1-2.3-0.8-5.7,1.6-6.9c3.4-1.8,6,2,6.9,4.8c-0.2-1.4-0.2-3.1,0.6-4.3c0.5-0.9,1.5-1.5,2.5-1.8      c0,0,0.1,0,0.1,0c1-0.2,2-0.2,2.9,0.3C31.9,3.3,33,5.2,33,6.8c-0.1-2,1.5-4.1,3.4-4.6c2.3-0.7,5.1,0.4,6.2,2.6      c0.8,1.6,0.6,3.6-0.4,5.1c1.1-0.5,2.3-0.6,3.4-0.2C47.7,10.3,49.2,12.3,49.3,14.5z"></path><path fill="#f47dc4" d="M25.3 12.4c-.2-1.7-.3-3.5-.1-5.2 0-.1.1-.2.3-.2.1 0 .2.1.2.3-.2 1.7-.2 3.4.1 5.1 0 .1-.1.3-.2.3C25.4 12.6 25.3 12.5 25.3 12.4zM34.4 9.4c-.3-1.8.3-3.8 1.6-5.1.1-.1.3-.1.4 0 .1.1.1.3 0 .4-1.2 1.2-1.7 3-1.4 4.7 0 .1-.1.3-.2.3C34.5 9.7 34.4 9.6 34.4 9.4zM36.2 9.6c-.1 0-.2-.1-.3-.2-.1-2 .8-3.9 2.4-5.1.1-.1.3-.1.3.1.1.1.1.3-.1.3-1.4 1.1-2.3 2.9-2.2 4.7C36.4 9.5 36.3 9.6 36.2 9.6 36.2 9.6 36.2 9.6 36.2 9.6zM37.8 9.9c-.1-.1-.2-.2-.1-.3.5-1.2 1.4-2.2 2.5-2.8.1-.1.3 0 .3.1.1.1 0 .3-.1.3-1 .6-1.8 1.5-2.3 2.6C38.1 9.9 37.9 9.9 37.8 9.9zM44.9 13.2c-1.6-.8-3.4-.9-5.1-.4-.1 0-.3 0-.3-.2 0-.1 0-.3.2-.3 1.8-.5 3.8-.4 5.4.5.1.1.2.2.1.3C45.2 13.3 45 13.3 44.9 13.2zM45.3 15.7c-1.4-.8-3-1.2-4.6-1.2-.1 0-.2-.1-.2-.3 0-.1.1-.2.3-.2 0 0 0 0 0 0 1.7 0 3.3.4 4.8 1.2.1.1.2.2.1.3C45.6 15.7 45.4 15.7 45.3 15.7zM45 18c-1.2-.9-2.7-1.5-4.2-1.5-.1 0-.2-.1-.2-.3s.1-.2.3-.2c1.6.1 3.2.6 4.5 1.6.1.1.1.2 0 .4C45.3 18 45.2 18.1 45 18zM42.5 25.1c-1.1-1.7-2.7-3.2-4.5-4-.1-.1-.2-.2-.1-.3.1-.1.2-.2.3-.1 1.9.9 3.6 2.4 4.7 4.2.1.1 0 .3-.1.3C42.7 25.2 42.6 25.2 42.5 25.1zM39.3 26c-1.2-.6-2.1-1.6-2.7-2.8-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.5 1.1 1.4 2 2.5 2.6.1.1.2.2.1.3C39.6 26.1 39.5 26.1 39.3 26zM38.2 27.2c-1.2-.7-2.3-1.7-3.1-2.9-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.8 1.1 1.8 2.1 2.9 2.7.1.1.2.2.1.3C38.5 27.2 38.3 27.2 38.2 27.2zM37.3 28.2c0 0-.1 0-.1 0-1.4-.7-2.6-1.8-3.5-3.2-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.8 1.3 1.9 2.3 3.3 3C37.7 27.8 37.6 28.2 37.3 28.2zM32.2 33C32.2 33 32.2 33 32.2 33c-.1 0-.3-.1-.2-.3 0-1.6-.4-3.2-1.2-4.6-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.8 1.5 1.2 3.1 1.2 4.8C32.4 32.9 32.3 33 32.2 33zM31 32.8c-.1 0-.2-.1-.3-.2 0-1.2-.3-2.3-.9-3.3-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.6 1.1 1 2.3 1 3.6C31.3 32.7 31.2 32.8 31 32.8 31 32.8 31 32.8 31 32.8zM29 32.5c-.1 0-.2-.1-.2-.2l-.5-3.1c0-.1.1-.3.2-.3.1 0 .3.1.3.2l.5 3.1C29.3 32.4 29.2 32.5 29 32.5 29 32.5 29 32.5 29 32.5zM33 29.4c-.1-.6-.4-1.1-.8-1.5-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .5.5.9 1.1 1 1.8 0 .1-.1.3-.2.3C33.2 29.7 33 29.6 33 29.4zM21.4 31.3c0-.1 0-.3.2-.3 1.7-.6 2.9-2.2 3.1-3.9 0-.1.1-.2.3-.2.1 0 .2.1.2.3-.2 1.9-1.6 3.7-3.5 4.3C21.6 31.4 21.5 31.4 21.4 31.3zM20.8 29.5c-.1-.1-.1-.3 0-.4.8-.7 1.5-1.6 1.7-2.7 0-.1.2-.2.3-.2.1 0 .2.2.2.3-.2 1.2-.9 2.3-1.8 3C21 29.6 20.9 29.6 20.8 29.5zM19.6 28.2c-.1-.1-.2-.2-.1-.3l1.6-2.8c.1-.1.2-.2.3-.1.1.1.2.2.1.3L20 28.1C19.9 28.2 19.7 28.2 19.6 28.2zM24.8 30.4c-.1-.1-.2-.2-.1-.3.3-.5.5-1.1.7-1.7 0-.1.2-.2.3-.2.1 0 .2.2.2.3-.1.7-.4 1.3-.7 1.9C25 30.5 24.9 30.5 24.8 30.4zM11.2 22.4c-.1-.1-.1-.3.1-.3 1.4-1.1 3-1.9 4.7-2.5.1 0 .3 0 .3.2 0 .1 0 .3-.2.3-1.7.6-3.2 1.4-4.6 2.5C11.5 22.6 11.3 22.5 11.2 22.4zM13.8 23.1c-.1-.1-.1-.3 0-.4l2.9-2.7c.1-.1.3-.1.4 0 .1.1.1.3 0 .4l-2.9 2.7C14 23.2 13.9 23.2 13.8 23.1zM14.4 24.5c-.1-.1-.1-.3 0-.4 1.1-1 2.2-2 3.1-3.2.1-.1.2-.1.4 0 .1.1.1.2 0 .4-1 1.2-2 2.3-3.2 3.3C14.6 24.6 14.5 24.6 14.4 24.5zM16.7 25.1c-.1-.1-.1-.3 0-.4.7-.7 1.3-1.5 1.7-2.3.1-.1.2-.2.3-.1.1.1.2.2.1.3-.5.9-1.1 1.7-1.8 2.4C17 25.2 16.8 25.2 16.7 25.1zM14.2 16.5c-1.5 0-3-.7-3.9-1.9-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .9 1.2 2.5 1.8 4 1.7.1 0 .3.1.3.2s-.1.3-.2.3C14.5 16.5 14.4 16.5 14.2 16.5zM14.8 14.7c-1.6-.2-3-1.1-4-2.3-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .9 1.1 2.3 1.9 3.7 2.1.1 0 .2.1.2.3C15.1 14.6 15 14.7 14.8 14.7zM14.8 12.8c-.7-.2-1.3-.6-1.8-1.1-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .4.5 1 .8 1.6 1 .1 0 .2.2.2.3C15.1 12.8 14.9 12.9 14.8 12.8zM19 11.3c-.8-1.4-1.3-3-1.3-4.6 0-.1.1-.3.2-.3 0 0 0 0 0 0 .1 0 .2.1.3.2 0 1.5.5 3 1.3 4.3.1.1 0 .3-.1.3C19.2 11.4 19 11.4 19 11.3zM20.5 10.8c-.8-1.4-1.1-3.1-.8-4.6C19.7 6.1 19.9 6 20 6c.1 0 .2.2.2.3-.3 1.4 0 3 .7 4.3.1.1 0 .3-.1.3C20.7 11 20.5 11 20.5 10.8zM21.7 10.1c-.4-1.1-.5-2.2-.4-3.3 0-.1.1-.2.3-.2.1 0 .2.1.2.3-.1 1.1.1 2.1.4 3.1 0 .1 0 .3-.2.3C21.9 10.3 21.8 10.2 21.7 10.1zM28.1 12.2c-1.1-2.1-1.5-4.6-1.1-7 0-.1.2-.2.3-.2.1 0 .2.2.2.3-.4 2.3-.1 4.6 1 6.6.1.1 0 .3-.1.3C28.3 12.4 28.2 12.3 28.1 12.2zM29.6 10.1c-.8-1.5-1.1-3.2-.9-4.9C28.8 5.1 28.9 5 29 5c.1 0 .2.1.2.3-.2 1.6.1 3.2.8 4.6.1.1 0 .3-.1.3C29.9 10.3 29.7 10.3 29.6 10.1zM31 9c-.6-.9-.7-2-.5-3 0-.1.2-.2.3-.2.1 0 .2.2.2.3C30.8 7.1 31 8 31.5 8.8c.1.1 0 .3-.1.3C31.3 9.2 31.1 9.2 31 9z"></path><path fill="#ffc0e3" d="M38.8,22.1c-1.9,2.1-3.9,4.1-5.9,6.1C32,29,31,30.3,30,30.9c-1,0.6-1.6,0.1-2.6-0.4      c-4.3-2.4-8-5.7-10.9-9.6c-1.6-2.2-2.9-3.9-2-6.6c0.8-2.3,2.7-4.3,5.1-4.8c2.6-0.6,5.5,0.6,7.1,2.7c0.4,0.5,1.1,0.4,1.3-0.2      c0.6-1.5,2-2.8,3.5-3.3c2.9-1,6.3,0.1,8.6,1.9c0.6,0.5,1.1,1.1,1.5,1.8C43.6,16,41.2,19.5,38.8,22.1z"></path><path fill="#fc95ce" d="M38,19.5c-0.1-0.1-0.2-0.2-0.1-0.3c0.8-1.5,0.8-3.3,0.1-4.8c-0.7-1.5-2.2-2.6-3.9-2.8      c-0.1,0-0.2-0.1-0.2-0.3c0-0.1,0.1-0.2,0.3-0.2c1.8,0.3,3.4,1.4,4.3,3.1c0.8,1.6,0.8,3.6-0.1,5.3C38.3,19.5,38.1,19.5,38,19.5z      "></path><path fill="#fc95ce" d="M37.1 17.4c-.1 0-.2-.1-.3-.2 0-1.3-.6-2.7-1.5-3.6-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 1 1.1 1.6 2.5 1.6 4C37.4 17.3 37.3 17.4 37.1 17.4 37.1 17.4 37.1 17.4 37.1 17.4zM40.3 13.1c-.1 0-.2-.1-.2-.1-.3-.5-.7-1-1.3-1.3-.1-.1-.2-.2-.1-.3.1-.1.2-.2.3-.1.6.3 1.2.8 1.5 1.5C40.6 12.9 40.5 13.1 40.3 13.1zM23.4 27.4c-3-2.3-5.5-5.4-7.2-8.8-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1 1.7 3.3 4.1 6.3 7.1 8.6.1.1.1.2 0 .4C23.7 27.5 23.5 27.5 23.4 27.4zM22 24.1c-1.2-.9-2.1-2.1-2.9-3.4-.1-.1 0-.3.1-.3.1-.1.3 0 .3.1.7 1.2 1.6 2.4 2.7 3.2.1.1.1.2 0 .4C22.2 24.2 22.1 24.2 22 24.1zM17.4 13.2c-.2 0-.3-.1-.2-.3.2-1.3 1.4-2.3 2.8-2.2.1 0 .2.1.2.3 0 .1-.1.2-.3.2-1.1-.1-2.1.7-2.3 1.8C17.6 13.1 17.5 13.2 17.4 13.2zM20.9 12c-.1-.1 0-.3.1-.3l.5-.3c.1-.1.3 0 .3.1.1.1 0 .3-.1.3l-.5.3C21.1 12.2 21 12.1 20.9 12zM33 26.3c-.1-.1-.1-.2 0-.4l3-3.7c.1-.1.2-.1.4 0 .1.1.1.2 0 .4l-3 3.7C33.2 26.4 33.1 26.4 33 26.3zM34.9 25.1c-.1-.1-.2-.2-.1-.3l.8-1.2c.1-.1.2-.2.3-.1.1.1.2.2.1.3L35.3 25C35.2 25.1 35.1 25.2 34.9 25.1zM37.7 22.2c-.1-.1-.1-.2-.1-.3l.7-1.1c.1-.1.2-.2.3-.1.1.1.1.2.1.3l-.7 1.1C38 22.3 37.9 22.3 37.7 22.2z"></path><path d="M46.6 40.5c-.1.4-.6.7-1 .7-.6 0-1-.4-1.1-1.1 0-.3-.1-3.1-.1-4 0-.6.3-1.1 1-1.2.5-.1 1 .3 1.2.8C46.9 36.7 47 39.4 46.6 40.5zM46.6 33.1c0 .6-.5 1-1 1-.5 0-1-.4-1-1 0-.6.5-1 1-1C46.2 32.2 46.6 32.6 46.6 33.1zM35.1 49.2c.8.1 1.8 0 2.6-.2.5-.2.9 0 1 .3.2.3.2.8-.3 1.1-.8.7-2.8.6-3.9.5-.8-.1-1.1-.5-1.3-1.2-.3-1.3-.3-7.6-.3-7.8.1-.5.4-.8 1-.8.5 0 .8.3.9.9C35.1 46.4 35 47.3 35.1 49.2zM43.2 51.2c-1.9.2-3.6-1.1-3.6-3.3 0-2.3 1.5-3.6 3.4-3.6 2.1 0 3.4 1.5 3.4 3.4C46.4 49.5 45.2 51.1 43.2 51.2zM43 49.6c1-.1 1.6-.9 1.6-1.9.1-1-.5-1.9-1.5-1.9-1.1-.1-1.7.9-1.7 1.9C41.4 48.8 41.9 49.7 43 49.6zM50.2 48.5c1.3-3.5 1.3-3.8 1.7-4.2.3-.5.9-.5 1.3-.3.4.2.6.6.4 1.1-1.1 2.4-1.8 5.1-2.6 5.9-.2.2-.4.3-.7.3-.5 0-1-.5-1.2-1-.9-1.5-1.2-3.4-1.8-5.5-.1-.5.1-.9.5-1.1.5-.2 1 0 1.2.4C49.4 45.7 49.6 47.1 50.2 48.5zM56.3 48.1c0 .6.4 1.1.8 1.4.5.2 1 .1 1.4-.5.3-.5.7-.5 1.1-.4.4.1.7.5.5 1-.6 1.3-2.5 2.1-3.9 1.4-1.4-.7-2-2.4-1.8-4 .2-1.9 1.3-3.3 3.2-3.4 1.9-.1 3.2 1.6 2.8 3-.2.7-.8 1.3-1.6 1.4C58 48.2 56.4 48.2 56.3 48.1zM56.4 46.4c.8.1 1.4.3 2.1.1.1 0 .2-.1.2-.2.1-.4-.4-1.1-1.2-.8C57 45.6 56.6 46 56.4 46.4zM35.3 55.4c.6 0 .9.4.9.9 0 .9 0 1.5.1 2.1.1.6.5 1.1 1.1 1.1.9-.1 1.3-1 1.5-1.8.2-.6.4-1.4.7-1.9.3-.4.6-.4 1-.4.4.1.8.4.7.9-.2 4.4.1 4.2-.1 5.9-.1.9-.7 1.6-2.1 2-.8.2-2.1.4-2.9.1-.4-.1-.6-.4-.6-.8 0-.3.3-.7.8-.7.6 0 1.8-.1 2.3-.2.5-.1.6-.4.6-.7 0-.6 0-1.2 0-1.6-.6.8-1.7 1.3-2.7 1.1-1.2-.2-1.9-1.3-2.2-2.5-.2-.8-.3-1.7-.1-2.5C34.5 55.6 34.8 55.4 35.3 55.4zM45.9 62.5c-2 .2-3.7-1.1-3.7-3.5 0-2.3 1.5-3.8 3.5-3.8 2.2 0 3.5 1.6 3.5 3.5C49.3 60.7 48 62.3 45.9 62.5zM45.7 60.9c1-.1 1.6-1 1.7-2 .1-1-.5-1.9-1.5-2-1.1-.1-1.8.9-1.8 2C44 59.9 44.6 61 45.7 60.9zM56.1 60.5c-.3.3-.6.6-1 .9-1.8 1.2-3.7 1.1-4.5-.9-.4-1.2-.5-2.5-.4-3.7 0-.6.3-1 .9-1 .5 0 .9.3 1 .9 0 .9 0 2.6.5 3.2.4.5.9.4 1.4.1 1.1-.7 2-2.3 2.2-3.3.2-.6.7-.9 1.1-.8.4 0 .8.4.8 1-.1 1.4-.2 3 0 4.5.1.5 0 .9-.4 1.1-.5.2-1 0-1.3-.4C56.2 61.6 56.2 61.1 56.1 60.5z"></path><path fill="#fff" d="M37.3 12.6c.7.9 1.3 1.9 1.4 3 .1 1.1-.4 2.3-1.3 3-.5.3-1.3.5-1.6 0-.7-.9.8-1.9.6-2.9-.4-1.3-2.1-.9-2.7-2C32.1 10.9 36 11.1 37.3 12.6zM35.4 20.9c-.7.8-1 1.8-.8 2.9.6 0 1.2-.1 1.6-.6.4-.4.5-1.1.2-1.6-.3-.5-1.1-.6-1.5-.2L35.4 20.9z"></path><path fill="#fff" d="M15.9 15.5c-.5 0-.5-.8 0-.8C16.4 14.7 16.4 15.5 15.9 15.5zM18 14.1c-.2-.5.3-1 .6-.9.9.3 1 1.1.4 1.8-.2.2-.4.2-.6.1-.3-.2-.3-.5-.4-.8C18 14.3 18 14.2 18 14.1L18 14.1zM36 4.3h-.2c-.5 0-.5-.8 0-.8H36C36.5 3.5 36.5 4.3 36 4.3zM37.8 7.4c-.2 0-.4-.1-.5-.3-.3-.3.2-.9.5-.5.1 0 .1 0 .2.1C38.5 6.8 38.3 7.5 37.8 7.4zM40.4 4.3c-.2.3-.4.4-.7.5-.2 0-.3 0-.4-.1C39.2 4.8 39.1 5 39 5.1c-.1.2-.5.1-.6-.1-.1-.2-.1-.3 0-.4 0 0 0 0 0 0 0 0 0 0 0 0l0 0c0 0 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1 0 0 0 0 0 0 0 0 0 0 0 0 0-.2.2-.3.3-.4.1-.1.5 0 .5.2 0 0 .1 0 .1-.1.1 0 .2-.1.3-.2C40 3.5 40.7 3.9 40.4 4.3zM40.9 6.6c-.3 0-.5-.2-.5-.5 0-.4.5-.5.7-.2C41.4 6.1 41.3 6.7 40.9 6.6zM21.9 15.4c.2.3-.1.6-.4.5-.1 0-.3-.1-.4-.3-.2.1-.6 0-.5-.3 0-.3 0-.7.5-.7.3 0 .3.2.7.5C21.7 15.2 21.8 15.3 21.9 15.4 21.9 15.4 21.9 15.4 21.9 15.4zM20.2 18.9c.2.5.2.9 0 1.4-.2.4-.8.1-.7-.4.1-.2.1-.4 0-.6 0 .3-.4.5-.6.2-.3-.3-.3-.5 0-.9.2-.3.6 0 .6.3C19.7 18.7 20.1 18.6 20.2 18.9zM20 13.6c0-.3.1-.5.2-.7.2-.4.9 0 .6.4-.1.1-.1.2-.1.3C20.7 14.1 19.9 14.1 20 13.6zM19.2 17.5c-.4.5-1 .2-1.4-.1-.4-.3 0-.9.3-.7 0 0 0-.1 0-.1 0-.3.3-.4.6-.3.2.1.4.3.5.4.1 0 .1 0 .1 0 .5 0 .5.7 0 .8C19.3 17.5 19.3 17.5 19.2 17.5z" opacity=".56"></path></symbol>
+        <symbol id="blog-flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fc445f" d="m253.83 215-36.12 3.71-26.53-139.29C185.89 51.69 207.15 26 235.38 26h31.24c28.23 0 49.49 25.69 44.2 53.42l-11.33 59.52L253.83 215z"></path><path fill="#fd697f" d="M99.41 82.32c19.96-19.96 53.16-16.83 69.03 6.52l34.07 50.1L227 222.71l-25.91 30.46h-.01L83.84 173.44c-23.35-15.87-26.48-49.07-6.52-69.03l22.09-22.09zm325.27 22.09c19.96 19.96 16.83 53.16-6.52 69.03l-50.1 34.07-83.77 24.99-30.46-26.41v-.01l79.73-117.24c15.87-23.35 49.07-26.48 69.03-6.52l22.09 22.09z"></path><path fill="#fc445f" d="M21 240.38c0-28.23 25.69-49.49 53.42-44.2l59.52 11.33 75.56 45.66 4.21 36.12-139.29 26.53C46.69 321.11 21 299.85 21 271.62v-31.24zM235.38 486c-28.23 0-49.49-25.69-44.2-53.42l11.33-59.52 45.66-67.14v-.01c12.684.81 25.905-3.48 36.12-12.62l26.53 139.29c5.29 27.73-15.97 53.42-44.2 53.42h-31.24zM293 258.83l-4.71-36.12 139.29-26.53c27.73-5.29 53.42 15.97 53.42 44.2v31.24c0 28.23-25.69 49.49-53.42 44.2l-59.52-11.33L293 258.83z"></path><path fill="#fd697f" d="m99.41 429.68-22.09-22.09c-19.96-19.96-16.83-53.16 6.52-69.03l50.1-34.07v-.01L213 282l35.17 23.91v.01l-79.73 117.24c-15.87 23.35-49.07 26.48-69.03 6.52zm325.27-22.09-22.09 22.09c-19.96 19.96-53.16 16.83-69.03-6.52l-34.07-50.1-27.99-94.56 29.41-19.67h.01l117.24 79.73c23.35 15.87 26.48 49.07 6.52 69.03z"></path><path fill="#f7ecd9" d="M41 446c11.05 0 20 8.95 20 20s-8.95 20-20 20-20-8.95-20-20 8.95-20 20-20zM461 26c11.05 0 20 8.95 20 20s-8.95 20-20 20-20-8.95-20-20 8.95-20 20-20z"></path><path fill="#fd697f" d="M481 96c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm0 280c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm-50 90c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm-310 0c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zM51 36c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10z"></path><path fill="#e1105a" d="M251 111a5 5 0 0 0 5-5V26h-10v80a5 5 0 0 0 5 5z"></path><path fill="#fc445f" d="M141.395 153.466c.976.976 2.256 1.464 3.535 1.464s2.56-.488 3.535-1.464a5 5 0 0 0 0-7.071l-56.56-56.56-.005-.004-7.07 7.07.005.006 56.56 56.559z"></path><path fill="#e1105a" d="M106 256a5 5 0 0 0-5-5H21v10h80a5 5 0 0 0 5-5z"></path><path fill="#fc445f" d="M148.465 365.605a5 5 0 1 0-7.07-7.071l-56.56 56.56-.005.006 7.07 7.07.005-.004 56.56-56.561z"></path><path fill="#e1105a" d="M251 401a5 5 0 0 0-5 5v80h10v-80a5 5 0 0 0-5-5z"></path><path fill="#fc445f" d="M360.605 358.534a5 5 0 0 0-7.07 7.071l56.56 56.56.005.004 7.07-7.07-.005-.006-56.56-56.559z"></path><path fill="#e1105a" d="M401 251a5 5 0 1 0 0 10h80v-10h-80z"></path><path fill="#fc445f" d="M353.535 146.395a5 5 0 1 0 7.07 7.071l56.56-56.56.005-.006-7.07-7.07-.005.004-56.56 56.561z"></path><path fill="#fee46f" d="M253.83 206.09C280.118 207.531 301 229.363 301 256c0 29.026-24.68 51.707-52.83 49.91-27.663-1.517-48.817-25.53-47.08-52.74 1.517-27.665 25.528-48.817 52.74-47.08z"></path></symbol>
+        <symbol id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M19.9771 11.9771L3.97705 11.9771M9.98007 17.9771L4.00407 12.0001L9.98007 6.02305" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="fill-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor"><path d="M19.9771 11.9771L3.97705 11.9771M9.98007 17.9771L4.00407 12.0001L9.98007 6.02305" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="telegram" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentcolor" d="M17.094 7.146c.593-.215.888-.292 1.05-.32q.002.08-.002.122c-.232 2.444-1.251 8.457-1.775 11.255c-.122.655-.216.967-.85.595c-.416-.245-.792-.553-1.196-.817c-1.325-.869-3.221-2.162-3.065-2.084c-1.304-.86-.758-1.386-.03-2.088c.117-.113.24-.231.36-.356c.054-.056.317-.3.687-.645c1.188-1.104 3.484-3.239 3.542-3.486c.01-.04.018-.192-.071-.271c-.09-.08-.223-.053-.318-.031q-.203.046-6.474 4.279q-.918.63-1.664.614l.005.003c-.655-.231-1.308-.43-1.964-.63a66 66 0 0 1-1.3-.405l-.308-.098c4.527-1.972 7.542-3.27 9.053-3.899c2.194-.913 3.496-1.438 4.32-1.738m2.423-1.928a1.8 1.8 0 0 0-.726-.346c-.2-.048-.39-.063-.533-.06c-.477.008-.988.143-1.846.454c-.875.318-2.219.862-4.406 1.771Q9.691 8 2.804 11.001c-.404.161-.773.344-1.065.56c-.27.201-.647.56-.716 1.11c-.052.416.069.8.315 1.103c.214.263.488.423.697.524c.31.15.728.281 1.095.396c.573.18 1.144.363 1.719.539c1.778.544 3.242.992 4.852 2.054c1.181.778 2.34 1.59 3.523 2.366c.432.283.835.608 1.28.87c.488.285 1.106.546 1.86.477c1.138-.105 1.73-1.152 1.97-2.43c.521-2.79 1.557-8.886 1.8-11.432a3.8 3.8 0 0 0-.037-.885a1.66 1.66 0 0 0-.58-1.035"></path></symbol>
+        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentcolor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"></path></symbol>
+        <symbol id="whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentcolor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"></path></symbol>
+        <symbol id="location" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M13.7343 17.9536C13.9666 17.4116 14.4333 17.0143 14.9704 16.7709C17.4678 15.6395 19.2051 13.125 19.2051 10.2049C19.2051 6.22572 15.9794 3 12.0003 3C8.02113 3 4.79541 6.22572 4.79541 10.2049C4.79541 13.1249 6.53257 15.6393 9.02983 16.7708C9.5669 17.0142 10.0336 17.4114 10.2658 17.9534L11.081 19.8553C11.4274 20.6634 12.573 20.6634 12.9193 19.8553L13.7343 17.9536Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M14.1211 7.87822C15.2929 9.05019 15.2929 10.949 14.1211 12.121C12.9493 13.293 11.0507 13.293 9.87885 12.121C8.70703 10.949 8.70703 9.05019 9.87885 7.87822C11.0507 6.70726 12.9493 6.70726 14.1211 7.87822Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none"><g clip-path="url(#clip0_103_2)"><path d="M4.95755 11.2511V9.58995C4.95754 9.16743 5.302 8.82412 5.72878 8.82128H7.29207C7.72088 8.82128 8.0685 9.16543 8.0685 9.58995V11.2563C8.0684 11.615 8.35762 11.9082 8.71987 11.9166H9.76207C10.801 11.9166 11.6432 11.0828 11.6432 10.0542V5.32875C11.6377 4.92412 11.4458 4.54415 11.1221 4.29698L7.55783 1.45446C6.9334 0.959516 6.04576 0.959516 5.42133 1.45446L1.87266 4.30214C1.54779 4.54831 1.35556 4.9289 1.35156 5.3339V10.0542C1.35156 11.0828 2.19379 11.9166 3.23272 11.9166H4.27492C4.64617 11.9166 4.94713 11.6186 4.94713 11.2511" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_103_2"><rect fill="white"></rect></clipPath></defs></symbol>
+        <symbol id="small-basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none"><path d="M1.48438 1.76025L2.61104 1.95525L3.13266 8.1698C3.17437 8.67734 3.59849 9.0668 4.10766 9.06517H10.0167C10.5026 9.06625 10.9148 8.70875 10.9836 8.22775L11.4976 4.6755C11.555 4.27846 11.2793 3.91013 10.8828 3.85271C10.8482 3.84784 2.79195 3.84513 2.79195 3.84513" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.64844 5.84702H9.15048" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8728 10.9429C4.03584 10.9429 4.16746 11.075 4.16746 11.2375C4.16746 11.4006 4.03584 11.5327 3.8728 11.5327C3.70976 11.5327 3.57812 11.4006 3.57812 11.2375C3.57812 11.075 3.70976 10.9429 3.8728 10.9429Z" fill="#9D9D9D" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.98217 10.9429C10.1452 10.9429 10.2774 11.075 10.2774 11.2375C10.2774 11.4006 10.1452 11.5327 9.98217 11.5327C9.81913 11.5327 9.6875 11.4006 9.6875 11.2375C9.6875 11.075 9.81913 10.9429 9.98217 10.9429Z" fill="#9D9D9D" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="about-us" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none"><path d="M9.69531 5.90268C10.4509 5.79651 11.0327 5.14868 11.0343 4.3638C11.0343 3.5903 10.4704 2.94897 9.73106 2.82764" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.6875 7.71924C11.4193 7.82865 11.9301 8.08486 11.9301 8.61299C11.9301 8.97645 11.6896 9.21261 11.3007 9.36103" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.44654 7.94312C4.70563 7.94312 3.21875 8.20691 3.21875 9.26045C3.21875 10.3134 4.69642 10.5848 6.44654 10.5848C8.18746 10.5848 9.67379 10.3237 9.67379 9.26966C9.67379 8.21557 8.19667 7.94312 6.44654 7.94312Z" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.44364 6.4395C7.58602 6.4395 8.51227 5.51379 8.51227 4.37087C8.51227 3.2285 7.58602 2.30225 6.44364 2.30225C5.30127 2.30225 4.37502 3.2285 4.37502 4.37087C4.37068 5.50945 5.28989 6.4357 6.42847 6.4395H6.44364Z" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.19056 5.90268C2.4344 5.79651 1.85319 5.14868 1.85156 4.3638C1.85156 3.5903 2.41544 2.94897 3.15481 2.82764" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.19571 7.71924C1.46392 7.82865 0.953125 8.08486 0.953125 8.61299C0.953125 8.97645 1.19362 9.21261 1.58254 9.36103" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="x-btn" xmlns="http://www.w3.org/2000/svg"  viewBox="-6 -6 24 24"><path fill="currentcolor" d="m7.314 5.9l3.535-3.536A1 1 0 1 0 9.435.95L5.899 4.485L2.364.95A1 1 0 1 0 .95 2.364l3.535 3.535L.95 9.435a1 1 0 1 0 1.414 1.414l3.535-3.535l3.536 3.535a1 1 0 1 0 1.414-1.414L7.314 5.899z"></path></symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M21 21L17.175 17.175M12.4976 6.15C15.3741 6.92075 17.0866 9.8878 16.316 12.7636M11.3255 3C6.73481 3 3 6.63288 3 11.0995C3 15.5661 6.73481 19.2 11.3255 19.2C15.9152 19.2 19.65 15.5661 19.65 11.0995C19.65 6.63288 15.9152 3 11.3255 3Z" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round"></path></symbol>
+        <symbol id="category" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentcolor"><path opacity="0.4" d="M8.39114 0.166748H10.3224C11.1222 0.166748 11.7703 0.835162 11.7703 1.66006V3.65189C11.7703 4.47679 11.1222 5.1452 10.3224 5.1452H8.39114C7.59132 5.1452 6.94324 4.47679 6.94324 3.65189V1.66006C6.94324 0.835162 7.59132 0.166748 8.39114 0.166748" fill="currentcolor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1.81081 0.166748H3.74207C4.54188 0.166748 5.18997 0.835162 5.18997 1.66006V3.65189C5.18997 4.47679 4.54188 5.1452 3.74207 5.1452H1.81081C1.011 5.1452 0.362915 4.47679 0.362915 3.65189V1.66006C0.362915 0.835162 1.011 0.166748 1.81081 0.166748ZM1.81081 6.85496H3.74207C4.54188 6.85496 5.18997 7.52338 5.18997 8.34828V10.3401C5.18997 11.1644 4.54188 11.8334 3.74207 11.8334H1.81081C1.011 11.8334 0.362915 11.1644 0.362915 10.3401V8.34828C0.362915 7.52338 1.011 6.85496 1.81081 6.85496ZM10.3224 6.85496H8.39117C7.59136 6.85496 6.94327 7.52338 6.94327 8.34828V10.3401C6.94327 11.1644 7.59136 11.8334 8.39117 11.8334H10.3224C11.1222 11.8334 11.7703 11.1644 11.7703 10.3401V8.34828C11.7703 7.52338 11.1222 6.85496 10.3224 6.85496Z" fill="currentcolor"></path></symbol>
+        <symbol id="blog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.45"><path d="M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5"></path><path d="M7 8.5A1.5 1.5 0 0 1 8.5 7h3A1.5 1.5 0 0 1 13 8.5v0a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 7 8.5m0 7A1.5 1.5 0 0 1 8.5 14h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 15.5"></path></g></symbol>
+        <symbol id="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none" ><path d="M7.76562 1.354C9.77033 1.57663 11.3542 3.1583 11.579 5.163" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.76562 3.27319C8.72492 3.45953 9.47458 4.20974 9.66146 5.16903" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.9702 6.75571C8.1309 8.91587 8.62107 6.41681 9.9968 7.79161C11.3231 9.11758 12.086 9.38324 10.405 11.0632C10.1945 11.2324 8.85714 13.2676 4.15721 8.56882C-0.543303 3.8695 1.49064 2.53074 1.65984 2.32031C3.34433 0.63567 3.60599 1.40242 4.9323 2.72839C6.30745 4.10377 3.8095 4.59556 5.9702 6.75571Z" stroke="currentcolor" stroke-width="0.8125" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="phone-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="header-basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#EF3A4F" d="M8.75 13a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0zm7.25-.75a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m-3.25.75a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0z"></path><path fill="#EF3A4F" fill-rule="evenodd" d="M17.274 3.473c-.476-.186-1.009-.217-1.692-.222A1.75 1.75 0 0 0 14 2.25h-4a1.75 1.75 0 0 0-1.582 1c-.684.006-1.216.037-1.692.223A3.25 3.25 0 0 0 5.3 4.563c-.367.493-.54 1.127-.776 1.998l-.628 2.303a3 3 0 0 0-1.01.828c-.622.797-.732 1.746-.621 2.834c.107 1.056.44 2.386.856 4.05l.026.107c.264 1.052.477 1.907.731 2.574c.265.696.602 1.266 1.156 1.699c.555.433 1.19.62 1.929.71c.708.084 1.59.084 2.675.084h4.724c1.085 0 1.966 0 2.675-.085c.74-.088 1.374-.276 1.928-.71c.555-.432.891-1.002 1.156-1.698c.255-.667.468-1.522.731-2.575l.027-.105c.416-1.665.748-2.995.856-4.05c.11-1.09 0-2.038-.622-2.835a3 3 0 0 0-1.009-.828l-.628-2.303c-.237-.871-.41-1.505-.776-1.999a3.25 3.25 0 0 0-1.426-1.089M7.272 4.87c.22-.086.486-.111 1.147-.118c.282.59.884.998 1.58.998h4c.698 0 1.3-.408 1.582-.998c.661.007.927.032 1.147.118c.306.12.572.323.768.587c.176.237.279.568.57 1.635l.354 1.297c-1.038-.139-2.378-.139-4.043-.139H9.622c-1.664 0-3.004 0-4.042.139l.354-1.297c.29-1.067.394-1.398.57-1.635a1.75 1.75 0 0 1 .768-.587M10 3.75a.25.25 0 0 0 0 .5h4a.25.25 0 1 0 0-.5zm-5.931 6.865c.279-.357.72-.597 1.63-.729c.931-.134 2.193-.136 3.986-.136h4.63c1.793 0 3.054.002 3.985.136c.911.132 1.352.372 1.631.73c.279.357.405.842.311 1.758c-.095.936-.399 2.16-.834 3.9c-.277 1.108-.47 1.876-.688 2.45c-.212.554-.419.847-.678 1.05c-.259.202-.594.331-1.183.402c-.61.073-1.4.074-2.544.074h-4.63c-1.144 0-1.935-.001-2.544-.074c-.59-.07-.924-.2-1.183-.402c-.26-.203-.467-.496-.678-1.05c-.218-.574-.411-1.342-.689-2.45c-.434-1.74-.739-2.964-.834-3.9c-.093-.916.033-1.402.312-1.759" clip-rule="evenodd"></path></symbol>
+        <symbol id="shopping-basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M6.53031 9.46967C6.23741 9.17678 5.76254 9.17678 5.46965 9.46967C5.17675 9.76256 5.17675 10.2374 5.46965 10.5303L6.06965 11.1303C9.34488 14.4056 14.6551 14.4056 17.9303 11.1303L18.5303 10.5303C18.8232 10.2374 18.8232 9.76256 18.5303 9.46967C18.2374 9.17678 17.7625 9.17678 17.4696 9.46967L16.8696 10.0697C14.1802 12.7591 9.81975 12.7591 7.13031 10.0697L6.53031 9.46967Z" fill="currentcolor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.25C9.07852 0.25 6.66617 2.42852 6.29849 5.25L5.63592 5.25C4.64023 5.24997 3.81454 5.24994 3.16653 5.34049C2.48529 5.43567 1.87316 5.64585 1.40763 6.16597C0.942096 6.68609 0.800806 7.31769 0.781433 8.00527C0.763004 8.65932 0.854212 9.47995 0.964197 10.4695L1.27209 13.2405C1.50212 15.3109 1.68278 16.937 1.98963 18.2008C2.30415 19.4962 2.77194 20.5072 3.64039 21.2845C4.50967 22.0625 5.57115 22.4154 6.90054 22.5847C8.19848 22.75 9.84662 22.75 11.9465 22.75H12.0535C14.1533 22.75 15.8015 22.75 17.0994 22.5847C18.4288 22.4154 19.4903 22.0625 20.3596 21.2845C21.228 20.5072 21.6958 19.4962 22.0103 18.2008C22.3172 16.937 22.4978 15.311 22.7279 13.2406L23.0358 10.4695C23.1457 9.47996 23.2369 8.65931 23.2185 8.00527C23.1991 7.31769 23.0579 6.68609 22.5923 6.16597C22.1268 5.64585 21.5147 5.43567 20.8334 5.34049C20.1854 5.24994 19.3597 5.24997 18.364 5.25L17.7015 5.25C17.3339 2.42858 14.9214 0.25 12 0.25ZM12 1.75C14.0913 1.75 15.8299 3.26063 16.184 5.25H7.81589C8.16998 3.26068 9.90869 1.75 12 1.75ZM2.52532 7.16635C2.65603 7.02031 2.86344 6.89741 3.3741 6.82605C3.90604 6.75173 4.62603 6.75 5.69126 6.75H18.3087C19.3739 6.75 20.0939 6.75173 20.6258 6.82605C21.1365 6.89741 21.3439 7.02031 21.4746 7.16635C21.6053 7.31239 21.7046 7.5321 21.7191 8.04752C21.7342 8.58441 21.6565 9.30019 21.5388 10.3589L21.243 13.0215C21.0057 15.1569 20.8342 16.6873 20.5527 17.8469C20.2762 18.9857 19.9145 19.6697 19.3592 20.1668C18.8047 20.6631 18.0816 20.9475 16.9099 21.0967C15.7177 21.2486 14.165 21.25 12 21.25C9.83495 21.25 8.28228 21.2486 7.09007 21.0967C5.91831 20.9475 5.19529 20.6631 4.64077 20.1668C4.08543 19.6697 3.72378 18.9857 3.44728 17.8469C3.16574 16.6873 2.99425 15.1569 2.75698 13.0215L2.46114 10.3589C2.3435 9.30019 2.26571 8.58441 2.28084 8.04752C2.29536 7.5321 2.39461 7.31239 2.52532 7.16635Z" fill="currentcolor"></path>
+        <path  class="pt-4" stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 -4" />
+        </symbol>
+        <symbol id="delivery" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M12 14H13C14.1 14 15 13.1 15 12V2H6C4.5 2 3.19001 2.82999 2.51001 4.04999" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M2 17C2 18.66 3.34 20 5 20H6C6 18.9 6.9 18 8218C9.1 18 10 18.9 10 20H14C14 18.9 14.9 18 16 18C17.1 18 18 18.9 18 20H19C20.66 20 22 18.66 22 17V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L18.58 6.-4001C18.22 5.39001 17.56 5 16.84 5H15V12C15 13.1 14.1 14 13 14H12" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path  stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M2 8H8" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M2 11H6" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M2 14H4" class="pt-4" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></symbol>
+        <symbol id="support" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 14 14"><path fill="none" stroke="#D3D3D3" stroke-linecap="round" stroke-linejoin="round" d="M7.506 13.065a2.7 2.7 0 0 0 3.37-.36l.38-.38a.91.91 0 0 0 0-1.28l-1.6-1.59a.9.9 0 0 0-1.27 0v0a.91.91 0 0 1-1.28 0l-2.55-2.55a.91.91 0 0 1 0-1.28v0a.9.9 0 0 0 0-1.27l-1.54-1.6a.91.91 0 0 0-1.28 0l-.38.38a2.7 2.7 0 0 0-.41 3.37a24.231 24.231 0 0 0 6.56 6.56m5.959-9.893h-2.748a.215.215 0 0 1-.215-.216v0a.22.22 0 0 1 .053-.142l1.96-2.24a.204.204 0 0 1 .154-.07v0c.112 0 .203.092.203.204v3.353M8.85 4.06H6.48v-.505a.89.89 0 0 1 .533-.814l1.32-.577a.866.866 0 0 0-.348-1.66h-.616a.89.89 0 0 0-.838.593"></path></symbol>
+        <symbol id="refund" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M2 17.0601H12"  class="pt-2" stroke="#D3D3D3" stroke-width="1.5px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M13 4.56006H23" stroke="#D3D3D3" stroke-width="1.5px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M4.21997 13.5H9.78003C11.56 13.5 12 13.94 12 15.7V19.81C12 21.57 11.56 22.01 9.78003 22.01H4.21997C2.43997 22.01 2 21.57 2 19.81V15.7C2 13.94 2.43997 13.5 4.21997 13.5Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M15.22 1H20.78C22.56 1 23 1.44 23 3.2V7.31C23 9.07 22.56 9.51 20.78 9.51H15.22C13.44 9.51 13 9.07 13 7.31V3.2C13 1.44 13.44 1 15.22 1Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M22 15C22 18.87 18.87 22 15 22L16.05 20.25" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M2 9C2 5.13 5.13 2 9 2L7.95001 3.75" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></symbol>
+        <symbol id="safe-payment" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M11.74 17.7499H17.66C17.57 17.8299 17.48 17.8999 17.39 17.9799L13.12 21.1799C11.71 22.2299 9.41001 22.2299 7.99001 21.1799L3.71001 17.9799C2.77001 17.2799 2 15.7299 2 14.5599V7.14986C2 5.92986 2.93001 4.57986 4.07001 4.14986L9.05 2.27986C9.87 1.96986 11.23 1.96986 12.05 2.27986L17.02 4.14986C17.97 4.50986 18.78 5.50986 19.03 6.52986H11.73C11.51 6.52986 11.31 6.53987 11.12 6.53987C9.27 6.64987 8.78999 7.31986 8.78999 9.42986V14.8598C8.79999 17.1598 9.39001 17.7499 11.74 17.7499Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M8.80005 11.22H22" stroke="#D3D3D3" stroke-width="1.5px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M22 9.41977V14.9698C21.98 17.1898 21.37 17.7397 19.06 17.7397H11.7401C9.39005 17.7397 8.80005 17.1498 8.80005 14.8398V9.40976C8.80005 7.30976 9.28005 6.63974 11.1301 6.51974C11.3201 6.51974 11.5201 6.50977 11.7401 6.50977H19.06C21.41 6.51977 22 7.09977 22 9.41977Z" stroke="#D3D3D3" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M11.3201 15.2598H12.6501" stroke="#D3D3D3" stroke-width="1.5px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M14.75 15.2598H18.02" stroke="#D3D3D3" stroke-width="1.5px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></symbol>
+        <symbol id="key-about-us" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.67927 4.49307C11.6694 1.50296 16.5173 1.50296 19.5074 4.49307C22.4975 7.48318 22.4975 12.3311 19.5074 15.3212C17.5213 17.3073 14.716 17.9732 12.1823 17.3226C12.0324 17.2841 11.9181 17.3292 11.8623 17.385L8.14988 21.0973C7.67086 21.5763 7.00007 21.8116 6.32677 21.7368L4.23818 21.5048C3.84626 21.4612 3.48081 21.2856 3.20196 21.0067L2.99375 20.7985C2.7149 20.5197 2.53926 20.1542 2.49571 19.7623L2.26365 17.6737C2.18884 17.0004 2.42414 16.3296 2.90316 15.8506L6.61525 12.1385C6.67126 12.0825 6.71629 11.9677 6.67788 11.8182C6.02725 9.2845 6.69321 6.47914 8.67927 4.49307ZM18.4468 5.55373C16.0424 3.14941 12.1443 3.14941 9.73993 5.55373C8.14412 7.14955 7.60655 9.40379 8.13074 11.4451C8.28182 12.0333 8.15857 12.7165 7.67591 13.1992L3.96382 16.9113C3.80701 17.0681 3.72998 17.2877 3.75447 17.5081L3.98654 19.5967C3.99247 19.6501 4.01641 19.6999 4.05441 19.7379L4.26262 19.9461C4.30062 19.9841 4.35042 20.008 4.40384 20.0139L6.49242 20.246C6.71283 20.2705 6.93242 20.1935 7.08922 20.0367L7.79637 19.3295L6.5835 18.1299C6.289 17.8386 6.28639 17.3638 6.57767 17.0693C6.86895 16.7748 7.34382 16.7722 7.63832 17.0634L8.85705 18.2688L10.8016 16.3243C11.2845 15.8414 11.9675 15.7188 12.5554 15.8697C14.5967 16.3939 16.8509 15.8564 18.4468 14.2606C20.8511 11.8562 20.8511 7.95805 18.4468 5.55373ZM12.0555 8.05594C13.1294 6.982 14.8706 6.982 15.9445 8.05594C17.0185 9.12989 17.0185 10.8711 15.9445 11.945C14.8706 13.019 13.1294 13.019 12.0555 11.945C10.9815 10.8711 10.9815 9.12989 12.0555 8.05594ZM14.8839 9.1166C14.3957 8.62845 13.6043 8.62845 13.1161 9.1166C12.628 9.60476 12.628 10.3962 13.1161 10.8844C13.6043 11.3725 14.3957 11.3725 14.8839 10.8844C15.372 10.3962 15.372 9.60476 14.8839 9.1166Z" fill="#FF9500"></path></symbol>
+        <symbol id="support-about-us" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M5.46005 18.4898V15.5698C5.46005 14.5998 6.22005 13.7298 7.30005 13.7298C8.27005 13.7298 9.14005 14.4898 9.14005 15.5698V18.3798C9.14005 20.3298 7.52005 21.9498 5.57005 21.9498C3.62005 21.9498 2.00005 20.3198 2.00005 18.3798V12.2198C1.89005 6.5998 6.33005 2.0498 11.95 2.0498C17.57 2.0498 22 6.5998 22 12.1098V18.2698C22 20.2198 20.38 21.8398 18.43 21.8398C16.48 21.8398 14.86 20.2198 14.86 18.2698V15.4598C14.86 14.4898 15.62 13.6198 16.7 13.6198C17.67 13.6198 18.54 14.3798 18.54 15.4598V18.4898" stroke="#FF8520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="orginal-product" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75037C8.54822 2.75037 5.75 5.54859 5.75 9.00037C5.75 12.4521 8.54822 15.2504 12 15.2504C15.4518 15.2504 18.25 12.4521 18.25 9.00-47C18.25 5.54859 15.4518 2.75037 12 2.75037ZM4.25 9.00037C4.25 4.72016 7.71979 1.25037 12 1.25037C16.2802 1.25037 19.75 4.72016 19.75 9.00037C19.75 11.2258 18.812 13.2321 17.3098 14.6456C17.3359 14.6942 17.357 14.7466 17.3722 14.8021L18.0217 17.1712C18.3252 18.278 18.5696 19.1693 18.6807 19.8611C18.7897 20.539 18.812 21.2375 18.4326 21.8052C18.2166 22.1284 17.9233 22.393 17.5766 22.5696C16.9468 22.8902 16.2599 22.7321 15.6446 22.4998C15.017 22.2629 14.2288 21.8522 13.2607 21.3478L13.2141 21.3235C12.4899 20.9461 12.3008 20.8614 12.1191 20.842C12.0399 20.8336 11.9601 20.8336 11.8809 20.842C11.6992 20.8614 11.5101 20.9461 10.7859 21.3235L10.7393 21.3477C9.77122 21.8522 8.98303 22.2629 8.35539 22.4998C7.74006 22.7321 7.0532 22.8902 6.42341 22.5696C6.07674 22.393 5.78341 22.1284 5.56741 21.8052C5.188 21.2375 5.21031 20.539 5.31926 19.8611C5.43043 19.1693 5.67482 18.278 5.97827 17.1712L6.6278 14.8021C6.64302 14.7466 6.66409 14.6942 6.69015 14.6456C5.18798 13.2321 4.25 11.2258 4.25 9.00037ZM7.96016 15.6155L7.43755 17.5216C7.11851 18.6853 6.89691 19.4977 6.80026 20.0991C6.69985 20.7239 6.7747 20.9121 6.81454 20.9717C6.89239 21.0882 6.99326 21.1765 7.10403 21.2329C7.12687 21.2445 7.27015 21.3062 7.82563 21.0965C8.35876 20.8952 9.06684 20.5278 10.0928 19.9932C10.1276 19.975 10.1621 19.957 10.1962 19.9392C10.7642 19.6425 11.2211 19.4039 11.722 19.3505C11.9068 19.3308 12.0932 19.3308 12.278 19.3505C12.7789 19.4039 13.2358 19.6425 13.8038 19.9392C13.8379 19.957 13.8724 19.975 13.9072 19.9932C14.9332 20.5278 15.6412 20.8952 16.1744 21.0965C16.7299 21.3062 16.8731 21.2445 16.896 21.2329C17.0067 21.1765 17.1076 21.0882 17.1855 20.9717C17.2253 20.9121 17.3002 20.7239 17.1997 20.0991C17.1031 19.4977 16.8815 18.6853 16.5625 17.5216L16.0398 15.6155C14.8635 16.3354 13.4802 16.7504 12 16.7504C10.5198 16.7504 9.13652 16.3354 7.96016 15.6155ZM12 7.03485C11.9419 7.1355 11.8772 7.2514 11.801 7.38806L11.7027 7.56441C11.6958 7.57686 11.6884 7.59046 11.6804 7.60502C11.6019 7.74864 11.4718 7.98646 11.255 8.15108C11.0336 8.31913 10.7673 8.37695 10.6116 8.41077C10.596 8.41415 10.5815 8.4173 10.5683 8.42029L10.3774 8.46348C10.2022 8.50312 10.0595 8.53546 9.9375 8.56612C10.0169 8.66381 10.1199 8.78511 10.254 8.9419L10.3842 9.09409C10.3934 9.10489 10.4035 9.11646 10.4141 9.12877C10.5221 9.2531 10.6963 9.45382 10.7769 9.71297C10.8566 9.96906 10.8291 10.2328 10.8118 10.3992C10.81 10.4158 10.8084 10.4314 10.807 10.446L10.7873 10.649C10.7691 10.8373 10.7549 10.9875 10.7455 11.1097C10.8497 11.0638 10.9682 11.0093 11.109 10.9445L11.2878 10.8622C11.3001 10.8565 11.3136 10.8501 11.3281 10.8433C11.4716 10.7756 11.7213 10.6578 12 10.6578C12.2787 10.6578 12.5284 10.7756 12.6719 10.8433C12.6864 10.8501 12.6999 10.8565 12.7122 10.8622L12.891 10.9445C13.0318 11.0093 13.1503 11.0638 13.2545 11.1097C13.2451 10.9875 13.2309 10.8373 13.2127 10.649L13.193 10.446C13.1916 10.4314 13.19 10.4158 13.1882 10.3992C13.1709 10.2328 13.1434 9.96906 13.2231 9.71297C13.3037 9.45382 13.4779 9.2531 13.5859 9.12877C13.5965 9.11646 13.6066 9.10489 13.6158 9.09409L13.746 8.9419C13.8801 8.78511 13.9831 8.66381 14.0625 8.56612C13.9405 8.53546 13.7978 8.50312 13.6226 8.46348L13.4317 8.42029C13.4185 8.4173 13.404 8.41415 13.3884 8.41077C13.2327 8.37695 12.9664 8.31913 12.745 8.15108C12.5282 7.98646 12.3981 7.74864 12.3196 7.60502C12.3116 7.59046 12.3042 7.57686 12.2973 7.56441L12.199 7.38806C12.1228 7.2514 12.0581 7.1355 12 7.03485ZM11.0135 5.8C11.1857 5.57518 11.4983 5.25037 12 5.25037C12.5017 5.25037 12.8143 5.57518 12.9865 5.8C13.1508 6.01458 13.3163 6.31161 13.486 6.61613C13.4937 6.62998 13.5014 6.64383 13.5091 6.6577L13.6075 6.83406C13.6303 6.87496 13.6482 6.90714 13.6639 6.93466C13.6912 6.94108 13.723 6.94828 13.7627 6.95727L13.9536 7.00046C13.9693 7.004 13.9849 7.00753 14.0005 7.01107C14.3284 7.08514 14.6542 7.15876 14.9042 7.25732C15.1804 7.36614 15.5547 7.57807 15.6989 8.04198C15.8407 8.49771 15.6618 8.88373 15.5056 9.13183C15.3611 9.36145 15.1414 9.61823 14.9165 9.88111C14.9063 9.89299 14.8962 9.90488 14.886 9.91679L14.7558 10.069C14.7213 10.1093 14.6953 10.1397 14.6735 10.166C14.6764 10.2024 14.6805 10.2447 14.686 10.3013L14.7057 10.5043C14.7072 10.5198 14.7087 10.5353 14.7102 10.5508C14.7444 10.9027 14.7774 11.2428 14.7653 11.5148C14.7526 11.8001 14.6841 12.2319 14.2969 12.5258C13.8975 12.829 13.4564 12.7629 13.1767 12.6828C12.919 12.6089 12.6144 12.4686 12.3077 12.3273C12.293 12.3205 12.2783 12.3137 12.2636 12.307L12.0849 12.2247C12.0514 12.2093 12.024 12.1966 12 12.1858C11.976 12.1966 11.9486 12.2093 11.9151 12.2247L11.7364 12.307C11.7217 12.3137 11.707 12.3205 11.6923 12.3273C11.3856 12.4686 11.081 12.6089 10.8233 12.6828C10.5436 12.7629 10.1025 12.829 9.70306 12.5258C9.31589 12.2319 9.24743 11.8001 9.23473 11.5148C9.22261 11.2428 9.25563 10.9027 9.28981 10.5508C9.29131 10.5353 9.29281 10.5198 9.29432 10.5043L9.31399 10.3013C9.31948 10.2447 9.32356 10.2024 9.32655 10.166C9.30465 10.1397 9.27866 10.1093 9.24418 10.069L9.11403 9.91679C9.10385 9.90488 9.09367 9.89299 9.08351 9.88111C8.8586 9.61823 8.63891 9.36145 8.49436 9.13183C8.33817 8.88373 8.15934 8.49771 8.30105 8.04198C8.44532 7.57807 8.81962 7.36614 9.09576 7.25732C9.34585 7.15876 9.67164 7.08514 9.99945 7.01107C10.0151 7.00753 10.0307 7.004 10.0463 7.00047L10.2373 6.95727C10.277 6.94828 10.3088 6.94108 10.3361 6.93466C10.3518 6.90714 10.3697 6.87496 10.3925 6.83406L10.4909 6.6577C10.4986 6.64384 10.5063 6.62998 10.514 6.61614C10.6837 6.31161 10.8492 6.01458 11.0135 5.8Z" fill="#FF9500"></path></symbol>
+        <symbol id="update-product" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M15.39 5.21L16.8 8.02999C16.99 8.41999 17.5 8.78999 17.93 8.86999L20.48 9.28999C22.11 9.55999 22.49 10.74 21.32 11.92L19.33 13.91C19 14.24 18.81 14.89 18.92 15.36L19.49 17.82C19.94 19.76 18.9 20.52 17.19 19.5L14.8 18.08C14.37 17.82 13.65 17.82 13.22 18.08L10.83 19.5C9.12 20.51 8.08001 19.76 8.53001 17.82L9.10002 15.36C9.21002 14.9 9.02001 14.25 8.69001 13.91L6.70002 11.92C5.53002 10.75 5.91002 9.56999 7.54002 9.28999L10.09 8.86999C10.52 8.79999 11.03 8.41999 11.22 8.02999L12.63 5.21C13.38 3.68 14.62 3.68 15.39 5.21Z" stroke="#FF8520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 5H2" stroke="#FF8520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 19H2" stroke="#FF8520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 12H2" stroke="#FF8520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="email" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#d" d="M22 5.5H9c-1.1 0-2 .9-2 2v9a2 2 0 0 0 2 2h13c1.11 0 2-.89 2-2v-9a2 2 0 0 0-2-2m0 3.67l-6.5 3.33L9 9.17V7.5l6.5 3.31L22 7.5zM5 16.5c0 .17.03.33.05.5H1c-.552 0-1-.45-1-1s.448-1 1-1h4 class="pt-2"zM3 7h2.05c-.02.17-.05.33-.05.5V9H3c-.55 0-1-.45-1-1s.45-1 1-1m-2 5c0-.55.45-1 1-1h3v2H2c-.55 0-1-.45-1-1"></path></symbol>
+        <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
+        <symbol id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="multi-tab-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="23" fill="currntcolor"></circle><path d="M28.9999 20.52C28.2308 20.9699 27.3345 21.153 26.4505 21.0406C25.5666 20.9283 24.7446 20.5268 24.1124 19.8988C23.4803 19.2707 23.0736 18.4513 22.9555 17.5681C22.8375 16.6849 23.0147 15.7874 23.4597 15.0154C23.9047 14.2434 24.5924 13.6402 25.4158 13.2996C26.2392 12.959 27.1521 12.9002 28.0124 13.1324C28.8727 13.3645 29.6321 13.8745 30.1724 14.5831C30.7128 15.2916 31.0037 16.1589 30.9999 17.05" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28 20.8C29.1046 20.8 30 19.9046 30 18.8C30 17.6954 29.1046 16.8 28 16.8C26.8954 16.8 26 17.6954 26 18.8C26 19.9046 26.8954 20.8 28 20.8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24.9999 13.5L22.9999 14.8C21.6208 15.5956 20.6142 16.9066 20.2017 18.4444C19.7891 19.9822 20.0043 21.6209 20.7999 23C21.5956 24.3791 22.9065 25.3857 24.4443 25.7983C25.9821 26.2109 27.6208 25.9956 28.9999 25.2L30.9999 24C31.9216 23.4696 32.5947 22.5947 32.8713 21.568C33.148 20.5412 33.0054 19.4466 32.4749 18.525C31.9445 17.6034 31.0697 16.9302 30.0429 16.6536C29.0161 16.377 27.9216 16.5196 26.9999 17.05" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20.77 23C15 26 13 33 13 33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 31C24 31 19 34 14.8 29C14.8 29 20 26 24 31Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+        <symbol id="multi-tab-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="23" fill="currntcolor"></circle><path d="M23.1635 12C22.3624 12.3254 21.7303 12.8104 21.3471 13.3872L20.6527 12.0938C20.2301 14.4068 20.0659 16.5509 22.1527 17.2296C21.6496 18.9611 21.3471 20.6936 21.183 22.4239L20.2192 20.6265C20.0857 19.9369 19.7683 19.1876 19.4062 18.4234L18.5917 21.898C18.2535 20.8448 17.8185 19.8037 17.2572 18.7822C18.4037 16.7564 18.0135 15.4743 15.7997 15.066C15.7755 15.2085 15.7734 15.504 15.7734 15.504L14.8417 15.0938L14.7319 16.0239L14.2939 15.8057C14.0392 17.7863 14.2882 19.3188 16.4794 19.1851C16.6511 19.4965 16.8123 19.8136 16.9629 20.1357L12 18.6387C13.4655 20.7596 15.0081 22.518 17.2748 20.8462C17.7898 22.0957 18.1413 23.3748 18.3881 24.6768L15.3516 22.793C15.9549 24.4837 16.6736 25.947 18.4892 25.251C18.5472 25.6 18.5973 25.9507 18.6429 26.3028H19.5277C19.3985 25.2739 19.2215 24.2487 18.9697 23.2325C19.3544 23.0405 19.6423 22.8175 19.8486 22.5674C20.0217 23.0923 20.3928 23.4882 21.0878 23.6734C21.0364 24.5504 21.0172 25.4272 21.0204 26.3027H21.8964C21.8958 26.1119 21.8963 25.9221 21.8978 25.7314C23.8613 25.4121 23.7485 23.7403 23.4169 21.9257L21.9185 24.7207C21.9543 23.6097 22.0353 22.5023 22.1806 21.3969C24.6423 21.6333 25.0468 19.579 25.2334 17.2823L22.336 20.3686C22.4987 19.4048 22.7138 18.4425 22.9923 17.4828C24.7522 17.6983 26.5962 15.8063 26.521 14.2016L25.938 14.5635C25.8886 14.0028 25.6252 13.3677 25.1353 12.6561C24.7821 12.9071 24.4789 13.2455 24.2051 13.6142L24.0131 12.7661L23.4652 13.4502C23.4502 12.9594 23.3635 12.4767 23.1635 12ZM31.7051 16.6524C31.471 16.6528 31.1904 16.6927 30.8496 16.7886C30.2245 16.9646 29.5596 17.3628 29.8007 18.5523C28.6529 19.1676 27.6722 20.0111 26.8828 21.0439H26.8739C26.8753 21.046 26.877 21.0477 26.8783 21.0498C26.8408 21.099 26.8036 21.1478 26.767 21.1977L27.8481 17.6191C25.6947 19.107 23.9134 20.6737 25.7182 22.998C25.2639 23.9963 24.943 25.1046 24.766 26.3027H26.5487C27.6986 25.9569 27.9362 24.5948 28.0575 23.1035L25.8002 25.5073C26.1174 24.0753 26.6639 22.8244 27.413 21.7822C29.1346 23.7577 31.0308 22.4805 32.9458 20.8536L28.043 21.0073C28.6567 20.3378 29.3719 19.7793 30.1786 19.3433C30.7124 20.0342 31.5099 20.0076 32.0815 19.7094C33.2692 19.0899 32.8991 18.4044 33.8759 17.5576C32.8965 17.8043 32.9687 16.6502 31.7051 16.6523V16.6524ZM17.7992 27.1787L19.0194 34.4253H25.7504L26.9882 27.1787H17.7992Z" fill="white"></path></symbol>
+        <symbol id="multi-tab-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" fill="none"><circle opacity="0.46" cx="23" cy="23" r="23" fill="currntcolor"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M18.047 13.0002C17.9121 12.9972 17.7779 13.0216 17.6526 13.0718C17.5273 13.1221 17.4135 13.1971 17.318 13.2925C17.2225 13.3879 17.1473 13.5017 17.097 13.6269C17.0466 13.7522 17.0221 13.8863 17.025 14.0212C17.041 14.7272 17.212 15.7212 17.692 16.7382C17.959 17.3042 18.302 17.8122 18.732 18.2422C19.0127 18.5222 19.3237 18.7662 19.665 18.9742H17C16.4696 18.9742 15.9609 19.185 15.5858 19.56C15.2107 19.9351 15 20.4438 15 20.9742V22.9742C15 23.328 15.0939 23.6755 15.272 23.9812C15.4501 24.2869 15.7062 24.5398 16.014 24.7142C16.153 28.3792 17.289 30.9322 17.851 31.9842C18.201 32.6402 18.874 32.9742 19.535 32.9742H26.465C27.125 32.9742 27.799 32.6402 28.149 31.9842C28.711 30.9322 29.847 28.3792 29.986 24.7142C30.2938 24.5398 30.5499 24.2869 30.728 23.9812C30.9061 23.6755 31 23.328 31 22.9742V20.9742C31 20.4438 30.7893 19.9351 30.4142 19.56C30.0391 19.185 29.5304 18.9742 29 18.9742H27.102C27.3193 18.7476 27.507 18.4976 27.665 18.2242C27.8757 17.8562 28.0257 17.4599 28.115 17.0352C28.288 16.2372 28.252 15.4172 28.094 14.6342L27.95 14.0642C27.8731 13.8306 27.7128 13.6335 27.4997 13.5107C27.2866 13.3878 27.0357 13.3478 26.795 13.3982C26.1235 13.5504 25.4821 13.8133 24.897 14.1762C24.241 14.5792 23.702 15.0882 23.335 15.7242C23.2857 15.8102 23.2397 15.8976 23.197 15.9862C22.9541 15.5146 22.6405 15.083 22.267 14.7062C21.83 14.2752 21.3214 13.9233 20.764 13.6662C19.9133 13.2611 18.9886 13.0344 18.047 13.0002ZM19.25 15.2242C19.476 15.2942 19.697 15.3742 19.91 15.4742C20.278 15.6482 20.596 15.8632 20.854 16.1212C21.111 16.3782 21.326 16.6962 21.5 17.0642C21.594 17.2812 21.68 17.4972 21.749 17.7242C21.5234 17.6566 21.3028 17.573 21.089 17.4742C20.7395 17.3154 20.4204 17.0968 20.146 16.8282C19.8774 16.5536 19.6587 16.2341 19.5 15.8842C19.4012 15.6704 19.3177 15.4499 19.25 15.2242ZM26.222 15.7242L26.228 15.9542C26.228 16.1836 26.2057 16.4036 26.161 16.6142C26.1172 16.8282 26.0403 17.034 25.933 17.2242C25.748 17.5442 25.448 17.8282 25.056 18.0692L24.777 18.2232L24.772 17.9952C24.772 17.7666 24.7947 17.5462 24.84 17.3342C24.8887 17.1069 24.9643 16.9036 25.067 16.7242C25.252 16.4042 25.552 16.1212 25.944 15.8792L26.222 15.7242ZM18.028 24.9742H27.972C27.798 27.9972 26.879 30.0992 26.421 30.9742H19.579C19.121 30.0992 18.201 27.9972 18.028 24.9742ZM29 22.9742H17V20.9742H29V22.9742Z" fill="white"></path></symbol>
+        <symbol id="chart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+        </symbol>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="public/js/main.js"></script>
+</body>
+
+</html>

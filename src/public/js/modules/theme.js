@@ -18,19 +18,23 @@ const setThemeIcons = () => {
 
   const prefix = isDark ? "bg-header-dark" : "bg-header";
 
-  backgroundHeader.src = `./public/image/${prefix}-300x200.webp`;
+  const imageBasePath = window.location.pathname.includes("/src/html/")
+  ? "../public/image/"
+  : "./public/image/"
+
+  backgroundHeader.src = `${imageBasePath}${prefix}-300x200.webp`
 
   backgroundHeader.srcset = `
-    ../public/image/${prefix}-300x200.webp 300w,
-    ../public/image/${prefix}-480x320.webp 480w,
-    ../public/image/${prefix}-640x427.webp 640w,
-    ../public/image/${prefix}-768x512.webp 768w,
-    ../public/image/${prefix}-800x533.webp 800w,
-    ../public/image/${prefix}-1280x853.webp 1280w,
-    ../public/image/${prefix}-1440x960.webp 1440w,
-    ../public/image/${prefix}-1536x1024.webp 1536w,
-    ../public/image/${prefix}-1920x1280.webp 1920w
-  `;
+    ${imageBasePath}${prefix}-300x200.webp 300w,
+    ${imageBasePath}${prefix}-480x320.webp 480w,
+    ${imageBasePath}${prefix}-640x427.webp 640w,
+    ${imageBasePath}${prefix}-768x512.webp 768w,
+    ${imageBasePath}${prefix}-800x533.webp 800w,
+    ${imageBasePath}${prefix}-1280x853.webp 1280w,
+    ${imageBasePath}${prefix}-1440x960.webp 1440w,
+    ${imageBasePath}${prefix}-1536x1024.webp 1536w,
+    ${imageBasePath}${prefix}-1920x1280.webp 1920w
+  `
 };
 
 const applyTheme = (theme) => {

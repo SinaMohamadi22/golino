@@ -1,5 +1,5 @@
 
-import { supabase } from "../cofig/supabase.js"
+import { supabase , getImageUrl } from "../cofig/supabase.js"
 
 // عناصر مربوط به محصولات
 const productContainers = document.querySelectorAll(".product-container")
@@ -35,7 +35,7 @@ const showProducts = () => {
             <div class="p-4 flex justify-center items-center">
               <img
                 class="w-38"
-                src="../public/image/${product.image}"
+                src="${getImageUrl(product.image)}"
                 loading="lazy"
                 alt="${product.title}"
               >
@@ -83,7 +83,7 @@ const showFamousProducts = () => {
   if (!famousProductContainer) return;
 
   famousProductContainer.innerHTML = "";
-
+  
   products.forEach((product) => {
     famousProductContainer.insertAdjacentHTML(
       "beforeend",
@@ -96,7 +96,7 @@ const showFamousProducts = () => {
             <img
               class="w-38"
               loading="lazy"
-              src="../public/image/${product.image}"
+              src="${getImageUrl(product.image)}"
               alt="${product.title}"
             >
           </div>

@@ -20,7 +20,7 @@ export const showProductsDetail = () => {
 
   productDetailImage?.setAttribute(
     "src",
-    `../public/image/${mainProduct.image}`,
+    `${getImageUrl(mainProduct.image)}`,
   );
 
   productDetailTitles.forEach((title) => {

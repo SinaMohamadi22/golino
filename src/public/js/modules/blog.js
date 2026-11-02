@@ -1,5 +1,5 @@
 
-import { supabase } from "../cofig/supabase.js";
+import { supabase , getImageUrl } from "../cofig/supabase.js";
 
 const blogContainer = document.querySelector(".blog-container");
 
@@ -25,7 +25,7 @@ const getBlogs = async () => {
         <article class="bg-white dark:bg-zinc-700 p-4.5 rounded-2xl items-center">
           <img
             class="w-full rounded-2xl"
-            src="../public/image/${blog.image}"
+            src="${getImageUrl(blog.image)}"
             alt="${blog.title}"
             loading="lazy"
           >
@@ -41,9 +41,7 @@ const getBlogs = async () => {
 
             <div class="flex bg-primary text-white rounded-2xl py-2 px-3.75 items-center text-center font-iranyekan text-sm font-normal">
               <a
-                class="flex items-center gap-x-1 justify-center align-center"
-                href="blog.html?slug=${encodeURIComponent(blog.slug)}"
-              >
+                class="flex items-center gap-x-1 justify-center align-center">
                 ادامه مطلب
                 <svg class="size-3.75 mt-1">
                   <use href="#arrow"></use>

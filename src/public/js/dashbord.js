@@ -1,22 +1,7 @@
 import "./modules/theme.js"
 import "./modules/chart.js"
-import {supabase} from "./cofig/supabase.js"
-const getImageUrl = (image, folder = "") => {
-    if (!image) return ""
+import {supabase , getImageUrl} from "./cofig/supabase.js"
 
-    if (image.startsWith("http")) {
-        return image
-    }
-
-    const imagePath = folder
-        ? `${folder}/${image}`
-        : image
-
-    return supabase.storage
-        .from("products")
-        .getPublicUrl(imagePath)
-        .data.publicUrl
-}
 const addProductModal = document.querySelector("#add-product-modal")
 const addBlogModal = document.querySelector("#add-blog-modal")
 const addProductForm = document.querySelector("#add-product-form")
@@ -91,7 +76,6 @@ const renderPagination = ({
 }) => {
     const totalPages = Math.ceil(items.length / state.perPage);
 
-    // محدود کردن صفحه فعلی به تعداد صفحات معتبر
     if (totalPages > 0 && state.currentPage > totalPages) {
         state.currentPage = totalPages;
     }
@@ -102,14 +86,12 @@ const renderPagination = ({
         startIndex + state.perPage
     );
 
-    // رندر آیتم‌های صفحه فعلی
     renderItems(paginatedItems);
 
     if (!container) return;
 
     container.innerHTML = "";
 
-    // اگر فقط یک صفحه داریم، دکمه‌ها لازم نیستند
     if (totalPages <= 1) return;
 
     const buttonBaseClass =
