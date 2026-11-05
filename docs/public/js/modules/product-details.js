@@ -1,6 +1,6 @@
 
 import { products } from "./products.js";
-
+import { getImageUrl } from "../cofig/supabase.js";
 const productDetailImage = document.querySelector(".product-detail-img");
 const productDetailTitles = document.querySelectorAll(".product-detail-title");
 const productDetailTags = document.querySelector(".product-detail-tags");
