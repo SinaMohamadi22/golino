@@ -1,11 +1,15 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
+    "sweetalert2": "^11.26.25",
     "swiper": "^12.2.0",
     "tailwindcss": "^4.3.0"
   },
-    "scripts": {
-    "tailwind" : "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch",
     "build:css": "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css"
+  },
+  "devDependencies": {
+    "vite": "^8.3.6"
   }
 }

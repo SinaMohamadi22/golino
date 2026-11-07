@@ -880,6 +880,9 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
@@ -1862,6 +1865,10 @@
   }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -3579,6 +3586,82 @@
     background: #f21339;
     cursor: pointer;
     pointer-events: auto;
+  }
+  .custom-swal-container {
+    --gif-size: 250px;
+    --gif-gap: 20px;
+    --side-space: 30px;
+    --popup-width: 600px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .custom-swal-container .swal2-popup {
+    width: var(--popup-width) !important;
+    max-width: calc(100vw - var(--gif-size) - var(--gif-gap) - var(--side-space)) !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+  .custom-swal-container::before {
+    content: "";
+    position: fixed;
+    width: var(--gif-size);
+    height: var(--gif-size);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../image/nyan_cat_transparent_stars.gif") center / contain no-repeat;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @media (max-width: 1023px) {
+    .custom-swal-container {
+      --gif-size: 170px;
+      --gif-gap: 15px;
+      --side-space: 20px;
+      --popup-width: 420px;
+    }
+    .custom-swal-container .swal2-popup {
+      padding: 2em !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .custom-swal-container {
+      --gif-size: 110px;
+      --gif-gap: 10px;
+      --side-space: 15px;
+      --popup-width: 300px;
+    }
+    .custom-swal-container .swal2-popup {
+      padding: 1.5em !important;
+    }
+  }
+  @media (max-width: 380px) {
+    .custom-swal-container {
+      --gif-size: 85px;
+      --gif-gap: 8px;
+      --side-space: 10px;
+      --popup-width: 250px;
+    }
+    @media (max-width: 400px) {
+      .custom-swal-container {
+        --gif-size: 65px;
+        --gif-gap: 8px;
+        --side-space: 10px;
+        --popup-width: 230px;
+      }
+      .custom-swal-container .swal2-popup {
+        width: min(230px, calc(100vw - 83px)) !important;
+        max-width: calc(100vw - 83px) !important;
+        padding: 1.2em !important;
+        box-sizing: border-box;
+      }
+      .custom-swal-container::before {
+        width: 65px;
+        height: 65px;
+        left: 0;
+      }
+    }
   }
 }
 @media (min-width: 1024px) {

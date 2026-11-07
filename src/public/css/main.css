@@ -203,11 +203,6 @@
     pointer-events: auto;
   }
 }
-@media (min-width: 1024px) {
-  .range-input {
-    width: 90%;
-  }
-}
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {

@@ -12,50 +12,53 @@
     <img class="w-60" src="../public/image/logo.png" alt="">
   </section>
 <section class="container relative flex items-center justify-center -mt-5">
-  <div class="w-93 h-26 rounded-2xl bg-primary absolute -top-4"></div>
-  <div class="bg-white dark:bg-zinc-700 w-85 font-iranyekan rounded-2xl z-50">
+  <div class="w-80 sx:w-93 h-26 rounded-2xl bg-primary absolute -top-4"></div>
+  <div class="bg-white dark:bg-zinc-700 w-70 sx:w-85 font-iranyekan rounded-2xl z-50">
     <aside class="*:pt-5 flex flex-col items-center">
       <h1 class="font-bold leading-8 dark:text-white text-222223 text-xl">ورود به حساب کاربری</h1>
       <p class="dont-regester dark:text-zinc-300 text-4E4E4E text-xs font-semibold">هنوز ثبت نام نکرده اید ؟ <a class="text-primary" href="./regester.html">ثبت نام</a></p>
     </aside>
 
-<aside class="flex flex-col justify-start px-10 pt-5">
-  <div class="flex justify-center gap-3 mb-4">
-    <button type="button" class="login-mode-password text-primary text-xs font-semibold">
-      ورود با رمز عبور
-    </button>
-    <button type="button" class="login-mode-otp text-4E4E4E dark:text-white text-xs font-semibold">
-      ورود با کد ایمیل
-    </button>
-  </div>
+    <aside class="flex flex-col justify-start gap-y-3 px-1.5 sx:px-10 pt-5">
+      <div class="flex justify-center gap-3 mb-4">
+        <button type="button" class="login-mode-password text-primary text-xs font-semibold">
+          ورود با رمز عبور
+        </button>
+        <button type="button" class="login-mode-otp text-4E4E4E dark:text-white text-xs font-semibold">
+          ورود با کد ایمیل
+        </button>
+      </div>
 
-  <h3 class="number-or-email dark:text-white text-222223 py-3 text-xs font-semibold leading-6">
-    ایمیل خود را وارد کنید
-  </h3>
+      <h3 class="number-or-email dark:text-white text-222223 py-3 text-xs font-semibold leading-6">
+        ایمیل خود را وارد کنید
+      </h3>
 
-  <input
-    class="login-input dark:border-C4C4C4 border-E1E1E1 border rounded-lg h-12 px-4 focus:outline-primary dark:placeholder:text-white placeholder:text-xs"
-    type="email"
-    autocomplete="email"
-    placeholder="آدرس ایمیل"
-  >
-
-  <input
-    class="login-password-input hidden mt-4 dark:border-C4C4C4 border-E1E1E1 border rounded-lg h-12 px-4 focus:outline-primary dark:placeholder:text-white placeholder:text-xs"
-    type="password"
-    autocomplete="current-password"
-    placeholder="رمز عبور"
-  >
-
-  <aside dir="ltr" class="code-input hidden justify-center items-center gap-x-2.5 mt-4">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-    <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
-  </aside>
-</aside>
+            <aside class="flex relative w-66">
+                <input class="login-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" autocomplete="email" type="email" placeholder="آدرس ایمیل">
+                <svg class="size-4 absolute left-4 top-4  dark:text-white text-737373">
+                    <use href="#email"></use>
+                </svg>
+            </aside>
+            <aside class="flex relative w-66">
+                <input class="login-password-input password-input w-full dark:border-C4C4C4 border-E1E1E1 border rounded-lg  h-12 leading-12 px-4 py-4 focus:outline-primary focus:caret-primary placeholder:text-xs placeholder:font-medium dark:placeholder:text-white" autocomplete="current-password" minlength="8" maxlength="64" type="password" placeholder="رمز عبور  (حداقل 8 کارکتر و حداکثر 64)">
+                <svg class="open-eye size-4 absolute left-4  dark:text-white top-4 text-737373">
+                    <use href="#open-eye"></use>
+                </svg>
+                <svg class="close-eye hidden size-4 absolute left-4 top-4 text-737373">
+                    <use href="#close-eye"></use>
+                </svg>
+            </aside>
+      
+      <!-- <img src="../public/image/nyan_cat_transparent_stars.gif" alt=""> -->
+      <aside dir="ltr" class="code-input hidden justify-center items-center gap-x-2.5 mt-4">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+        <input class="size-10 text-center border-E1E1E1 border rounded-lg dark:border-C4C4C4 dark:placeholder:text-white focus:outline-primary" placeholder="-" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1">
+      </aside>
+    </aside>
 
     <aside class="flex  justify-center py-5">
       <button class="login-btn dark:bg-white bg-222223 w-65  rounded-lg  h-12 leading-12 px-4 py-4 flex justify-center items-center">
@@ -77,6 +80,16 @@
   </symbol>
   <symbol id="correct" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+  </symbol>
+  <symbol id="email" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+  </symbol>
+  <symbol id="open-eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  </symbol>
+  <symbol id="close-eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
   </symbol>
 </svg>
 </html>
