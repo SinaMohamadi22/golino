@@ -255,7 +255,7 @@ function showSuccessModal(title, message) {
 
         const gif = document.createElement("img");
         gif.className = "success-modal-gif";
-        gif.src = "../public/image/nyan_cat_transparent_stars.gif";
+        gif.src = "./public/image/nyan_cat_transparent_stars.gif";
         gif.alt = "";
         gif.draggable = false;
 
@@ -354,7 +354,7 @@ function setLoading(loading, text = "") {
 // Redirect
 
 function redirectAfterLogin() {
-    window.location.href = "../html/main.html";
+    window.location.href = "./index.html";
 }
 
 // Login Mode
