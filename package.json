@@ -7,7 +7,7 @@
   },
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css"
+    "build:css": "npx @tailwindcss/cli -i ./src/public/css/main.css -o ./src/public/css/output.css --minify"
   },
   "devDependencies": {
     "vite": "^8.3.6"

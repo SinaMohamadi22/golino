@@ -1799,9 +1799,6 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-40 {
-    opacity: 40%;
-  }
   .opacity-60 {
     opacity: 60%;
   }
@@ -3445,6 +3442,14 @@
       padding-inline: calc(var(--spacing) * 4);
     }
   }
+  .bg-header {
+    display: block;
+    width: 100%;
+  }
+  .bg-header img {
+    width: 100%;
+    height: auto;
+  }
   .swiper {
     width: 100%;
     max-width: 1200px;
@@ -3539,7 +3544,7 @@
   .img {
     position: absolute;
     inset: 0;
-    background: url("../image/bg-login.png") center/cover no-repeat;
+    background: url("../image/bg-login.webp") center/cover no-repeat;
   }
   .color {
     z-index: 1;
@@ -3585,37 +3590,37 @@
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-thin.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-thin.ttf") format("truetype");
   font-weight: 100;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-light.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-light.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-medium.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-medium.ttf") format("truetype");
   font-weight: 500;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-bold.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-bold.ttf") format("truetype");
   font-weight: 700;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-extrabold.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-extrabold.ttf") format("truetype");
   font-weight: 800;
 }
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-black.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-black.ttf") format("truetype");
   font-weight: 900;
 }
 .toast {

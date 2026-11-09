@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+
+@source "../../html/**/*.html";
+@source "../js/**/*.js";
+
 @theme {
   --color-primary: #F080AD;
   --color-low-red: #ef3a4f;
@@ -42,6 +46,17 @@
     margin: 0 auto;
     @apply px-4 sx:px-3 xs:px-0 lg:px-4;
   }
+  
+  .bg-header {
+    display: block;
+    width: 100%;
+  }
+
+  .bg-header img {
+      width: 100%;
+      height: auto;
+  }
+
   .swiper {
     width: 100%;
     max-width: 1200px;
@@ -153,7 +168,7 @@
   .img {
     position: absolute;
     inset: 0;
-    background: url("../image/bg-login.png") center/cover no-repeat;
+    background: url("../image/bg-login.webp") center/cover no-repeat;
   }
 
   .color {
@@ -216,43 +231,43 @@
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-thin.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-thin.ttf") format("truetype");
   font-weight: 100;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-light.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-medium.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-bold.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-extrabold.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-extrabold.ttf") format("truetype");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "IranYekan";
-  src: url("/src/fonts/Qs_Iranyekan-black.ttf") format("truetype");
+  src: url("../../fonts/Qs_Iranyekan-black.ttf") format("truetype");
   font-weight: 900;
 }
 .toast {
