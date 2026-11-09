@@ -255,7 +255,7 @@ function showSuccessModal(title, message) {
 
         const gif = document.createElement("img");
         gif.className = "success-modal-gif";
-        gif.src = "../public/image/nyan_cat_transparent_stars.gif";
+        gif.src = "./public/image/nyan_cat_transparent_stars.gif";
         gif.alt = "";
         gif.loading = "lazy"
         gif.draggable = false;
