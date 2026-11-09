@@ -1,7 +1,4 @@
-@import "tailwindcss" source(none);
-
-@source "../../html/**/*.html";
-@source "../js/**/*.js";
+@import "tailwindcss";
 
 @theme {
   --color-primary: #F080AD;
